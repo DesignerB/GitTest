@@ -1,21 +1,84 @@
+@import "color.scss";
+@import "font.scss";
+
+@mixin width-style{
+    max-width: $sc-type01;
+    margin: 0 auto;
+}
+
 body {
     margin: 0;
     padding: 0;
+    font-size: 12px;
 }
 
-.container {
-    width: 1000px;
-    height: 800px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    padding: 0;
-    border: 1px solid red;
-    .item {
-        width:22%;
-        height:100px;
-        border: 1px solid black;
+ul {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+}
+
+.container_dtview{
+    @include width-style;
+    
+}
+
+
+.container_dtview_etc {
+    @include width-style;
+    background-color: $color-gray;
+    border-radius: 25px;
+    margin-top:10px;
+    .box_dtview_etc {
+        width:70%;        
+        padding:$typo-sc01 $typo-sc03;
+        margin:0 auto;
+        // border: 1px dashed yellowgreen;
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+        }
+        li{
+            padding: 8px 0;
+            font-size: $typo-sc02;
+            line-height: $typo-sc03;
+            &:nth-child(odd){
+                color: $color-main;
+                font-weight: bold;
+                // border: 1px dashed yellowgreen;
+            }
+            &:nth-child(even){
+                // border: 1px dashed yellowgreen;
+            }
+        }
+        
     }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .container_dtview_etc{
+        .box_dtview_etc{
+            li {
+                float: left;
+                &:nth-child(odd){
+                    width:18%;
+                    min-width:80px;
+                }
+                &:nth-child(even){
+                    width:80%;
+                }
+            }
+        }
+    }
+}
+
+
+// @media screen and (max-width:){
+//     container_dtview
+// }
