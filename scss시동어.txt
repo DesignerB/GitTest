@@ -1,0 +1,1 @@
+sass --watch detail_view.scss:detail_view.css

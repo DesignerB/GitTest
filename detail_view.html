@@ -4,7 +4,6 @@
         <link rel="stylesheet" type="text/css" href="detail_view.css">
     </head>
     <body>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <div class="container_dtview">
             <div class="product_title">
                 <ul>
@@ -26,11 +25,11 @@
                     </li>
                     <li>화물용달</li>
                     <li>
-                        <b>기본 배송료는 착불입니다.</b><br>
-                    현수막, 현판등 부피와 무게가 큰 제품일 경우 화물용달로 배송됩니다. 배송은 평일 하루정도 소요되나(주말제외), 사정에 따라 연기될 수 있습니다. (도서,산간,오지 일부지역은 배송비가 추가될 수 있습니다)
+                        <b>지역 화물영업소로 배송 가능합니다.(착불)</b><br>
+                    급한 물건. 부피와 무게가 큰 제품의 경우 화물로 배달 가능합니다. 받으실 지역의 영업소를 유선으로 알려주세요<br>
+                    <input type="button" value="경동택배 영업소 찾기" onclick="window.open('https://kdexp.com/office.kd')"><br>
+                    <input type="button" value="대신화물 영업소 찾기" onclick="window.open('http://www.ds3211.co.kr/freight/agencySearch.ht')">
                     </li>
-                    <li>퀵서비스</li>
-                    <li>부산, 양산, 김해지역은 착불배송 가능</li>
                     <li>방문</li>
                     <li>
                         완료된 작업물을 <b>아래의 주소에서 수령</b>하실 수 있습니다.<br>
@@ -42,14 +41,77 @@
         <div class="container_dtview_etc">
             <div class="box_dtview_etc">
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
+                    <li>환불가능</li>
+                    <li>
+                        <div class="box_dtview_contents">
+                            <ul>
+                                <li><b>시안작업 착수 전 :</b> 환불 100%</li>
+                                <li><b>시안작업 착수 후 시안 제공 전 :</b> 디자인비 50%,  인쇄비 100%</li>
+                                <li><b>시안 제공 후 인쇄 전 :</b> 디자인비 환불불가,  인쇄비 100%</li>
+                                <li><b>인쇄 불량 발견 7일 이내  :</b> 재작업 혹은 디자인비 제외 환불.<br>(수령하신 제품은 반송해주세요. 확인 후 진행 해 드립니다.)</li>
+                            </ul>
+                        <br>
+                    </li>
+                    <li>환불불가</li>
+                    <li>
+                        <div class="box_dtview_contents">
+                            <ul>
+                                <li>인쇄요청 이후</li>
+                                <li>단순변심</li>
+                                <li>상품 수령 7일 경과</li>
+                                <li>인쇄불량과 관계없이 1/5 이상 사용</li>
+                                <li>인쇄물 오탈자</li>
+                                <li>모니터와 인쇄물간의 컬러차, 서체종류,  서체크기, 서체자간, 서체행간, 레이아웃 차이</li>
+                                <li>종이 재질 느낌</li>
+                                <li>인쇄공정에서 흔히 나타나는 결함</li>
+                                <li>클라이언트의 무리한 요청으로 발생한 불량 인쇄물 및 디자인</li>
+                                <li>불량 인쇄물 1/3 미만</li>
+                                <li>인쇄공장사정으로 인한 출고일 초과</li>
+                                <li>택배사 사정으로 인한 수령일 초과</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>재작업 가능</li>
+                    <li>
+                        <div class="box_dtview_contents">
+                            <ul>
+                                <li>요청한 사항이 인쇄물에 반영되지 않았을 경우.<br>(작성된 문서기준으로 확인합니다. 그린비는 구두요청을 받지 않습니다.)</li>
+                                <li>불량 인쇄 비율 30%이상.<br>(사진을 먼저 보내주시고, 출고된 제품 전체를 반송해주세요)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>재작업 불가</li>
+                    <li>
+                        <div class="box_dtview_contents">
+                            <ul>
+                                <li>단순변심</li>
+                                <li>요청하신 사항에 대해 그린비측에서 인쇄 및 디자인 결과물에 대해 좋지않은 상황이 발생할 가능성이 있음을 알렸음에도, 클라이언트의 주장으로 일을 진행 한 경우.</li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
+        <div class="container_dtview_etc">
+            <div class="box_dtview_etc">
+                <ul>
+                    <li>색상</li>
+                    <li>
+                        <div class="box_dtview_contents">
+                            <ul>
+                                <li>모니터(RGB)와 인쇄기계(CMYK)가 표현하는 색범위의 차이로 인해 인쇄물의 색상 차이가 있습니다.</li>
+                                <li>출력물의 색상은 기계, 종이, 잉크, 온도, 습도 변화에 따른 오차율이 있습니다. 이로 인하여 시간차를 두고 재작업을 할 시 같은 원본파일이라 할지라도 색차이가 있을 수 있습니다.</li>
+                                <li>앞/뒤판을 따로 인쇄 합니다. 위와 같은 문제로 앞면과 뒷면이 완벽히 동일한 색상으로 표현되지 않습니다. 앞/뒷장의 배경색을 모두 동일하게 하시고 싶으시다면 색지를 이용해주세요.</li>
+                            </ul>
+                        </div>
+                    <li>재단</li>
+                    <li>
+                        - 인쇄물은 커다란 종이판에 인쇄된 후 여러장을 겹쳐놓고 기계로 재단됩니다. 이로인해 1~2mm의 밀림현상이 생길 수 있습니다.<br>
+                        - 여러장을 겹쳐 재단하다 보니 모서리 부분의 보풀증상이 발생하기도 합니다. 민감하신 분이라면 짙은 배경색은 지양해주세요.<br>
+                        - 주문하신 수량보다 많이 출력하지만 재단공법상의 문제로 +-10%의 매수차이가 발생할 수 있습니다.
+                    </li>
+                </ul>
+            </div>
+        </div>        
     </body>
 </html>

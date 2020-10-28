@@ -1,3 +1,15 @@
+input[type=button] {
+  padding: 8px 10px 10px;
+  margin-top: 7px;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: yellowgreen; }
+
+input[type=button]:hover {
+  background-color: red;
+  transition: 1s;
+  cursor: pointer; }
+
 body {
   margin: 0;
   padding: 0;
@@ -38,6 +50,16 @@ ul {
       .container_dtview_etc .box_dtview_etc li:nth-child(odd) {
         color: #127C3B;
         font-weight: bold; }
+    .container_dtview_etc .box_dtview_etc .box_dtview_contents ul {
+      display: inline-block;
+      list-style: disc; }
+    .container_dtview_etc .box_dtview_etc .box_dtview_contents li {
+      padding: 0;
+      margin-bottom: 6px;
+      font-size: 1em; }
+      .container_dtview_etc .box_dtview_etc .box_dtview_contents li:nth-child(odd) {
+        color: black;
+        font-weight: normal; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .container_dtview_etc .box_dtview_etc li {

@@ -1,0 +1,13 @@
+input[type=button] {
+    padding:8px 10px 10px;
+    margin-top:7px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: yellowgreen;
+}
+
+input[type=button]:hover {
+    background-color: red;
+    transition: 1s;
+    cursor: pointer;
+}

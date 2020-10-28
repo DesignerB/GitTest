@@ -1,5 +1,6 @@
 @import "color.scss";
 @import "font.scss";
+@import "default_style.scss";
 
 @mixin width-style{
     max-width: $sc-type01;
@@ -54,10 +55,23 @@ ul {
                 // border: 1px dashed yellowgreen;
             }
             &:nth-child(even){
-                // border: 1px dashed yellowgreen;
             }
         }
-        
+        .box_dtview_contents{
+            ul{
+                display: inline-block;
+                list-style: disc;
+            }
+            li{
+                padding: 0;
+                margin-bottom: 6px;
+                font-size: $typo-sc01;
+                &:nth-child(odd){
+                    color: black;
+                    font-weight: normal;
+                }
+            }
+        }
     }
 }
 
