@@ -30,29 +30,30 @@ ul {
     
 }
 
-
 .container_dtview_etc {
     @include width-style;
     background-color: $color-gray;
     border-radius: 25px;
-    margin-top:10px;
+    margin-top: $typo-sc06;
     .box_dtview_etc {
-        width:70%;        
-        padding:$typo-sc01 $typo-sc03;
+        width:70%;
         margin:0 auto;
-        // border: 1px dashed yellowgreen;
+        padding: $typo-sc07 0;
+        line-height: $typo-sc05;
         ul{
             display: grid;
             grid-template-columns: 1fr 4fr;
+            grid-gap:$typo-sc01;
+            margin-bottom: $typo-sc02;
+            &:last-child{
+                margin-bottom: 0;
+            } 
         }
         li{
-            padding: 8px 0;
             font-size: $typo-sc02;
-            line-height: $typo-sc03;
             &:nth-child(odd){
                 color: $color-main;
                 font-weight: bold;
-                // border: 1px dashed yellowgreen;
             }
             &:nth-child(even){
             }
@@ -60,20 +61,60 @@ ul {
         .box_dtview_contents{
             ul{
                 display: inline-block;
-                list-style: disc;
+                list-style-type: disc;
+                margin-bottom:0;
             }
             li{
-                padding: 0;
-                margin-bottom: 6px;
                 font-size: $typo-sc01;
+                padding-bottom: 0.25em;
                 &:nth-child(odd){
-                    color: black;
+                    color:black;
                     font-weight: normal;
                 }
             }
         }
     }
+    .dtview_subtitle{
+        font-size: $typo-sc03;
+        text-align: center;
+        line-height: $typo-sc03;
+        padding-bottom: $typo-sc01;
+        margin-bottom: $typo-sc02;
+        border-bottom: 1px solid #dddddd;
+        span{
+            font-weight: bold;
+            color: $color-main;
+            line-height: $typo-sc06;
+        }
+    }
+    .dtview_after{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: $typo-sc01;
+        color:$color-main;
+        font-weight: bold;
+        ul{
+            display: inline-block;
+        }
+        li{
+            width: calc(33.3333333333% -20px);
+            &:nth-child(odd){
+                color:black;
+                font-weight: normal;
+            }
+            &:first-child{
+                width:100%;
+                height: 300px;
+                background-color: red;
+            }
+            &:last-child{
+                font-weight: normal;
+            }
+        }
+    }
 }
+
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .container_dtview_etc{
@@ -91,8 +132,3 @@ ul {
         }
     }
 }
-
-
-// @media screen and (max-width:){
-//     container_dtview
-// }

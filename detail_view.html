@@ -4,17 +4,6 @@
         <link rel="stylesheet" type="text/css" href="detail_view.css">
     </head>
     <body>
-        <div class="container_dtview">
-            <div class="product_title">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="product_sub-title"></div>
-            <div class="product_spec"></div>
-        </div>
         <div class="container_dtview_etc">
             <div class="box_dtview_etc">
                 <ul>
@@ -23,6 +12,8 @@
                         <b>기본 배송료는 3,000원입니다.</b><br>
                     명함,전단지 등 소량의 경우 택배로 배송됩니다. 배송은 1~3일 소요(주말,공휴일 제외) 되며, 택배사 사정으로 지연 혹은 연기될 수있습니다. (도서,산간,오지 일부지역은 배송비가 추가될 수 있습니다)
                     </li>
+                </ul>
+                <ul>
                     <li>화물용달</li>
                     <li>
                         <b>지역 화물영업소로 배송 가능합니다.(착불)</b><br>
@@ -30,6 +21,8 @@
                     <input type="button" value="경동택배 영업소 찾기" onclick="window.open('https://kdexp.com/office.kd')"><br>
                     <input type="button" value="대신화물 영업소 찾기" onclick="window.open('http://www.ds3211.co.kr/freight/agencySearch.ht')">
                     </li>
+                </ul>
+                <ul>
                     <li>방문</li>
                     <li>
                         완료된 작업물을 <b>아래의 주소에서 수령</b>하실 수 있습니다.<br>
@@ -38,6 +31,7 @@
                 </ul>
             </div>
         </div>
+        
         <div class="container_dtview_etc">
             <div class="box_dtview_etc">
                 <ul>
@@ -45,13 +39,15 @@
                     <li>
                         <div class="box_dtview_contents">
                             <ul>
-                                <li><b>시안작업 착수 전 :</b> 환불 100%</li>
-                                <li><b>시안작업 착수 후 시안 제공 전 :</b> 디자인비 50%,  인쇄비 100%</li>
-                                <li><b>시안 제공 후 인쇄 전 :</b> 디자인비 환불불가,  인쇄비 100%</li>
-                                <li><b>인쇄 불량 발견 7일 이내  :</b> 재작업 혹은 디자인비 제외 환불.<br>(수령하신 제품은 반송해주세요. 확인 후 진행 해 드립니다.)</li>
+                                <li>시안작업 착수 전 : 환불 100%</li>
+                                <li>시안작업 착수 후 시안 제공 전 : 디자인비 50%,  인쇄비 100%</li>
+                                <li>시안 제공 후 인쇄 전 : 디자인비 환불불가,  인쇄비 100%</li>
+                                <li>인쇄 불량 발견 7일 이내 : 재작업 혹은 디자인비 제외 환불.<br>(수령하신 제품은 반송해주세요. 확인 후 진행 해 드립니다.)</li>
                             </ul>
                         <br>
                     </li>
+                </ul>
+                <ul>
                     <li>환불불가</li>
                     <li>
                         <div class="box_dtview_contents">
@@ -71,6 +67,8 @@
                             </ul>
                         </div>
                     </li>
+                </ul>
+                <ul>
                     <li>재작업 가능</li>
                     <li>
                         <div class="box_dtview_contents">
@@ -80,6 +78,8 @@
                             </ul>
                         </div>
                     </li>
+                </ul>
+                <ul>
                     <li>재작업 불가</li>
                     <li>
                         <div class="box_dtview_contents">
@@ -92,8 +92,14 @@
                 </ul>
             </div>
         </div>
+
         <div class="container_dtview_etc">
             <div class="box_dtview_etc">
+                <div class="dtview_subtitle">
+                    <span>인쇄유의사항</span><br>
+                    아래 기재된 사항들은 모든 인쇄소에서 공통적으로 발생할 수 있는 현상들입니다.<br>
+                    아래 현상으로 인한 재작업은 어려우니 확인하시고 주문해주시길 바랍니다.
+                </div>
                 <ul>
                     <li>색상</li>
                     <li>
@@ -104,14 +110,47 @@
                                 <li>앞/뒤판을 따로 인쇄 합니다. 위와 같은 문제로 앞면과 뒷면이 완벽히 동일한 색상으로 표현되지 않습니다. 앞/뒷장의 배경색을 모두 동일하게 하시고 싶으시다면 색지를 이용해주세요.</li>
                             </ul>
                         </div>
+                    </li>
+                </ul>
+                <ul>
                     <li>재단</li>
                     <li>
-                        - 인쇄물은 커다란 종이판에 인쇄된 후 여러장을 겹쳐놓고 기계로 재단됩니다. 이로인해 1~2mm의 밀림현상이 생길 수 있습니다.<br>
-                        - 여러장을 겹쳐 재단하다 보니 모서리 부분의 보풀증상이 발생하기도 합니다. 민감하신 분이라면 짙은 배경색은 지양해주세요.<br>
-                        - 주문하신 수량보다 많이 출력하지만 재단공법상의 문제로 +-10%의 매수차이가 발생할 수 있습니다.
+                        <div class="box_dtview_contents">
+                            <ul>
+                                <li>인쇄물은 커다란 종이판에 인쇄된 후 여러장을 겹쳐놓고 기계로 재단됩니다. 이로인해 1~2mm의 밀림현상이 생길 수 있습니다.</li>
+                                <li>여러장을 겹쳐 재단하다 보니 모서리 부분의 보풀증상이 발생하기도 합니다. 민감하신 분이라면 짙은 배경색은 지양해주세요.</li>
+                                <li>주문하신 수량보다 많이 출력하지만 재단공법상의 문제로 +-10%의 매수차이가 발생할 수 있습니다.</li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
-        </div>        
+        </div>
+
+        <div class="container_dtview_etc">
+            <div class="box_dtview_etc">
+                <div class="dtview_subtitle">
+                    <span>후가공안내</span><br>
+                    모든 후가공은 출력 후 진행됩니다.<br>
+                    공장 스케쥴과 가공방식차이로 인한 추가소요 시간이 있습니다.
+                </div>
+                <div class="dtview_after">
+                    <div>
+                        <ul>
+                            <li>사진</li>
+                            <li>제목</li>
+                            <li>내용</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>사진</li>
+                            <li>제목</li>
+                            <li>내용</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

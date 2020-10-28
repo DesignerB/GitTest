@@ -35,30 +35,63 @@ ul {
   margin: 0 auto;
   background-color: #F9F9F9;
   border-radius: 25px;
-  margin-top: 10px; }
+  margin-top: 2em; }
   .container_dtview_etc .box_dtview_etc {
     width: 70%;
-    padding: 1em 1.5em;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 2.2em 0;
+    line-height: 1.8em; }
     .container_dtview_etc .box_dtview_etc ul {
       display: grid;
-      grid-template-columns: 1fr 4fr; }
+      grid-template-columns: 1fr 4fr;
+      grid-gap: 1em;
+      margin-bottom: 1.2em; }
+      .container_dtview_etc .box_dtview_etc ul:last-child {
+        margin-bottom: 0; }
     .container_dtview_etc .box_dtview_etc li {
-      padding: 8px 0;
-      font-size: 1.2em;
-      line-height: 1.5em; }
+      font-size: 1.2em; }
       .container_dtview_etc .box_dtview_etc li:nth-child(odd) {
         color: #127C3B;
         font-weight: bold; }
     .container_dtview_etc .box_dtview_etc .box_dtview_contents ul {
       display: inline-block;
-      list-style: disc; }
+      list-style-type: disc;
+      margin-bottom: 0; }
     .container_dtview_etc .box_dtview_etc .box_dtview_contents li {
-      padding: 0;
-      margin-bottom: 6px;
-      font-size: 1em; }
+      font-size: 1em;
+      padding-bottom: 0.25em; }
       .container_dtview_etc .box_dtview_etc .box_dtview_contents li:nth-child(odd) {
         color: black;
+        font-weight: normal; }
+  .container_dtview_etc .dtview_subtitle {
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 1.4em;
+    padding-bottom: 1em;
+    margin-bottom: 1.2em;
+    border-bottom: 1px solid #dddddd; }
+    .container_dtview_etc .dtview_subtitle span {
+      font-weight: bold;
+      color: #127C3B;
+      line-height: 2em; }
+  .container_dtview_etc .dtview_after {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    color: #127C3B;
+    font-weight: bold; }
+    .container_dtview_etc .dtview_after ul {
+      display: inline-block; }
+    .container_dtview_etc .dtview_after li {
+      width: calc(33.3333333333% -20px); }
+      .container_dtview_etc .dtview_after li:nth-child(odd) {
+        color: black;
+        font-weight: normal; }
+      .container_dtview_etc .dtview_after li:first-child {
+        width: 100%;
+        height: 300px;
+        background-color: red; }
+      .container_dtview_etc .dtview_after li:last-child {
         font-weight: normal; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
