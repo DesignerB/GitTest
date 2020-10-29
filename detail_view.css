@@ -76,23 +76,22 @@ ul {
       line-height: 2em; }
   .container_dtview_etc .dtview_after {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
     color: #127C3B;
     font-weight: bold; }
+    .container_dtview_etc .dtview_after div {
+      width: 50%; }
     .container_dtview_etc .dtview_after ul {
       display: inline-block; }
-    .container_dtview_etc .dtview_after li {
-      width: calc(33.3333333333% -20px); }
-      .container_dtview_etc .dtview_after li:nth-child(odd) {
-        color: black;
-        font-weight: normal; }
-      .container_dtview_etc .dtview_after li:first-child {
-        width: 100%;
-        height: 300px;
-        background-color: red; }
-      .container_dtview_etc .dtview_after li:last-child {
-        font-weight: normal; }
+    .container_dtview_etc .dtview_after li:nth-child(odd) {
+      color: black;
+      font-weight: normal; }
+    .container_dtview_etc .dtview_after li:first-child {
+      height: 250px;
+      background-color: red; }
+    .container_dtview_etc .dtview_after li:last-child {
+      font-weight: normal; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .container_dtview_etc .box_dtview_etc li {
