@@ -1,3 +1,8 @@
+@import "dtview.scss";
+@import "font.scss";
+@import "color.scss";
+@import "size.scss";
+
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +13,7 @@ ul {
     position: relative;
     display: inline-block;
     list-style: none;
+    line-height: $type_bigger;
     -webkit-padding-start: 0;
             padding-inline-start: 0;
     -webkit-margin-before: 0;

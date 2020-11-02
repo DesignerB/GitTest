@@ -1,0 +1,62 @@
+
+    .margin_subtitle{
+        margin-top: $size_nomal;
+        margin-bottom: $size_nomal;
+    }
+    .dtview_subtitle{
+        @include ty_basic;
+        text-align: center;
+        line-height: $size_nomal;
+        @include division_line;
+        div{
+            @include ty_big_title;
+            margin-bottom: $size_xsmall;
+        }        
+    }
+    .dtview_subtitle_left{
+        @include subtitle;
+        font-size: $typo-sc02;
+        text-align: left;
+        padding: 0 $typo-sc02;
+    }
+    .dtview_subscript{
+        font-size: $typo-sc02;
+        text-align: left;
+        line-height: $typo-sc04;
+        padding: $typo-sc01 $typo-sc02;
+        background-color: white;
+        border-radius: $typo-sc01;
+        margin-bottom: $typo-sc03;
+    }
+    .dtview_after{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $typo-sc02;
+        color:$color-main;
+        font-weight: bold;
+        margin-top: $size_nomal;
+        ul{
+            position: relative;
+            display: inline-block;
+        }
+        li{
+            width:100%;
+            &:nth-child(odd){
+                color:black;
+                font-weight: normal;
+                @include image-container;
+            }
+            &:first-child{
+                height: 300px;
+                background-color:goldenrod;
+            }
+            &:nth-child(2){
+                padding: 5px 0 2px 0;
+            }
+            &:last-child{
+                font-weight: normal;
+                line-height: $typo-sc03;
+                
+            }
+        }
+    }

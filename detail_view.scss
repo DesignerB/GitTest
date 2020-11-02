@@ -1,10 +1,22 @@
-@import "color.scss";
-@import "font.scss";
 @import "default_style.scss";
 @import "dtview.scss";
+@import "font.scss";
+@import "color.scss";
+@import "size.scss";
 
+.container_basic {
+width: 100vw;
+}
 
 .container_dtview {
+    width: 100%;
+    max-width: $sc-type02;
+    background-color: $color-gray;
+    @include v_center;
+    @include b_radi;
+    @include ver_gutter_padding;
+    @include ver_gutter_margin;
+
     .box_dtview_etc {
         position: relative;
         max-width: 780px;
@@ -26,79 +38,89 @@
             }
             &:nth-child(even){
             }
-        }
-        .box_dtview_contents{
-            ul{
-                display: inline-block;
-                list-style-type: disc;
-                margin-bottom:0;
-            }
-            li{
-                font-size: 1em;
-                padding-bottom: 0.25em;
-                &:nth-child(odd){
-                    color:black;
-                    font-weight: normal;
+            .box_dtview_contents{
+                ul{
+                    display: inline-block;
+                    list-style-type: disc;
+                    margin-bottom: $size_xsmall;
+                }
+                li{
+                    font-size: $type_default;
+                    margin-bottom: 2px;
+                    &:nth-child(odd){
+                        color:black;
+                        font-weight: normal;
+                        font-size: $type_default;
+                    }
                 }
             }
         }
-    }
-    .dtview_subtitle{
-        div{
-            @include ty_big_title;
-            margin-bottom: $size_xsmall;
+
+        .box_dtview_subtitle{
+            margin-top: $size_small;
+            margin-bottom: $size_small;
         }
-        @include ty_basic;
-        // text-align: center;
-        line-height: $size_nomal;
-        @include division_line;
-    }
-    .dtview_subtitle_left{
-        @include subtitle;
-        font-size: $typo-sc02;
-        text-align: left;
-        padding: 0 $typo-sc02;
-    }
-    .dtview_subscript{
-        font-size: $typo-sc02;
-        text-align: left;
-        line-height: $typo-sc04;
-        padding: $typo-sc01 $typo-sc02;
-        background-color: white;
-        border-radius: $typo-sc01;
-        margin-bottom: $typo-sc03;
-    }
-    .dtview_after{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: $typo-sc02;
-        color:$color-main;
-        font-weight: bold;
-        margin-top: $size_nomal;
-        ul{
-            position: relative;
-            display: inline-block;
-        }
-        li{
-            width:100%;
-            &:nth-child(odd){
-                color:black;
-                font-weight: normal;
-                @include image-container;
-            }
-            &:first-child{
-                height: 300px;
-                background-color:goldenrod;
-            }
-            &:nth-child(2){
-                padding: 5px 0 2px 0;
-            }
-            &:last-child{
-                font-weight: normal;
-                line-height: $typo-sc03;
-                
+
+        .dtview_subtitle{
+            font-size: $type_nomal;
+            text-align: center;
+            line-height: $type_big;
+            @include division_line;
+            div{
+                font-size:$type_big; 
+                font-weight: bold;
+                color:$color-main;
+                margin-bottom:$size_small;
             }
         }
+
+        .subtitle_border_none{
+            border:0;
+            padding-bottom: 0;
+            margin-bottom: $type_default;
+        }
+
+        .dtview_subscript {
+            @include b_radi;
+            @include sq_padding;
+            text-align: center;
+            margin-bottom: $size_xlarge;
+            background-color: white;
+            font-size: $type_nomal;
+        }
+
+        .dtview_after{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: $size_nomal;
+            color:$color-main;
+            font-weight: bold;
+            ul{
+                position: relative;
+                display: inline-block;
+            }
+            li{
+                width:100%;
+                &:nth-child(odd){
+                    color:black;
+                    font-weight: normal;
+                    @include image-container;
+                }
+                &:first-child{
+                    height: 250px;
+                    background-color:goldenrod;
+                }
+                &:nth-child(2){
+                    padding: 5px 0 2px 0;
+                }
+                &:last-child{
+                    font-weight: normal;
+                    
+                }
+            }
+        }
+
+
     }
 }
 
