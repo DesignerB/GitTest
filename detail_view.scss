@@ -17,10 +17,7 @@ width: 100vw;
     @include ver_gutter_padding;
     @include ver_gutter_margin;
     .box_dtview_etc {
-        position: relative;
-        max-width: 780px;
-        width:100%;
-        @include v_center;
+        @include container_default;
         ul{
             display: grid;
             grid-template-columns: 1fr 4fr;
@@ -140,24 +137,90 @@ width: 100vw;
     }
 }
 
-
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .container_dtview{
-        .box_dtview_etc{
-            li {
-                float: left;
-                &:nth-child(odd){
-                    width:18%;
-                    min-width:80px;
-                }
-                &:nth-child(even){
-                    width:80%;
-                }
+.box_draw{
+    position: relative;
+    margin: $size_xlarge 0;
+    @include ty_baisc_bold;
+    color: black;
+    .draw_plus{
+        div{
+            background-color: $color-gray-border;
+            margin: 0 auto;
+            &:first-child, &:last-child{
+                width:2px;
+                height:18em;
+            }
+            &:nth-child(2){
+                width:77%;
+                height:2px;
             }
         }
-        .container_dtview{
-            &:last-child{width:100%}
+    }
+    .draw_text{
+        position: absolute;
+        border-radius : 20px;
+        padding: 4px 12px 6px;
+        background-color: $color-main;
+        color: white;
+    }
+    .draw_text_title{
+        position: absolute;
+        top:47.8%;
+    }
+}
+
+.container_process{
+    @include container_default;
+    @include top_margin;
+    ul{
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-gap:$size_normal;
+        li{
+            text-align: center;
+            margin-bottom: $size_large;
+            div{
+                display: block;
+                @include ty_basic;
+                &:first-child{
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 100px;
+                    background-color: teal;
+                }
+                &:last-child{
+                    margin-top: $size_xsmall;
+                }
+                margin-bottom: $size_xlarge;
+                margin: 0 auto;
+            }
+
         }
     }
+}
+
+
+// ms explorer11일떄
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+    ul{padding: 0;}
+    
+    .container_process{
+        margin: 0 auto;
+        li{
+            float: left;
+            padding-left:45px;
+            &:first-child, &:nth-child(5){
+                padding-left: 0;
+            }
+        }
+    }
+
+    .container_dtview .box_dtview_etc .dtview_after ul {
+        display: block; 
+        margin-bottom: 50px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .container_dtview .box_dtview_etc ul li .box_dtview_contents li { margin-left: 5%;}
 }

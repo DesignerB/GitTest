@@ -20,3 +20,10 @@
     overflow: hidden;
     background-repeat: no-repeat;
 }
+
+@mixin container_default{
+    position: relative;
+    max-width: 780px;
+    width:100%;
+    @include v_center;
+}
