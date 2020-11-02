@@ -1,0 +1,31 @@
+@mixin v_center{margin: 0 auto}
+@mixin b_radi{border-radius: $size_nomal;}
+@mixin ver_gutter_margin{margin: $size_large 0;}
+@mixin ver_gutter_padding{padding: $size_xlarge 0;}
+@mixin division_line{
+    border-bottom: 1px solid $color-gray-border;
+    margin-bottom: $size_small;
+    padding-bottom: $size_small;
+}
+
+
+@mixin dtview_standard{
+    @include v_center;
+    @include b_radi;
+    @include ver_gutter_margin;
+}
+
+@mixin image-container {
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+@mixin subtitle {
+    line-height: $typo-sc04;
+    margin-bottom: $typo-sc02;
+        span{
+            font-weight: bold;
+            color: $color-main;
+            line-height: $typo-sc07;
+        }
+}
