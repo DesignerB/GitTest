@@ -7,7 +7,7 @@ ul {
   position: relative;
   display: inline-block;
   list-style: none;
-  line-height: 1.6em;
+  word-break: break-word;
   -webkit-padding-start: 0;
   padding-inline-start: 0;
   -webkit-margin-before: 0;
@@ -36,72 +36,82 @@ input[type=button]:hover {
   background-color: #F9F9F9;
   margin: 0 auto;
   border-radius: 1.4em;
-  padding-top: 2.2em;
-  padding-bottom: 2.2em;
-  margin-top: 2.2em;
-  margin-bottom: 2.2em; }
+  padding-top: 2.6em;
+  padding-bottom: 2.6em;
+  margin-top: 2.6em;
+  margin-bottom: 2.6em; }
   .container_dtview .box_dtview_etc {
     position: relative;
     max-width: 780px;
-    width: 92%;
+    width: 100%;
     margin: 0 auto; }
     .container_dtview .box_dtview_etc ul {
       display: grid;
       grid-template-columns: 1fr 4fr;
       grid-gap: 1.4em;
-      margin-bottom: 1.4em; }
+      margin-bottom: 1em; }
       .container_dtview .box_dtview_etc ul:last-child {
         margin-bottom: 0; }
-    .container_dtview .box_dtview_etc li {
-      font-size: 1.2em;
-      font-weight: normal; }
-      .container_dtview .box_dtview_etc li:nth-child(odd) {
+      .container_dtview .box_dtview_etc ul li {
         font-size: 1.2em;
-        font-weight: bold;
-        color: #127C3B; }
-      .container_dtview .box_dtview_etc li .box_dtview_contents ul {
-        display: inline-block;
-        list-style-type: disc;
-        margin-bottom: 0.3em; }
-      .container_dtview .box_dtview_etc li .box_dtview_contents li {
-        font-size: 1em;
-        margin-bottom: 2px; }
-        .container_dtview .box_dtview_etc li .box_dtview_contents li:nth-child(odd) {
-          color: black;
-          font-weight: normal;
-          font-size: 1em; }
+        font-weight: normal;
+        line-height: 1.6em; }
+        .container_dtview .box_dtview_etc ul li:nth-child(odd) {
+          font-size: 1.2em;
+          font-weight: bold;
+          color: #127C3B; }
+        .container_dtview .box_dtview_etc ul li .box_dtview_contents ul {
+          display: inline-block;
+          list-style-type: disc;
+          margin-bottom: 0.2em; }
+          .container_dtview .box_dtview_etc ul li .box_dtview_contents ul li {
+            font-size: 1em;
+            padding-bottom: 3px; }
+            .container_dtview .box_dtview_etc ul li .box_dtview_contents ul li:nth-child(odd) {
+              color: black;
+              font-weight: normal;
+              font-size: 1em; }
+            .container_dtview .box_dtview_etc ul li .box_dtview_contents ul li:last-child {
+              padding-bottom: 0; }
     .container_dtview .box_dtview_etc .box_dtview_subtitle {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em; }
+      padding-top: 1em;
+      padding-bottom: 1em; }
     .container_dtview .box_dtview_etc .dtview_subtitle {
-      font-size: 1.2em;
-      text-align: center;
-      line-height: 1.4em;
+      width: 100%; }
+      .container_dtview .box_dtview_etc .dtview_subtitle ul {
+        display: inline-block; }
+        .container_dtview .box_dtview_etc .dtview_subtitle ul li:first-child {
+          font-size: 2em;
+          font-weight: bold;
+          color: #127C3B;
+          padding-bottom: 0.2em; }
+        .container_dtview .box_dtview_etc .dtview_subtitle ul li:last-child {
+          font-size: 1.4em;
+          line-height: 2em;
+          line-height: 1.6em; }
+    .container_dtview .box_dtview_etc .subtitle_border {
       border-bottom: 1px solid #dedede;
       margin-bottom: 1.4em;
       padding-bottom: 1.4em; }
-      .container_dtview .box_dtview_etc .dtview_subtitle div {
-        font-size: 1.4em;
-        font-weight: bold;
-        color: #127C3B;
-        margin-bottom: 0.5em; }
-    .container_dtview .box_dtview_etc .subtitle_border_none {
-      border: 0;
-      padding-bottom: 0;
-      margin-bottom: 1em; }
+    .container_dtview .box_dtview_etc .subtitle_left {
+      text-align: left; }
     .container_dtview .box_dtview_etc .dtview_subscript {
       border-radius: 1.4em;
-      padding: 1em;
-      text-align: center;
-      margin-bottom: 2.2em;
-      background-color: white;
+      padding: 1em 2em;
+      line-height: 1.6em;
+      margin-top: 1.2em;
+      color: white;
+      background-color: #127C3B;
       font-size: 1.2em; }
+      .container_dtview .box_dtview_etc .dtview_subscript span {
+        color: yellow; }
     .container_dtview .box_dtview_etc .dtview_after {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1.4em;
       color: #127C3B;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-top: 2.6em; }
       .container_dtview .box_dtview_etc .dtview_after ul {
         position: relative;
         display: inline-block; }
@@ -109,16 +119,24 @@ input[type=button]:hover {
         width: 100%; }
         .container_dtview .box_dtview_etc .dtview_after li:nth-child(odd) {
           color: black;
-          font-weight: normal;
-          overflow: hidden;
-          background-repeat: no-repeat; }
+          font-weight: normal; }
         .container_dtview .box_dtview_etc .dtview_after li:first-child {
           height: 250px;
-          background-color: goldenrod; }
+          background-color: goldenrod;
+          overflow: hidden;
+          background-repeat: no-repeat; }
         .container_dtview .box_dtview_etc .dtview_after li:nth-child(2) {
-          padding: 5px 0 2px 0; }
+          font-size: 1.4em;
+          font-weight: bold;
+          color: #127C3B;
+          padding-top: 0.56em; }
         .container_dtview .box_dtview_etc .dtview_after li:last-child {
-          font-weight: normal; }
+          width: 80%;
+          padding-top: 0.2em;
+          line-height: 1.4em;
+          font-weight: normal;
+          word-break: break-word;
+          word-wrap: normal; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .container_dtview .box_dtview_etc li {
@@ -127,6 +145,8 @@ input[type=button]:hover {
       width: 18%;
       min-width: 80px; }
     .container_dtview .box_dtview_etc li:nth-child(even) {
-      width: 80%; } }
+      width: 80%; }
+  .container_dtview .container_dtview:last-child {
+    width: 100%; } }
 
 /*# sourceMappingURL=detail_view.css.map */

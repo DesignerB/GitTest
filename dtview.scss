@@ -1,12 +1,19 @@
+
 @mixin v_center{margin: 0 auto}
-@mixin b_radi{border-radius: $size_nomal;}
-@mixin ver_gutter_padding{padding-top: $size_xlarge; padding-bottom: $size_xlarge;}
-@mixin ver_gutter_margin{margin-top: $size_xlarge; margin-bottom: $size_xlarge;}
-@mixin sq_padding{padding:$type_default;}
+@mixin b_radi{border-radius: $size_normal;}
+@mixin ver_gutter_padding{padding-top: $size_xxlarge; padding-bottom: $size_xxlarge;}
+@mixin ver_gutter_margin{margin-top: $size_xxlarge; margin-bottom: $size_xxlarge;}
+@mixin sq_padding{padding:$size_default $size_xlarge;}
+@mixin top_margin{margin-top:$size_xxlarge;}
+@mixin bt_margin{margin-bottom:$size_default;}
+@mixin textline_default{line-height: $size_large;}
+@mixin textline_large{line-height: $size_large;}
+
+
 @mixin division_line{
     border-bottom: 1px solid $color-gray-border;
-    margin-bottom: $size_nomal;
-    padding-bottom: $size_nomal;
+    margin-bottom: $size_normal;
+    padding-bottom: $size_normal;
 }
 
 @mixin image-container {

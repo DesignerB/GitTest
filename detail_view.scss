@@ -16,85 +16,96 @@ width: 100vw;
     @include b_radi;
     @include ver_gutter_padding;
     @include ver_gutter_margin;
-
     .box_dtview_etc {
         position: relative;
         max-width: 780px;
-        width:92%;
+        width:100%;
         @include v_center;
         ul{
             display: grid;
             grid-template-columns: 1fr 4fr;
-            grid-gap:$size_nomal;
-            margin-bottom: $size_nomal;
+            grid-gap:$size_normal;
+            @include bt_margin;
             &:last-child{
                 margin-bottom: 0;
             } 
-        }
-        li{
-            @include ty_basic;
-            &:nth-child(odd){
-                @include ty_baisc_bold;
-            }
-            &:nth-child(even){
-            }
-            .box_dtview_contents{
-                ul{
-                    display: inline-block;
-                    list-style-type: disc;
-                    margin-bottom: $size_xsmall;
+            li{
+                @include ty_basic;
+                &:nth-child(odd){
+                    @include ty_baisc_bold;
                 }
+                &:nth-child(even){
+                }
+                .box_dtview_contents{
+                    ul{
+                        display: inline-block;
+                        list-style-type: disc;
+                        margin-bottom: $size_xsmall;
+                        li{
+                            font-size: $type_default;
+                            padding-bottom: 3px;
+                            &:nth-child(odd){
+                                color:black;
+                                font-weight: normal;
+                                font-size: $type_default;
+                            }
+                            &:last-child{
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+
+        .box_dtview_subtitle{
+            padding-top: $size_default;
+            padding-bottom: $size_default;
+        }
+
+        .dtview_subtitle{
+            width:100%;
+            ul{
+                display: inline-block;
                 li{
-                    font-size: $type_default;
-                    margin-bottom: 2px;
-                    &:nth-child(odd){
-                        color:black;
-                        font-weight: normal;
-                        font-size: $type_default;
+                    &:first-child{
+                        @include ty_big_title;
+                    }
+                    &:last-child{
+                        @include ty_big_title_sub;
                     }
                 }
             }
         }
 
-        .box_dtview_subtitle{
-            margin-top: $size_small;
-            margin-bottom: $size_small;
-        }
-
-        .dtview_subtitle{
-            font-size: $type_nomal;
-            text-align: center;
-            line-height: $type_big;
-            @include division_line;
-            div{
-                font-size:$type_big; 
-                font-weight: bold;
-                color:$color-main;
-                margin-bottom:$size_small;
-            }
-        }
-
-        .subtitle_border_none{
-            border:0;
-            padding-bottom: 0;
-            margin-bottom: $type_default;
+        .subtitle_border{@include division_line;}
+        .subtitle_left{
+            text-align: left;
         }
 
         .dtview_subscript {
             @include b_radi;
             @include sq_padding;
-            text-align: center;
-            margin-bottom: $size_xlarge;
-            background-color: white;
-            font-size: $type_nomal;
+            @include textline_large;
+            margin-top: $type_normal;
+            color: white;
+            background-color: $color-main;
+            font-size: $type_normal;
+            span{
+                color: $color-main-highlight;
+            }
         }
+
 
         .dtview_after{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: $size_nomal;
+            grid-gap: $size_normal;
             color:$color-main;
             font-weight: bold;
+            @include top_margin;
             ul{
                 position: relative;
                 display: inline-block;
@@ -104,18 +115,23 @@ width: 100vw;
                 &:nth-child(odd){
                     color:black;
                     font-weight: normal;
-                    @include image-container;
                 }
                 &:first-child{
                     height: 250px;
                     background-color:goldenrod;
+                    @include image-container;
                 }
                 &:nth-child(2){
-                    padding: 5px 0 2px 0;
+                    @include ty_big_subtitle;
+                    padding-top: $size_small;
                 }
                 &:last-child{
+                    width:80%;
+                    padding-top: $size_xsmall;
+                    line-height: $size_normal;
                     font-weight: normal;
-                    
+                    word-break: break-word;
+                    word-wrap: normal;
                 }
             }
         }
@@ -139,6 +155,9 @@ width: 100vw;
                     width:80%;
                 }
             }
+        }
+        .container_dtview{
+            &:last-child{width:100%}
         }
     }
 }

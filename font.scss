@@ -1,10 +1,11 @@
 @mixin ty_basic{
-    font-size: $type_nomal;
+    font-size: $type_normal;
     font-weight: normal;
+    @include textline_default;
 }
 
 @mixin ty_baisc_bold{
-    font-size: $type_nomal;
+    font-size: $type_normal;
     font-weight: bold;
     color:$color-main;
 }
@@ -13,9 +14,17 @@
     font-size: $type_bigger;
     font-weight: bold;
     color: $color-main;
+    padding-bottom: $size_xsmall;
 }
+
+@mixin ty_big_title_sub{
+    font-size: $type_big;
+    line-height: $size_xlarge;
+    @include textline_large;
+}
+
 @mixin ty_big_subtitle{
-    font-size: $type_bigger;
+    font-size: $type_big;
     font-weight: bold;
     color: $color-main;
 }
