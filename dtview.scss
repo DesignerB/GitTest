@@ -36,7 +36,10 @@
     margin-bottom: $spline_title-line_margin_bottom;
 }
 
-
+@mixin stroke_title_line{
+    padding: $spline_division-li-stroke-title_padding;
+    background-color: lightcoral;
+}
 //추가닫기
 
 @mixin division_line{
