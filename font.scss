@@ -14,13 +14,11 @@
     font-size: $type_bigger;
     font-weight: bold;
     color: $color-main;
-    padding-bottom: $size_xsmall;
 }
 
 @mixin ty_big_title_sub{
     font-size: $type_big;
     line-height: $size_xlarge;
-    @include textline_large;
 }
 
 @mixin ty_big_subtitle{
@@ -30,8 +28,30 @@
 }
 
 
+//추가분
 
+@mixin typo_basic{
+    font-size: $typo_basic;
+}
 
+@mixin typo_title{
+    font-size: $typo_title;
+    font-weight: bold;
+    color: $color-main;
+}
+
+@mixin typo_title_sub{
+    font-size: $typo_sub;
+}
+
+@mixin style_sentence_title{
+    color: $color-main;
+    font-weight: bold;
+}
+
+@mixin style_sentence_text{
+    list-style: disc;
+}
 
 
 

@@ -4,6 +4,67 @@
 @import "color.scss";
 @import "size.scss";
 
+.cont_default {width: 100vw;}
+.cont_section {
+    width: 100%;
+    max-width: $sc-type02;
+    background-color: $color-gray;
+    @include v_center;
+    @include b_radi;
+    @include ver_gutter_padding;
+    @include ver_gutter_margin;
+}
+.cont_details{
+    position: relative;
+    max-width: 780px;
+    width:100%;
+    @include v_center;
+    @include t_center;
+    .box_title{
+        li{
+            @include t_center;
+            &:first-child{
+                @include typo_title;
+            }
+            &:last-child{
+                @include typo_title_sub;
+            }
+        }
+    }
+    .box_sentence{
+        .chapter_text{
+            @include grid_default;
+            @include grid_colum_word;
+            @include typo_basic;
+            @include t_left;
+            @include top_margin_chapter;
+            line-height: $spline_typo-basic;
+        }
+        .title{
+            @include style_sentence_title;
+        }
+        .text{
+            ul{
+                list-style: disc;
+                li{
+                    margin-bottom: $spline_typo-list;
+                }
+            }
+        }
+    }
+    .box_division{
+        
+    }
+}
+
+.add_line{@include title_line;}
+
+
+
+
+
+
+
 .container_basic {
 width: 100vw;
 }
@@ -19,9 +80,8 @@ width: 100vw;
     .box_dtview_etc {
         @include container_default;
         ul{
-            display: grid;
-            grid-template-columns: 1fr 4fr;
-            grid-gap:$size_normal;
+            @include grid_default;
+            @include grid_colum_word;
             @include bt_margin;
             &:last-child{
                 margin-bottom: 0;
@@ -55,7 +115,6 @@ width: 100vw;
                 }
             }
         }
-        
 
         .box_dtview_subtitle{
             padding-top: $size_default;
@@ -78,9 +137,7 @@ width: 100vw;
         }
 
         .subtitle_border{@include division_line;}
-        .subtitle_left{
-            text-align: left;
-        }
+        .subtitle_center{text-align: center;}
 
         .dtview_subscript {
             @include b_radi;
@@ -95,14 +152,12 @@ width: 100vw;
             }
         }
 
-
-        .dtview_after{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: $size_normal;
+        .division_half{
+            @include grid_default;
+            @include grid_colum_half;
+            @include top_margin;
             color:$color-main;
             font-weight: bold;
-            @include top_margin;
             ul{
                 position: relative;
                 display: inline-block;
@@ -133,68 +188,131 @@ width: 100vw;
             }
         }
 
-
-    }
-}
-
-.box_draw{
-    position: relative;
-    margin: $size_xlarge 0;
-    @include ty_baisc_bold;
-    color: black;
-    .draw_plus{
-        div{
-            background-color: $color-gray-border;
-            margin: 0 auto;
-            &:first-child, &:last-child{
-                width:2px;
-                height:18em;
+        .division_third{
+            @include grid_default;
+            @include grid_colum_third;
+            @include top_margin;
+            color:$color-main;
+            ul{
+                position: relative;
+                display: inline-block;
             }
-            &:nth-child(2){
-                width:77%;
-                height:2px;
+            li{
+                width:100%;
+                text-align: center;
+                &:first-child{
+                    height: 200px;
+                    background-color:green;
+                    @include image-container;
+                }
+                &:last-child{
+                    color: black;
+                    padding-top: $size_default;
+                    line-height: $size_normal;
+                }
+            }
+        }
+
+        .box_draw{
+            position: relative;
+            margin: $size_xlarge 0;
+            @include ty_baisc_bold;
+            color: black;
+            .draw_plus{
+                div{
+                    background-color: $color-gray-border;
+                    margin: 0 auto;
+                    &:first-child, &:last-child{
+                        width:2px;
+                        height:18em;
+                    }
+                    &:nth-child(2){
+                        width:77%;
+                        height:2px;
+                    }
+                }
+            }
+            .draw_text{
+                position: absolute;
+                border-radius : 20px;
+                padding: 4px 12px 6px;
+                background-color: $color-main;
+                color: white;
+            }
+            .draw_text_title{
+                position: absolute;
+                top:47.8%;
             }
         }
     }
-    .draw_text{
-        position: absolute;
-        border-radius : 20px;
-        padding: 4px 12px 6px;
-        background-color: $color-main;
-        color: white;
-    }
-    .draw_text_title{
-        position: absolute;
-        top:47.8%;
-    }
 }
+
+
+
+
+
 
 .container_process{
     @include container_default;
-    @include top_margin;
-    ul{
-        display: grid;
-        grid-template-columns: repeat(4, 2fr);
-        grid-gap:$size_normal;
-        li{
-            text-align: center;
-            margin-bottom: $size_large;
-            div{
-                display: block;
-                @include ty_basic;
-                &:first-child{
-                    width: 130px;
-                    height: 130px;
-                    border-radius: 100px;
-                    background-color: teal;
-                }
-                &:last-child{
-                    margin-top: $size_xsmall;
-                }
-                margin-bottom: $size_xlarge;
-                margin: 0 auto;
+    @include top_margin_min;
+    @include looklike_process;
+    ul{@include grid_colum_quarter;}
+    div{
+        &:last-child{
+            span{
+                background-color: $color-gray-border;
+                padding: 0.5em $size_normal;
+                border-radius: $size_xxlarge;
             }
+        }
+    }
+}
 
+.container_gongji{
+    @include container_default;
+    @include grid_default;
+    @include grid_colum_half;    
+    .box_gongji{
+        @include top_margin;
+        div{
+            &:first-child{ }
+            &:last-child{
+                @include looklike_process;
+                margin-top: $size_large;
+                margin-bottom: 0;
+                ul{
+                    @include grid_colum_half;
+                    grid-gap:0;
+                    li{
+                        div{
+                            &:last-child{
+                                margin-top: 0.8em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .title{
+            padding: 0.45em 0 $size_small 0;
+        }
+        &:first-child{
+            border: 1px solid $color-gray-border;
+            background-color: white;
+            .title{
+                background-color: $color-gray-border;
+                @include ty_big_subtitle;
+                text-align: center;
+            }
+        }
+        &:last-child{
+            border: 1px solid $color-gray-border;
+            background-color: white;
+            .title{
+                background-color: $color-main-highlight;
+                @include ty_big_subtitle;
+                text-align: center;
+            }
         }
     }
 }

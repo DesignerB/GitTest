@@ -1,14 +1,43 @@
-
 @mixin v_center{margin: 0 auto}
 @mixin b_radi{border-radius: $size_normal;}
+
+@mixin t_center{text-align: center;}
+@mixin t_left{text-align: left;}
+
+@mixin top_margin{margin-top:$size_xxlarge;}
+@mixin top_margin_min{margin-top:$size_default;}
+@mixin top_margin_chapter{margin-top:$spline_chapter;}
+@mixin bt_margin{margin-bottom:$size_default;}
+
 @mixin ver_gutter_padding{padding-top: $size_xxlarge; padding-bottom: $size_xxlarge;}
 @mixin ver_gutter_margin{margin-top: $size_xxlarge; margin-bottom: $size_xxlarge;}
+
 @mixin sq_padding{padding:$size_default $size_xlarge;}
-@mixin top_margin{margin-top:$size_xxlarge;}
-@mixin bt_margin{margin-bottom:$size_default;}
+
+
 @mixin textline_default{line-height: $size_large;}
 @mixin textline_large{line-height: $size_large;}
 
+@mixin grid_default{
+    display: grid;
+    grid-gap:$size_xlarge;
+    align-content: center;
+}
+@mixin grid_colum_word{grid-template-columns: 1fr 4fr;}
+@mixin grid_colum_half{grid-template-columns: repeat(2, 2fr);}
+@mixin grid_colum_third{grid-template-columns: repeat(3, 2fr);}
+@mixin grid_colum_quarter{grid-template-columns: repeat(4, 2fr);}
+
+
+//추가한거
+@mixin title_line{
+    border-bottom: 1px solid $color-gray-border;
+    padding-bottom: $spline_title-line_padding_bottom;
+    margin-bottom: $spline_title-line_margin_bottom;
+}
+
+
+//추가닫기
 
 @mixin division_line{
     border-bottom: 1px solid $color-gray-border;
@@ -26,4 +55,36 @@
     max-width: 780px;
     width:100%;
     @include v_center;
+}
+
+
+
+@mixin process_circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-color:lightblue;
+}
+
+@mixin looklike_process{
+    margin-bottom: $size_default;
+    ul{
+        @include grid_default;
+        li{
+            text-align: center;
+            margin-bottom: $size_large;
+            div{
+                display: block;
+                @include ty_basic;
+                &:first-child{
+                    @include process_circle;
+                }
+                &:last-child{
+                    margin-top: $size_normal;
+                }
+                margin-bottom: $size_large;
+                margin: 0 auto;
+            }
+        }
+    }
 }
