@@ -59,12 +59,15 @@
 }
 
 @mixin style_division_title{
-    padding-top:$spline_division-li-title_padding_top;
+    padding-top:$spline_division_pic-title;
 }
 
 @mixin style_division_sub{
-    padding-top:$spline_division-li-sub_padding_top;
+    padding-top:$spline_division_title-sub;
 }
 
+@mixin style_highlight_noaml{
+    font-size: $typo_basic;
+}
 
 

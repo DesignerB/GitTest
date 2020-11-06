@@ -1,12 +1,14 @@
 @mixin v_center{margin: 0 auto}
-@mixin b_radi{border-radius: $size_normal;}
+@mixin b_radi{border-radius: $typo_basic;}
 
 @mixin t_center{text-align: center;}
 @mixin t_left{text-align: left;}
+@mixin t_bold{font-weight: bold;}
 
-@mixin top_margin{margin-top:$size_xxlarge;}
-@mixin top_margin_min{margin-top:$size_default;}
-@mixin top_margin_chapter{margin-top:$spline_chapter;}
+@mixin margin_box-box{margin-top:$margin_box-box;}
+@mixin margin_box-add{margin-top:$margin_box-add;}
+@mixin margin_chapter-chapter{margin-top:$margin_chapter-chapter;}
+
 @mixin bt_margin{margin-bottom:$size_default;}
 
 @mixin ver_gutter_padding{padding-top: $size_xxlarge; padding-bottom: $size_xxlarge;}
@@ -14,14 +16,19 @@
 
 @mixin sq_padding{padding:$size_default $size_xlarge;}
 
-
 @mixin textline_default{line-height: $size_large;}
 @mixin textline_large{line-height: $size_large;}
 
 @mixin grid_default{
     display: grid;
-    grid-gap:$size_xlarge;
+    grid-gap:$grid_colum_nomal;
     align-content: center;
+}
+@mixin grid_box{
+    display: grid;
+    grid-gap:$grid_colum_box_side;
+    align-content: center;
+    padding: $grid_colum_box_ver $grid_colum_box_side;
 }
 @mixin grid_colum_word{grid-template-columns: 1fr 4fr;}
 @mixin grid_colum_half{grid-template-columns: repeat(2, 2fr);}
@@ -32,32 +39,34 @@
 //추가한거
 @mixin title_line{
     border-bottom: 1px solid $color-gray-border;
-    padding-bottom: $spline_title-line_padding_bottom;
-    margin-bottom: $spline_title-line_margin_bottom;
+    padding-bottom: $spline_title_sub-line;
+    margin-bottom: $spline_title_line-box;
 }
 
 @mixin stroke_title_line{
-    padding: $spline_division-li-stroke-title_padding;
+    padding: $spline_stroke_title;
     background-color: lightcoral;
+}
+
+@mixin box_highlight{
+    @include b_radi;
+    padding: $highlight_padding_top $highlight_padding_side $highlight_padding_bottom;
+}
+
+@mixin chapter_default{
+    @include grid_default;
+    @include grid_colum_word;
+    @include typo_basic;
+    @include t_left;
+    @include margin_chapter-chapter;
+    line-height: $line-height_sentence_basic;
 }
 //추가닫기
 
-@mixin division_line{
-    border-bottom: 1px solid $color-gray-border;
-    margin-bottom: $size_normal;
-    padding-bottom: $size_normal;
-}
 
 @mixin image-container {
     overflow: hidden;
     background-repeat: no-repeat;
-}
-
-@mixin container_default{
-    position: relative;
-    max-width: 780px;
-    width:100%;
-    @include v_center;
 }
 
 
@@ -91,3 +100,23 @@
         }
     }
 }
+
+/// 아래 삭제
+
+@mixin container_default{
+    position: relative;
+    max-width: 780px;
+    width:100%;
+    @include v_center;
+}
+
+
+@mixin division_line{
+    border-bottom: 1px solid $color-gray-border;
+    margin-bottom: $size_normal;
+    padding-bottom: $size_normal;
+}
+
+@mixin top_margin{margin-top:$margin_box-box;}
+@mixin top_margin_min{margin-top:$size_default;}
+@mixin top_margin_chapter{margin-top:$spline_chapter;}

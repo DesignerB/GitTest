@@ -33,12 +33,7 @@
     }
     .box_sentence{
         .chapter_text{
-            @include grid_default;
-            @include grid_colum_word;
-            @include typo_basic;
-            @include t_left;
-            @include top_margin_chapter;
-            line-height: $spline_typo-basic;
+            @include chapter_default;
         }
         .title{
             @include style_sentence_title;
@@ -47,7 +42,7 @@
             ul{
                 list-style: disc;
                 li{
-                    margin-bottom: $spline_typo-list;
+                    margin-bottom: $spline_text-list;
                 }
             }
         }
@@ -57,7 +52,7 @@
             height: 220px;
             background-color: #6dd89a;
         }
-        @include top_margin;
+        @include margin_box-box;
         @include typo_basic;
         .half{
             margin:50px 0;
@@ -104,17 +99,31 @@
 
         .stroke{
             background-color: white;
-            .chapter_imagebox{border: 1px solid $color-gray-border; padding-bottom: 1em;}
-            .imagebox_title{@include stroke_title_line;}
+            .chapter_imagebox{
+                border: 1px solid $color-gray-border;
+                .imagebox_title{@include stroke_title_line;}
+                .imagebox_text{ @include grid_box;}
+                .colum_half{@include grid_colum_half;}
+                .colum_third{@include grid_colum_third;}
+            }
         }
 
-
-
+    }
+    .add_box_highlight{
+        @include box_highlight;
+        @include margin_box-add;
+        div{line-height: $hightlight_line-height_typo;}
+        .size_notice{@include typo_title_sub;}
+        .size_text{@include typo_basic;}
+        .left{@include t_left;}
+        .bold{@include t_bold;}
     }
 }
 
 .add_line{@include title_line;}
-
+.fill_color_main{background-color: $color-main; color:white;}
+.fill_color_gray{background-color: $color-gray;}
+.fill_color_white{background-color: white;}
 
 
 

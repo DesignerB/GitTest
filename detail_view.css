@@ -35,7 +35,7 @@ input[type=button]:hover {
   max-width: 1200px;
   background-color: #F9F9F9;
   margin: 0 auto;
-  border-radius: 1.4em;
+  border-radius: 1.2em;
   padding-top: 2.6em;
   padding-bottom: 2.6em;
   margin-top: 2.6em;
@@ -113,16 +113,48 @@ input[type=button]:hover {
     .cont_details .box_division .stroke {
       background-color: white; }
       .cont_details .box_division .stroke .chapter_imagebox {
-        border: 1px solid #dedede;
-        padding-bottom: 1em; }
-      .cont_details .box_division .stroke .imagebox_title {
-        padding: 0.7em;
-        background-color: lightcoral; }
+        border: 1px solid #dedede; }
+        .cont_details .box_division .stroke .chapter_imagebox .imagebox_title {
+          padding: 0.7em;
+          background-color: lightcoral; }
+        .cont_details .box_division .stroke .chapter_imagebox .imagebox_text {
+          display: grid;
+          grid-gap: 1.4em;
+          align-content: center;
+          padding: 1.2em 1.4em; }
+        .cont_details .box_division .stroke .chapter_imagebox .colum_half {
+          grid-template-columns: repeat(2, 2fr); }
+        .cont_details .box_division .stroke .chapter_imagebox .colum_third {
+          grid-template-columns: repeat(3, 2fr); }
+  .cont_details .add_box_highlight {
+    border-radius: 1.2em;
+    padding: 1em 2em 1.3em;
+    margin-top: 1em; }
+    .cont_details .add_box_highlight div {
+      line-height: 1.55em; }
+    .cont_details .add_box_highlight .size_notice {
+      font-size: 1.4em; }
+    .cont_details .add_box_highlight .size_text {
+      font-size: 1.2em; }
+    .cont_details .add_box_highlight .left {
+      text-align: left; }
+    .cont_details .add_box_highlight .bold {
+      font-weight: bold; }
 
 .add_line {
   border-bottom: 1px solid #dedede;
   padding-bottom: 1.3em;
   margin-bottom: 1.7em; }
+
+.fill_color_main {
+  background-color: #127C3B;
+  color: white; }
+
+.fill_color_gray {
+  background-color: #F9F9F9; }
+
+.fill_color_white {
+  background-color: white; }
 
 .container_basic {
   width: 100vw; }
@@ -132,7 +164,7 @@ input[type=button]:hover {
   max-width: 1200px;
   background-color: #F9F9F9;
   margin: 0 auto;
-  border-radius: 1.4em;
+  border-radius: 1.2em;
   padding-top: 2.6em;
   padding-bottom: 2.6em;
   margin-top: 2.6em;
@@ -192,7 +224,7 @@ input[type=button]:hover {
     .container_dtview .box_dtview_etc .subtitle_center {
       text-align: center; }
     .container_dtview .box_dtview_etc .dtview_subscript {
-      border-radius: 1.4em;
+      border-radius: 1.2em;
       padding: 1em 2em;
       line-height: 1.6em;
       margin-top: 1.2em;

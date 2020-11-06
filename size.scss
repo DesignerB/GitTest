@@ -16,14 +16,25 @@ $typo_title: 2em;
 $typo_sub: 1.4em;
 $typo_basic: 1.2em;
 
-$spline_typo-basic: 1.5em;
-$spline_typo-list: 0.3em;
+$margin_box-box:2.6em;
+$margin_box-add:1em;
+$margin_chapter-chapter:0.5em;
 
-$spline_chapter: 0.5em;
+$line-height_sentence_basic:1.5em; // 챕터내 기본 글씨 행간
 
-$spline_title-line_padding_bottom:1.3em;
-$spline_title-line_margin_bottom:1.7em;
+$spline_text-list: 0.3em; // 문장>텍스트>li간 간격
+$spline_title_sub-line:1.3em;
+$spline_title_line-box:1.7em;
 
-$spline_division-li-title_padding_top:0.55em;
-$spline_division-li-sub_padding_top:0.2em;
-$spline_division-li-stroke-title_padding:0.7em;
+$spline_division_pic-title:0.55em;
+$spline_division_title-sub:0.2em;
+$spline_stroke_title:0.7em; // 테두리 쳐진 박스의 제목 상하 간격
+
+$grid_colum_nomal:2em;
+$grid_colum_box_side:1.4em;
+$grid_colum_box_ver:1.2em;
+
+$highlight_padding_top:1em;
+$highlight_padding_side:2em;
+$highlight_padding_bottom:1.3em;
+$hightlight_line-height_typo:1.55em;
