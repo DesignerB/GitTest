@@ -1,28 +1,29 @@
-$type_default:1em;
-$type_normal:1.2em;
-$type_big:1.4em;
-$type_bigger:2em;
+//전체 컨테이너 넓이
+$frame_width: 1200px;
 
-$size_xsmall:0.2em;
-$size_small:0.56em;
-$size_default:1em;
-$size_normal:1.4em;
-$size_large:1.6em;
-$size_xlarge:2em;
-$size_xxlarge:2.6em;
+// 전체 컨테이너 마진, 패딩 값
+$frame_space: 2.6em; 
+$frame_space_narrow:1.2em;
 
-// 추가분
+//section 최대 넓이
+$sec_width: 780px;
+
+// 텍스트 사이즈
 $typo_title: 2em;
+$typo_title_mid:1.6em;
 $typo_sub: 1.4em;
 $typo_basic: 1.2em;
 
+//박스간 간격
 $margin_box-box:2.6em;
 $margin_box-add:1em;
 $margin_chapter-chapter:0.5em;
 
-$line-height_sentence_basic:1.5em; // 챕터내 기본 글씨 행간
+// 챕터내 기본 글씨 행간
+$line-height_sentence_basic:1.5em; 
 
-$spline_text-list: 0.3em; // 문장>텍스트>li간 간격
+// 문장>텍스트>li간 간격
+$spline_text-list: 0.3em; 
 $spline_title_sub-line:1.3em;
 $spline_title_line-box:1.7em;
 
@@ -30,6 +31,8 @@ $spline_division_pic-title:0.55em;
 $spline_division_title-sub:0.2em;
 $spline_stroke_title:0.7em; // 테두리 쳐진 박스의 제목 상하 간격
 
+
+//그리드 
 $grid_colum_nomal:2em;
 $grid_colum_box_side:1.4em;
 $grid_colum_box_ver:1.2em;

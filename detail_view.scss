@@ -4,406 +4,168 @@
 @import "color.scss";
 @import "size.scss";
 
-.cont_default {width: 100vw;}
-.cont_section {
+//프레임을 잡습니다. 프레임 가로넓이는 size.scss에서! 현재는 1200px
+.windows {width: 100vw;}
+.frame {
     width: 100%;
-    max-width: $sc-type02;
+    max-width: $frame_width;
     background-color: $color-gray;
     @include v_center;
     @include b_radi;
-    @include ver_gutter_padding;
-    @include ver_gutter_margin;
+    @include frame_margin_default;
 }
-.cont_details{
-    position: relative;
-    max-width: 780px;
-    width:100%;
+.frame_margin_narrow {
+    width: 100%;
+    max-width: $frame_width;
+    background-color: $color-gray;
     @include v_center;
-    @include t_center;
-    .box_title{
-        li{
-            @include t_center;
-            &:first-child{
-                @include typo_title;
+    @include b_radi;
+    @include frame_margin_narrow;
+}
+
+
+//모듈화 01depth
+.sec_ad{
+    @include sec_default;
+    .box_ad{
+        .chapter_ad{
+            @include grid_default;
+            @include grid_colum_ad;
+            @include t_left;
+            @include margin_chapter-chapter;
+            line-height: $line-height_sentence_basic;
+            .scene_imagebox{
+                position: relative;
+                .pic{
+                    position: absolute;
+                }
             }
-            &:last-child{
-                @include typo_title_sub;
+            .scene_textbox{
+                li{margin-bottom: $spline_text-list;}
+                .title{@include style_typo_ad_title;}
+                .sub{@include typo_basic;}
+                .money{@include typo_money; padding-top: 0.5em;}
             }
         }
+    }
+}
+
+.sec_product{
+    @include sec_default;
+    .box_title{
+        .title{@include t_center; @include typo_title;}
+        .sub{@include t_center; @include typo_title_sub;}
     }
     .box_sentence{
         .chapter_text{
             @include chapter_default;
-        }
-        .title{
-            @include style_sentence_title;
-        }
-        .text{
-            ul{
-                list-style: disc;
-                li{
-                    margin-bottom: $spline_text-list;
+            .title{@include style_sentence_title;}
+            .text{
+                ul{
+                    list-style: disc;
+                    li{
+                        margin-bottom: $spline_text-list;
+                    }
                 }
             }
-        }
+        }        
     }
     .box_division{
-        @mixin text_box_status{
-            height: 220px;
-            background-color: #6dd89a;
-        }
         @include margin_box-box;
         @include typo_basic;
-        .half{
+        .chapter_pt{
+            .pic{@include box_pic;}
+            .title{@include style_division_title;}
+        }
+        .chapter_pts{
+            @include t_left;
+            .pic{@include box_pic; background-color: lightblue;}
+            .title{@include typo_division_title; @include style_division_title;}
+            .sub{@include style_division_sub;}
+        }
+
+        .cut_half{
             margin:50px 0;
             @include grid_default;
             @include grid_colum_half;
         }
-        .third{
+        .cut_third{
             margin:50px 0;
             @include grid_default;
             @include grid_colum_third;
         }
-        .quarter{
+        .cut_quarter{
             margin:50px 0;
             @include grid_default;
             @include grid_colum_quarter;
         }
 
-        .text_two{
-            li{
-                &:first-child{
-                    @include text_box_status;
-                }
-                &:last-child{
-                    @include style_division_title;
-                }
-            }
-        }
-        .text_three{
-            @include t_left;
-            .title{
-                @include typo_division_title;
-                @include style_division_title;
-            }
-            li{
-                &:first-child{
-                    @include text_box_status;
-                    background-color: lightblue;
-                }
-                &:last-child{
-                    @include style_division_sub;
-                }
-            }
-        }
-
-        .stroke{
+        .add_stroke{
             background-color: white;
-            .chapter_imagebox{
-                border: 1px solid $color-gray-border;
-                .imagebox_title{@include stroke_title_line;}
-                .imagebox_text{ @include grid_box;}
+            .scene_imagebox{
+                .imagebox_title{@include grid_title_box;}
+                .imagebox_title_correct{@include grid_title_correct;}
+                .imagebox_title_wrong{@include grid_title_wrong;}
+                .imagebox_text{ @include grid_box; }
                 .colum_half{@include grid_colum_half;}
                 .colum_third{@include grid_colum_third;}
             }
         }
-
     }
-    .add_box_highlight{
-        @include box_highlight;
+    .box_highlight{
+        @include add_box_highlight;
         @include margin_box-add;
         div{line-height: $hightlight_line-height_typo;}
-        .size_notice{@include typo_title_sub;}
-        .size_text{@include typo_basic;}
-        .left{@include t_left;}
-        .bold{@include t_bold;}
+        .chapter_notice{@include typo_title_sub;}
+        .chapter_text{@include typo_basic;}
     }
 }
 
-.add_line{@include title_line;}
+.sec_graph{
+    @include sec_default;
+    .box_graph{
+        position: relative;
+        margin: 2em 0;
+        @include typo_title;
+        color: black;
+        .chapter_xy{
+            div{
+                background-color: $color-gray-border;
+                margin: 0 auto;
+                &:first-child, &:last-child{
+                    width:2px;
+                    height:18em;
+                }
+                &:nth-child(2){
+                    width:77%;
+                    height:2px;
+                }
+            }
+        }
+        .draw_text{
+            position: absolute;
+            border-radius : 20px;
+            padding: 4px 12px 6px;
+            background-color: $color-main;
+            color: white;
+        }
+        .draw_text_title{
+            position: absolute;
+            top:47.8%;
+        }
+    }
+}
+
+
+
 .fill_color_main{background-color: $color-main; color:white;}
 .fill_color_gray{background-color: $color-gray;}
 .fill_color_white{background-color: white;}
 
-
-
-
-
-
-.container_basic {
-width: 100vw;
-}
-
-.container_dtview {
-    width: 100%;
-    max-width: $sc-type02;
-    background-color: $color-gray;
-    @include v_center;
-    @include b_radi;
-    @include ver_gutter_padding;
-    @include ver_gutter_margin;
-    .box_dtview_etc {
-        @include container_default;
-        ul{
-            @include grid_default;
-            @include grid_colum_word;
-            @include bt_margin;
-            &:last-child{
-                margin-bottom: 0;
-            } 
-            li{
-                @include ty_basic;
-                &:nth-child(odd){
-                    @include ty_baisc_bold;
-                }
-                &:nth-child(even){
-                }
-                .box_dtview_contents{
-                    ul{
-                        display: inline-block;
-                        list-style-type: disc;
-                        margin-bottom: $size_xsmall;
-                        li{
-                            font-size: $type_default;
-                            padding-bottom: 3px;
-                            &:nth-child(odd){
-                                color:black;
-                                font-weight: normal;
-                                font-size: $type_default;
-                            }
-                            &:last-child{
-                                padding-bottom: 0;
-                            }
-                        }
-                    }
-                    
-                }
-            }
-        }
-
-        .box_dtview_subtitle{
-            padding-top: $size_default;
-            padding-bottom: $size_default;
-        }
-
-        .dtview_subtitle{
-            width:100%;
-            ul{
-                display: inline-block;
-                li{
-                    &:first-child{
-                        @include ty_big_title;
-                    }
-                    &:last-child{
-                        @include ty_big_title_sub;
-                    }
-                }
-            }
-        }
-
-        .subtitle_border{@include division_line;}
-        .subtitle_center{text-align: center;}
-
-        .dtview_subscript {
-            @include b_radi;
-            @include sq_padding;
-            @include textline_large;
-            margin-top: $type_normal;
-            color: white;
-            background-color: $color-main;
-            font-size: $type_normal;
-            span{
-                color: $color-main-highlight;
-            }
-        }
-
-        .division_half{
-            @include grid_default;
-            @include grid_colum_half;
-            @include top_margin;
-            color:$color-main;
-            font-weight: bold;
-            ul{
-                position: relative;
-                display: inline-block;
-            }
-            li{
-                width:100%;
-                &:nth-child(odd){
-                    color:black;
-                    font-weight: normal;
-                }
-                &:first-child{
-                    height: 250px;
-                    background-color:goldenrod;
-                    @include image-container;
-                }
-                &:nth-child(2){
-                    @include ty_big_subtitle;
-                    padding-top: $size_small;
-                }
-                &:last-child{
-                    width:80%;
-                    padding-top: $size_xsmall;
-                    line-height: $size_normal;
-                    font-weight: normal;
-                    word-break: break-word;
-                    word-wrap: normal;
-                }
-            }
-        }
-
-        .division_third{
-            @include grid_default;
-            @include grid_colum_third;
-            @include top_margin;
-            color:$color-main;
-            ul{
-                position: relative;
-                display: inline-block;
-            }
-            li{
-                width:100%;
-                text-align: center;
-                &:first-child{
-                    height: 200px;
-                    background-color:green;
-                    @include image-container;
-                }
-                &:last-child{
-                    color: black;
-                    padding-top: $size_default;
-                    line-height: $size_normal;
-                }
-            }
-        }
-
-        .box_draw{
-            position: relative;
-            margin: $size_xlarge 0;
-            @include ty_baisc_bold;
-            color: black;
-            .draw_plus{
-                div{
-                    background-color: $color-gray-border;
-                    margin: 0 auto;
-                    &:first-child, &:last-child{
-                        width:2px;
-                        height:18em;
-                    }
-                    &:nth-child(2){
-                        width:77%;
-                        height:2px;
-                    }
-                }
-            }
-            .draw_text{
-                position: absolute;
-                border-radius : 20px;
-                padding: 4px 12px 6px;
-                background-color: $color-main;
-                color: white;
-            }
-            .draw_text_title{
-                position: absolute;
-                top:47.8%;
-            }
-        }
-    }
-}
-
-
-
-
-
-
-.container_process{
-    @include container_default;
-    @include top_margin_min;
-    @include looklike_process;
-    ul{@include grid_colum_quarter;}
-    div{
-        &:last-child{
-            span{
-                background-color: $color-gray-border;
-                padding: 0.5em $size_normal;
-                border-radius: $size_xxlarge;
-            }
-        }
-    }
-}
-
-.container_gongji{
-    @include container_default;
-    @include grid_default;
-    @include grid_colum_half;    
-    .box_gongji{
-        @include top_margin;
-        div{
-            &:first-child{ }
-            &:last-child{
-                @include looklike_process;
-                margin-top: $size_large;
-                margin-bottom: 0;
-                ul{
-                    @include grid_colum_half;
-                    grid-gap:0;
-                    li{
-                        div{
-                            &:last-child{
-                                margin-top: 0.8em;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .title{
-            padding: 0.45em 0 $size_small 0;
-        }
-        &:first-child{
-            border: 1px solid $color-gray-border;
-            background-color: white;
-            .title{
-                background-color: $color-gray-border;
-                @include ty_big_subtitle;
-                text-align: center;
-            }
-        }
-        &:last-child{
-            border: 1px solid $color-gray-border;
-            background-color: white;
-            .title{
-                background-color: $color-main-highlight;
-                @include ty_big_subtitle;
-                text-align: center;
-            }
-        }
-    }
-}
-
+.insert_line_title{@include insert_title_line;}
+.insert_line{@include insert_line;}
 
 // ms explorer11일떄
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
     ul{padding: 0;}
-    
-    .container_process{
-        margin: 0 auto;
-        li{
-            float: left;
-            padding-left:45px;
-            &:first-child, &:nth-child(5){
-                padding-left: 0;
-            }
-        }
-    }
-
-    .container_dtview .box_dtview_etc .dtview_after ul {
-        display: block; 
-        margin-bottom: 50px;
-        &:last-child{
-            margin-bottom: 0;
-        }
-    }
-    .container_dtview .box_dtview_etc ul li .box_dtview_contents li { margin-left: 5%;}
 }

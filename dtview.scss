@@ -1,56 +1,32 @@
+
+// basic control
 @mixin v_center{margin: 0 auto}
 @mixin b_radi{border-radius: $typo_basic;}
-
 @mixin t_center{text-align: center;}
 @mixin t_left{text-align: left;}
 @mixin t_bold{font-weight: bold;}
 
-@mixin margin_box-box{margin-top:$margin_box-box;}
-@mixin margin_box-add{margin-top:$margin_box-add;}
-@mixin margin_chapter-chapter{margin-top:$margin_chapter-chapter;}
-
-@mixin bt_margin{margin-bottom:$size_default;}
-
-@mixin ver_gutter_padding{padding-top: $size_xxlarge; padding-bottom: $size_xxlarge;}
-@mixin ver_gutter_margin{margin-top: $size_xxlarge; margin-bottom: $size_xxlarge;}
-
-@mixin sq_padding{padding:$size_default $size_xlarge;}
-
-@mixin textline_default{line-height: $size_large;}
-@mixin textline_large{line-height: $size_large;}
-
-@mixin grid_default{
-    display: grid;
-    grid-gap:$grid_colum_nomal;
-    align-content: center;
-}
-@mixin grid_box{
-    display: grid;
-    grid-gap:$grid_colum_box_side;
-    align-content: center;
-    padding: $grid_colum_box_ver $grid_colum_box_side;
-}
-@mixin grid_colum_word{grid-template-columns: 1fr 4fr;}
-@mixin grid_colum_half{grid-template-columns: repeat(2, 2fr);}
-@mixin grid_colum_third{grid-template-columns: repeat(3, 2fr);}
-@mixin grid_colum_quarter{grid-template-columns: repeat(4, 2fr);}
-
-
-//추가한거
-@mixin title_line{
-    border-bottom: 1px solid $color-gray-border;
-    padding-bottom: $spline_title_sub-line;
-    margin-bottom: $spline_title_line-box;
+//frame_margin_default
+@mixin frame_margin_default{
+    padding-top: $frame_space;
+    padding-bottom: $frame_space;
+    margin-top: $frame_space;
+    margin-bottom: $frame_space;
 }
 
-@mixin stroke_title_line{
-    padding: $spline_stroke_title;
-    background-color: lightcoral;
+@mixin frame_margin_narrow{
+    padding-top: $frame_space_narrow;
+    padding-bottom: $frame_space_narrow;
+    margin-top: $frame_space_narrow;
+    margin-bottom: $frame_space_narrow;
 }
 
-@mixin box_highlight{
-    @include b_radi;
-    padding: $highlight_padding_top $highlight_padding_side $highlight_padding_bottom;
+@mixin sec_default{
+    position: relative;
+    max-width: $sec_width;
+    width:100%;
+    @include v_center;
+    @include t_center;
 }
 
 @mixin chapter_default{
@@ -61,62 +37,72 @@
     @include margin_chapter-chapter;
     line-height: $line-height_sentence_basic;
 }
-//추가닫기
 
-
-@mixin image-container {
-    overflow: hidden;
-    background-repeat: no-repeat;
+@mixin box_pic {
+    height: 220px;
+    background-color: #6dd89a;
 }
 
 
+//area margin
+@mixin margin_box-box{margin-top:$margin_box-box;}
+@mixin margin_box-add{margin-top:$margin_box-add;}
+@mixin margin_chapter-chapter{margin-top:$margin_chapter-chapter;}
 
-@mixin process_circle{
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-    background-color:lightblue;
+
+//Grid Status
+@mixin grid_default{
+    display: grid;
+    grid-gap:$grid_colum_nomal;
+    align-content: center;
 }
-
-@mixin looklike_process{
-    margin-bottom: $size_default;
-    ul{
-        @include grid_default;
-        li{
-            text-align: center;
-            margin-bottom: $size_large;
-            div{
-                display: block;
-                @include ty_basic;
-                &:first-child{
-                    @include process_circle;
-                }
-                &:last-child{
-                    margin-top: $size_normal;
-                }
-                margin-bottom: $size_large;
-                margin: 0 auto;
-            }
-        }
-    }
+@mixin grid_title_box{
+    padding: $spline_stroke_title;
+    @include grid_box_border;
+    border-bottom: 0;
+    background-color: $color-gray-hover;
 }
-
-/// 아래 삭제
-
-@mixin container_default{
-    position: relative;
-    max-width: 780px;
-    width:100%;
-    @include v_center;
+@mixin grid_title_correct{
+    @include grid_title_box;
+    background-color: $color-gridbox_title_corret;
+    color:white;
 }
+@mixin grid_title_wrong{
+    @include grid_title_box;
+    background-color: $color-gridbox_title_wrong;
+    color:white;
+}
+@mixin grid_box{
+    display: grid;
+    grid-gap:$grid_colum_box_side;
+    align-content: center;
+    padding: $grid_colum_box_ver $grid_colum_box_side;
+    @include grid_box_border;
+    border-top: 0;
+}
+@mixin grid_box_border{border:1px solid $color-gray-border;}
+@mixin grid_colum_ad{grid-template-columns: 2fr 4fr;}
+@mixin grid_colum_word{grid-template-columns: 1fr 4fr;}
+@mixin grid_colum_half{grid-template-columns: repeat(2, 2fr);}
+@mixin grid_colum_third{grid-template-columns: repeat(3, 2fr);}
+@mixin grid_colum_quarter{grid-template-columns: repeat(4, 2fr);}
 
 
-@mixin division_line{
+
+
+
+
+// 추가요소 (중복 클래스 사용)
+@mixin insert_line{
     border-bottom: 1px solid $color-gray-border;
-    margin-bottom: $size_normal;
-    padding-bottom: $size_normal;
+}
+@mixin insert_title_line{
+    border-bottom: 1px solid $color-gray-border;
+    padding-bottom: $spline_title_sub-line;
+    margin-bottom: $spline_title_line-box;
 }
 
-@mixin top_margin{margin-top:$margin_box-box;}
-@mixin top_margin_min{margin-top:$size_default;}
-@mixin top_margin_chapter{margin-top:$spline_chapter;}
+@mixin add_box_highlight{
+    @include b_radi;
+    padding: $highlight_padding_top $highlight_padding_side $highlight_padding_bottom;
+}

@@ -1,35 +1,4 @@
-@mixin ty_basic{
-    font-size: $type_normal;
-    font-weight: normal;
-    @include textline_default;
-}
-
-@mixin ty_baisc_bold{
-    font-size: $type_normal;
-    font-weight: bold;
-    color:$color-main;
-}
-
-@mixin ty_big_title{
-    font-size: $type_bigger;
-    font-weight: bold;
-    color: $color-main;
-}
-
-@mixin ty_big_title_sub{
-    font-size: $type_big;
-    line-height: $size_xlarge;
-}
-
-@mixin ty_big_subtitle{
-    font-size: $type_big;
-    font-weight: bold;
-    color: $color-main;
-}
-
-
-//추가분
-
+//글꼴 속성
 @mixin typo_basic{
     font-size: $typo_basic;
 }
@@ -42,6 +11,7 @@
 
 @mixin typo_title_sub{
     font-size: $typo_sub;
+    line-height: $line-height_sentence_basic;
 }
 
 @mixin typo_division_title{
@@ -50,12 +20,22 @@
     color: $color-main;
 }
 
+@mixin typo_money {
+    font-size: $typo_sub;
+    font-weight: bold;
+}
 
-
+//구역별 추가 스타일
+@mixin style_typo_ad_title{
+    font-size: $typo_title_mid;
+    font-weight: bold;
+    color: $color-main;
+}
 
 @mixin style_sentence_title{
     color: $color-main;
     font-weight: bold;
+    line-height: $line-height_sentence_basic;
 }
 
 @mixin style_division_title{
@@ -69,5 +49,4 @@
 @mixin style_highlight_noaml{
     font-size: $typo_basic;
 }
-
 
