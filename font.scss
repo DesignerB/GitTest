@@ -1,4 +1,9 @@
 //글꼴 속성
+@mixin typo_default{
+    font-size: $typo_default;
+    letter-spacing: $LetterSpacingDefault;
+}
+
 @mixin typo_basic{
     font-size: $typo_basic;
 }
@@ -7,11 +12,13 @@
     font-size: $typo_title;
     font-weight: bold;
     color: $color-main;
+    letter-spacing: $LetterSpacingTitle;
 }
 
 @mixin typo_title_sub{
     font-size: $typo_sub;
-    line-height: $line-height_sentence_basic;
+    line-height: $line-height_sentence_sub;
+    letter-spacing: $LetterSpacingSub;
 }
 
 @mixin typo_division_title{
@@ -21,16 +28,16 @@
 }
 
 @mixin typo_money {
-    font-size: $typo_sub;
+    font-size: $typo_default;
     font-weight: bold;
 }
 
 //구역별 추가 스타일
-@mixin style_typo_ad_title{
-    font-size: $typo_title_mid;
-    font-weight: bold;
-    color: $color-main;
+@mixin ad_typo_text{
+    @include typo_title;
+    color:$color-ad_title;
 }
+
 
 @mixin style_sentence_title{
     color: $color-main;

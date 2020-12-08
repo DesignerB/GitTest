@@ -30,16 +30,20 @@
 }
 
 @mixin chapter_default{
-    @include grid_default;
+    @include grid_textbox;
     @include grid_colum_word;
-    @include typo_basic;
     @include t_left;
-    @include margin_chapter-chapter;
     line-height: $line-height_sentence_basic;
 }
 
 @mixin box_pic {
     height: 220px;
+    background-color: #6dd89a;
+}
+
+@mixin pic_size_small{
+    with:100%;
+    height: 10em;
     background-color: #6dd89a;
 }
 
@@ -51,11 +55,31 @@
 
 
 //Grid Status
+
+@mixin grid_box_border{border:1px solid $color-gray-border;}
+@mixin grid_border_correct{border:1px solid $color-gridbox_title_corret;}
+@mixin grid_border_wrong{border:1px solid $color-gridbox_title_wrong;}
+
+
+@mixin grid_colum_ad{grid-template-columns: 2fr 4fr;}
+@mixin grid_colum_word{grid-template-columns: 1fr 4fr;}
+@mixin grid_colum_half{grid-template-columns: repeat(2, 2fr);}
+@mixin grid_colum_third{grid-template-columns: repeat(3, 2fr);}
+@mixin grid_colum_quarter{grid-template-columns: repeat(4, 2fr);}
+@mixin grid_colum_one-third{grid-template-columns: 1fr 3fr;}
+
+
+
 @mixin grid_default{
     display: grid;
     grid-gap:$grid_colum_nomal;
     align-content: center;
 }
+@mixin grid_textbox{
+    @include grid_default;
+    grid-gap:$grid_colum_textbox;
+}
+
 @mixin grid_title_box{
     padding: $spline_stroke_title;
     @include grid_box_border;
@@ -64,28 +88,39 @@
 }
 @mixin grid_title_correct{
     @include grid_title_box;
+    @include grid_border_correct;
+    border-radius: $grid_border_radius_top;
     background-color: $color-gridbox_title_corret;
     color:white;
 }
 @mixin grid_title_wrong{
     @include grid_title_box;
+    @include grid_border_wrong;
+    border-radius: $grid_border_radius_top;
     background-color: $color-gridbox_title_wrong;
     color:white;
 }
-@mixin grid_box{
+@mixin grid_box{    
     display: grid;
     grid-gap:$grid_colum_box_side;
     align-content: center;
-    padding: $grid_colum_box_ver $grid_colum_box_side;
-    @include grid_box_border;
-    border-top: 0;
+    padding: $grid_colum_box_top $grid_colum_box_side $grid_colum_box_bottom;
+    border-top: 0;    
 }
-@mixin grid_box_border{border:1px solid $color-gray-border;}
-@mixin grid_colum_ad{grid-template-columns: 2fr 4fr;}
-@mixin grid_colum_word{grid-template-columns: 1fr 4fr;}
-@mixin grid_colum_half{grid-template-columns: repeat(2, 2fr);}
-@mixin grid_colum_third{grid-template-columns: repeat(3, 2fr);}
-@mixin grid_colum_quarter{grid-template-columns: repeat(4, 2fr);}
+@mixin grid_box_correct{
+    @include grid_box;
+    @include grid_border_correct;
+    border-radius: $grid_border_radius_bottom;
+    background-color: white;
+    
+}
+@mixin grid_box_wrong{
+    @include grid_box;
+    @include grid_border_wrong;
+    border-radius: $grid_border_radius_bottom;
+    background-color: white;
+}
+
 
 
 
@@ -96,8 +131,12 @@
 @mixin insert_line{
     border-bottom: 1px solid $color-gray-border;
 }
+@mixin insert_line_margin_narrow{
+    @include insert_line;
+    padding-bottom:0.7em;
+}
 @mixin insert_title_line{
-    border-bottom: 1px solid $color-gray-border;
+    @include insert_line;
     padding-bottom: $spline_title_sub-line;
     margin-bottom: $spline_title_line-box;
 }
@@ -105,4 +144,5 @@
 @mixin add_box_highlight{
     @include b_radi;
     padding: $highlight_padding_top $highlight_padding_side $highlight_padding_bottom;
+    margin-bottom: $highlight_padding_bottom;
 }

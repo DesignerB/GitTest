@@ -5,7 +5,7 @@
 @import "size.scss";
 
 //프레임을 잡습니다. 프레임 가로넓이는 size.scss에서! 현재는 1200px
-.windows {width: 100vw;}
+.windows {width: 100vw; @include typo_default;}
 .frame {
     width: 100%;
     max-width: $frame_width;
@@ -13,6 +13,7 @@
     @include v_center;
     @include b_radi;
     @include frame_margin_default;
+
 }
 .frame_margin_narrow {
     width: 100%;
@@ -42,9 +43,9 @@
             }
             .scene_textbox{
                 li{margin-bottom: $spline_text-list;}
-                .title{@include style_typo_ad_title;}
-                .sub{@include typo_basic;}
-                .money{@include typo_money; padding-top: 0.5em;}
+                .title{@include ad_typo_text;}
+                .sub{@include typo_title_sub;}
+                .money{@include typo_money; padding-top: $margin_boxSub-box;}
             }
         }
     }
@@ -53,11 +54,18 @@
 .sec_product{
     @include sec_default;
     .box_title{
+        @include t_left;
+        width: 100%;
         .title{@include t_center; @include typo_title;}
-        .sub{@include t_center; @include typo_title_sub;}
+        .sub{@include t_center; @include typo_title_sub; margin-top:$margin_boxSub-box;}
+        ul{width:100%;
+            li{}
+        }
+
     }
     .box_sentence{
-        .chapter_text{
+        margin-top:$margin_box-box;
+        .chapter_textbox{
             @include chapter_default;
             .title{@include style_sentence_title;}
             .text{
@@ -71,8 +79,7 @@
         }        
     }
     .box_division{
-        @include margin_box-box;
-        @include typo_basic;
+        margin-top:$margin_box-box;
         .chapter_pt{
             .pic{@include box_pic;}
             .title{@include style_division_title;}
@@ -85,12 +92,10 @@
         }
 
         .cut_half{
-            margin:50px 0;
             @include grid_default;
             @include grid_colum_half;
         }
-        .cut_third{
-            margin:50px 0;
+        .cut_third{            
             @include grid_default;
             @include grid_colum_third;
         }
@@ -99,17 +104,33 @@
             @include grid_default;
             @include grid_colum_quarter;
         }
+        .cut_one-third{
+            @include grid_default;
+            @include grid_colum_one-third;
+        }
 
-        .add_stroke{
-            background-color: white;
-            .scene_imagebox{
-                .imagebox_title{@include grid_title_box;}
-                .imagebox_title_correct{@include grid_title_correct;}
-                .imagebox_title_wrong{@include grid_title_wrong;}
-                .imagebox_text{ @include grid_box; }
-                .colum_half{@include grid_colum_half;}
-                .colum_third{@include grid_colum_third;}
+        .scene_imagebox{
+            .imagebox_title{@include grid_title_box;}
+            .imagebox_title_correct{@include grid_title_correct;}
+            .imagebox_title_wrong{@include grid_title_wrong;}
+            .imagebox_text{ 
+                @include grid_box;
+                .pic_size_small{@include pic_size_small;}
             }
+            .imagebox_text_correct{ 
+                @include grid_box_correct;
+                .pic_size_small{@include pic_size_small;}
+                .title{color:$color-gridbox_title_corret; font-weight: bold;}
+            }
+            .imagebox_text_wrong{ 
+                @include grid_box_wrong;
+                .pic_size_small{@include pic_size_small;}
+                .title{color:$color-gridbox_title_wrong; font-weight: bold;}
+            }
+            
+
+            .colum_half{@include grid_colum_half;}
+            .colum_third{@include grid_colum_third;}
         }
     }
     .box_highlight{
@@ -117,7 +138,7 @@
         @include margin_box-add;
         div{line-height: $hightlight_line-height_typo;}
         .chapter_notice{@include typo_title_sub;}
-        .chapter_text{@include typo_basic;}
+        .chapter_textbox{}
     }
 }
 
@@ -142,30 +163,63 @@
                 }
             }
         }
-        .draw_text{
+        .draw_cirlce{
             position: absolute;
             border-radius : 20px;
             padding: 4px 12px 6px;
             background-color: $color-main;
             color: white;
         }
-        .draw_text_title{
+        .draw_label_lr{
             position: absolute;
             top:47.8%;
+        }
+        .draw_labe_tb{
+
         }
     }
 }
 
+.insert_margin_info{margin: 2em 0 1.5em;}
 
 
 .fill_color_main{background-color: $color-main; color:white;}
 .fill_color_gray{background-color: $color-gray;}
+.fill_color_darkgray{background-color: #E0E0E0;}
 .fill_color_white{background-color: white;}
+.stroke_color_brown{border: 1px solid #C98414;}
 
 .insert_line_title{@include insert_title_line;}
 .insert_line{@include insert_line;}
+.insert_line_margin_narrow{@include insert_line_margin_narrow;}
 
-// ms explorer11일떄
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
-    ul{padding: 0;}
-}
+// ms explorer 전용 css코드
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Enter your style code */
+   }
+    
+   /* IE6,7,9,10 */
+   @media screen and (min-width: 640px), screen\9 {
+    /* Enter your style code */
+   }
+    
+   /* IE6,7 */
+   @media screen\9 {
+    /* Enter your style code */
+   }
+    
+   /* IE8 */
+   @media \0screen {
+    /* Enter your style code */
+   }
+    
+   /* IE6,7,8 */
+   @media \0screen\,screen\9 {
+    /* Enter your style code */
+   }
+    
+   /* IE9,10 */
+   @media screen and (min-width:0\0){
+    /* Enter your style code */
+   } 
