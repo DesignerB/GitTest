@@ -2,8 +2,10 @@
 $frame_width: 980px;
 
 // 전체 컨테이너 마진, 패딩 값
-$frame_space: 2.6em; 
-$frame_space_narrow:1.2em;
+$frame_space: 2.5em;
+$frame_space_bottom: 2.7em;
+$frame_space_narrow:1em;
+$frame_space_narrow_bottom:1.3em;
 
 //section 최대 넓이
 $sec_width: 760px;
@@ -28,7 +30,7 @@ $margin_boxSub-box:0.5em;
 
 
 // 챕터내 기본 글씨 행간
-$line-height_sentence_basic:1.6em; 
+$line-height_sentence_basic:1.38em; 
 $line-height_sentence_sub:1.52em; 
 
 
@@ -36,7 +38,7 @@ $line-height_sentence_sub:1.52em;
 
 
 // 문장>텍스트>li간 간격
-$spline_text-list: 0.05em; 
+$spline_text-list: 0.5em; 
 $spline_title_sub-line:1.3em;
 $spline_title_line-box:1.7em;
 
@@ -60,3 +62,11 @@ $highlight_padding_bottom:1em;
 $hightlight_line-height_typo:1.55em;
 
 
+//IE10+
+$ie10_imagebox:85%;
+$ie10_imagebox_ul:30%;
+$ie10_imagebox_text:0.2em;
+$ie10_spline_stroke_title:0.7em;
+
+$ie10_width_frame:94%;
+$ie10_width_box:90%;
