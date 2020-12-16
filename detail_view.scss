@@ -4,6 +4,7 @@
 @import "color.scss";
 @import "size.scss";
 
+img{width:100%; border: 0; object-fit: cover; background-size: cover;}
 //프레임을 잡습니다. 프레임 가로넓이는 size.scss에서! 현재는 1200px
 .windows {width: 100vw; @include typo_default;}
 .frame {
@@ -13,19 +14,22 @@
     @include v_center;
     @include b_radi;
     @include frame_margin_default;
-
 }
-.frame_margin_narrow {
+
+.f_margin_narrow{@include frame_margin_narrow;}
+.f_bg_none{background-color: transparent;}
+.f_width_pic{background-color: transparent; max-width: $frame_pic_whdth; @include frame_margin_pic;}
+.f_border{border:2px solid $color-main; @include b_radi; background-color: transparent; max-width: $frame_pic_whdth_border; @include frame_border;}
+
+
+.frame_display{
     width: 100%;
-    max-width: $frame_width;
-    background-color: $color-gray;
     @include v_center;
-    @include b_radi;
-    @include frame_margin_narrow;
+    // background-color: lightcyan;
+    margin-top: 2em;
 }
 
-
-//모듈화 01depth
+//광고 섹션
 .sec_ad{
     @include sec_default;
     .box_ad{
@@ -88,7 +92,22 @@
             @include t_left;
             .pic{@include box_pic; background-color: lightblue;}
             .title{@include typo_division_title; @include style_division_title;}
-            .sub{@include style_division_sub;}
+            .sub{@include style_division_sub; @include t_left;  }
+        }
+        .chapter_ppts{
+            width:90%;
+            @include v_center;
+            .pic{@include box_pic_circle; background-color: lightblue; @include v_center;}
+            .pdtitle{width:6.5em; @include RadioButtonGreen; @include v_center;  margin-top: 1.2em;}
+            .title{@include typo_division_title; @include style_division_title; padding-top: 0.4em; font-size: $typo_sub;}
+            .sub{@include style_division_sub; @include t_left;  margin-top: 0.2em;}
+        }
+        .chapter_product{
+            .product_pic{
+                width:100%;
+                height: 300px;
+                background-color: lightpink;
+            }
         }
 
         .cut_half{
@@ -143,6 +162,85 @@
         .chapter_notice{@include typo_title_sub;}
         .chapter_textbox{}
     }
+    .box_seal{
+        margin-top:2.2em;
+        margin-bottom:9.5em;
+        .title {@include typo_seal_title;}
+        .sub {@include typo_seal_sub; margin-top:1px;}
+    }
+    .box_info{
+        .chapter_title{
+            .scene_category{
+                .title{@include RadioButton; background-color: $color-ad_title;}                
+            }
+            .scene_label{
+                margin-top:1em;
+                margin-bottom:1em;
+                .title{@include typo_title;} 
+                .sub{@include typo_title_sub;}
+            }
+            .scene_spec{
+                width:70%;
+                border: 1px solid lightgray;
+                padding: 0.5em 0 1em;
+                @include v_center;
+                ul{padding:0 0.8em;}
+                li{float: left; vertical-align: middle; line-height: 2px;}
+                .category{padding-right:0.5em; color:gray;}
+                .num{line-height: 0px;}
+            }
+        }
+
+    }
+
+
+}
+
+
+
+.sec_display{
+    @include sec_product_pic;
+    .box_singleview{
+        width:100%;
+        max-width: $frame_pic_whdth;
+        @include v_center;
+    }
+    .box_multiview{
+        position: relative;
+        .parts_{
+            position: relative;
+            .scene_pic{
+                width:90%;
+                max-width: 800px;
+                @include v_center;
+            }
+        }
+        .chapter_division{
+            width:90%;
+            max-width: 800px;
+            @include v_center;
+            .scene_nts{
+                .pic{width:100%; height: 300px; background-color: rosybrown;}
+            }
+        }
+        .cut_one-third{
+            @include grid_default;
+            @include grid_colum_one-third;
+        }
+        .cut_onefour{
+            @include grid_default;
+            @include grid_colum_onefour;
+        }
+    }
+    .test{
+        position: absolute;
+        bottom:-1.5em;
+        right:0;
+        width:51%;
+        height: 8em;
+        z-index: -10;
+        background-color: lightgoldenrodyellow;
+    }
 }
 
 .sec_graph{
@@ -190,6 +288,7 @@
 .fill_color_gray{background-color: $color-gray;}
 .fill_color_darkgray{background-color: #E0E0E0;}
 .fill_color_white{background-color: white;}
+.fill_color_base{background-color: $color-gray}
 .stroke_color_brown{border: 1px solid #C98414;}
 
 .insert_line_title{@include insert_title_line;}
@@ -244,8 +343,10 @@
                     margin: 0;
                     padding: 0 1.2%; 
                     border: 0 none;
+                    vertical-align: top;
                     li{
                         @include t_center;
+                        
                     }
                 }
             }
@@ -297,7 +398,7 @@
     }
    }
 
-   @media only screen and (min-width : 650px) and (max-width : 800px) {
+   @media only screen and (min-width : 650px) and (max-width : 1024px) {
     .frame{max-width:$ie10_width_frame;}
     .frame_margin_narrow{max-width:$ie10_width_frame;}
 

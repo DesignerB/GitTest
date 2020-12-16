@@ -28,6 +28,12 @@ input[type=button]:hover {
   transition: 1s;
   cursor: pointer; }
 
+img {
+  width: 100%;
+  border: 0;
+  object-fit: cover;
+  background-size: cover; }
+
 .windows {
   width: 100vw;
   font-size: 1.2em;
@@ -35,25 +41,42 @@ input[type=button]:hover {
 
 .frame {
   width: 100%;
-  max-width: 980px;
+  max-width: 860px;
   background-color: #F9F9F9;
   margin: 0 auto;
-  border-radius: 1em;
-  padding-top: 2.5em;
+  border-radius: 1.8em;
+  padding-top: 2.3em;
   padding-bottom: 2.7em;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em; }
+  margin-top: 2.3em; }
 
-.frame_margin_narrow {
-  width: 100%;
-  max-width: 980px;
-  background-color: #F9F9F9;
-  margin: 0 auto;
-  border-radius: 1em;
+.f_margin_narrow {
   padding-top: 1em;
   padding-bottom: 1.3em;
-  margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-top: 1em; }
+
+.f_bg_none {
+  background-color: transparent; }
+
+.f_width_pic {
+  background-color: transparent;
+  max-width: 860px;
+  padding-top: 0;
+  padding-bottom: 0.3em;
+  margin-top: 0; }
+
+.f_border {
+  border: 2px solid #127C3B;
+  border-radius: 1.8em;
+  background-color: transparent;
+  max-width: 856px;
+  padding-top: 1.6em;
+  padding-bottom: 1.8em;
+  margin-top: 2.3em; }
+
+.frame_display {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2em; }
 
 .sec_ad {
   position: relative;
@@ -79,12 +102,12 @@ input[type=button]:hover {
       font-size: 1.3em;
       font-weight: bold;
       color: #127C3B;
-      letter-spacing: -0.08em;
+      letter-spacing: -0.05em;
       color: #C98414; }
     .sec_ad .box_ad .chapter_ad .scene_textbox .sub {
       font-size: 1.09em;
       line-height: 1.52em;
-      letter-spacing: -0.05em; }
+      letter-spacing: -0.03em; }
     .sec_ad .box_ad .chapter_ad .scene_textbox .money {
       font-size: 1.2em;
       font-weight: bold;
@@ -104,12 +127,12 @@ input[type=button]:hover {
       font-size: 1.3em;
       font-weight: bold;
       color: #127C3B;
-      letter-spacing: -0.08em; }
+      letter-spacing: -0.05em; }
     .sec_product .box_title .sub {
       text-align: center;
       font-size: 1.09em;
       line-height: 1.52em;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.03em;
       margin-top: 0.5em; }
     .sec_product .box_title ul {
       width: 100%; }
@@ -151,7 +174,47 @@ input[type=button]:hover {
         color: #127C3B;
         padding-top: 0.55em; }
       .sec_product .box_division .chapter_pts .sub {
-        padding-top: 0.2em; }
+        padding-top: 0.2em;
+        text-align: left; }
+    .sec_product .box_division .chapter_ppts {
+      width: 90%;
+      margin: 0 auto; }
+      .sec_product .box_division .chapter_ppts .pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 120px;
+        background-color: lightblue;
+        background-color: lightblue;
+        margin: 0 auto; }
+      .sec_product .box_division .chapter_ppts .pdtitle {
+        width: 6.5em;
+        padding-top: 0.25em;
+        padding-bottom: 0.35em;
+        padding-left: 2em;
+        padding-right: 2em;
+        border-radius: 5em;
+        color: white;
+        background-color: #C98414;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #127C3B;
+        margin: 0 auto;
+        margin-top: 1.2em; }
+      .sec_product .box_division .chapter_ppts .title {
+        font-size: 1em;
+        font-weight: bold;
+        color: #127C3B;
+        padding-top: 0.55em;
+        padding-top: 0.4em;
+        font-size: 1.09em; }
+      .sec_product .box_division .chapter_ppts .sub {
+        padding-top: 0.2em;
+        text-align: left;
+        margin-top: 0.2em; }
+    .sec_product .box_division .chapter_product .product_pic {
+      width: 100%;
+      height: 300px;
+      background-color: lightpink; }
     .sec_product .box_division .cut_half {
       display: grid;
       grid-gap: 1.5em;
@@ -245,7 +308,7 @@ input[type=button]:hover {
     .sec_product .box_division .scene_imagebox .colum_third {
       grid-template-columns: repeat(3, 2fr); }
   .sec_product .box_highlight {
-    border-radius: 1em;
+    border-radius: 1.8em;
     padding: 0.8em 0 1em 0;
     margin-bottom: 1em;
     margin-top: 1em; }
@@ -254,7 +317,100 @@ input[type=button]:hover {
     .sec_product .box_highlight .chapter_notice {
       font-size: 1.09em;
       line-height: 1.52em;
+      letter-spacing: -0.03em; }
+  .sec_product .box_seal {
+    margin-top: 2.2em;
+    margin-bottom: 9.5em; }
+    .sec_product .box_seal .title {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.2em;
+      letter-spacing: 0em;
+      color: lightgray; }
+    .sec_product .box_seal .sub {
+      font-family: 'Vollkorn', serif;
+      letter-spacing: 0.17em;
+      font-size: 0.85em;
+      color: lightgray;
+      margin-top: 1px; }
+  .sec_product .box_info .chapter_title .scene_category .title {
+    padding-top: 0.25em;
+    padding-bottom: 0.35em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 5em;
+    color: white;
+    background-color: #C98414;
+    background-color: #C98414; }
+  .sec_product .box_info .chapter_title .scene_label {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+    .sec_product .box_info .chapter_title .scene_label .title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #127C3B;
       letter-spacing: -0.05em; }
+    .sec_product .box_info .chapter_title .scene_label .sub {
+      font-size: 1.09em;
+      line-height: 1.52em;
+      letter-spacing: -0.03em; }
+  .sec_product .box_info .chapter_title .scene_spec {
+    width: 70%;
+    border: 1px solid lightgray;
+    padding: 0.5em 0 1em;
+    margin: 0 auto; }
+    .sec_product .box_info .chapter_title .scene_spec ul {
+      padding: 0 0.8em; }
+    .sec_product .box_info .chapter_title .scene_spec li {
+      float: left;
+      vertical-align: middle;
+      line-height: 2px; }
+    .sec_product .box_info .chapter_title .scene_spec .category {
+      padding-right: 0.5em;
+      color: gray; }
+    .sec_product .box_info .chapter_title .scene_spec .num {
+      line-height: 0px; }
+
+.sec_display {
+  position: relative;
+  margin: 0 auto; }
+  .sec_display .box_singleview {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto; }
+  .sec_display .box_multiview {
+    position: relative; }
+    .sec_display .box_multiview .parts_ {
+      position: relative; }
+      .sec_display .box_multiview .parts_ .scene_pic {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto; }
+    .sec_display .box_multiview .chapter_division {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto; }
+      .sec_display .box_multiview .chapter_division .scene_nts .pic {
+        width: 100%;
+        height: 300px;
+        background-color: rosybrown; }
+    .sec_display .box_multiview .cut_one-third {
+      display: grid;
+      grid-gap: 1.5em;
+      align-content: center;
+      grid-template-columns: 1fr 3fr; }
+    .sec_display .box_multiview .cut_onefour {
+      display: grid;
+      grid-gap: 1.5em;
+      align-content: center;
+      grid-template-columns: 1fr 1fr; }
+  .sec_display .test {
+    position: absolute;
+    bottom: -1.5em;
+    right: 0;
+    width: 51%;
+    height: 8em;
+    z-index: -10;
+    background-color: lightgoldenrodyellow; }
 
 .sec_graph {
   position: relative;
@@ -268,7 +424,7 @@ input[type=button]:hover {
     font-size: 1.3em;
     font-weight: bold;
     color: #127C3B;
-    letter-spacing: -0.08em;
+    letter-spacing: -0.05em;
     color: black; }
     .sec_graph .box_graph .chapter_xy div {
       background-color: #dedede;
@@ -305,20 +461,26 @@ input[type=button]:hover {
 .fill_color_white {
   background-color: white; }
 
+.fill_color_base {
+  background-color: #F9F9F9; }
+
 .stroke_color_brown {
   border: 1px solid #C98414; }
 
 .insert_line_title {
   border-bottom: 1px solid #dedede;
+  margin-top: 1em;
   padding-bottom: 1.3em;
   margin-bottom: 1.7em; }
 
 .insert_line {
-  border-bottom: 1px solid #dedede; }
+  border-bottom: 1px solid #dedede;
+  margin-top: 1em; }
 
 .insert_line_margin_narrow {
   border-bottom: 1px solid #dedede;
-  padding-bottom: 0.7em; }
+  margin-top: 1em;
+  margin-top: 0.8em; }
 
 /* IE10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -365,7 +527,8 @@ input[type=button]:hover {
       width: 27.13%;
       margin: 0;
       padding: 0 1.2%;
-      border: 0 none; }
+      border: 0 none;
+      vertical-align: top; }
       .sec_product .box_division .cut_third ul li {
         text-align: center; }
   .sec_product .box_division .scene_imagebox {
@@ -407,7 +570,7 @@ input[type=button]:hover {
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto; } }
-@media only screen and (min-width: 650px) and (max-width: 800px) {
+@media only screen and (min-width: 650px) and (max-width: 1024px) {
   .frame {
     max-width: 94%; }
 

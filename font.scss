@@ -38,6 +38,19 @@
     color:$color-ad_title;
 }
 
+@mixin typo_seal_title{
+    font-family: 'Pacifico', cursive;
+    font-size: $typo_default;
+    letter-spacing: $LetterSpacingTitleSeal;
+    color:lightgray;
+}
+@mixin typo_seal_sub{
+    font-family: 'Vollkorn', serif;
+    letter-spacing: $LetterSpacingSubSeal;
+    font-size: $typo_seal_sub;
+    color:lightgray;
+}
+
 
 @mixin style_sentence_title{
     color: $color-main;

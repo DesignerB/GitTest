@@ -1,7 +1,7 @@
 
 // basic control
 @mixin v_center{margin: 0 auto}
-@mixin b_radi{border-radius: $typo_basic;}
+@mixin b_radi{border-radius: 1.8em;}
 @mixin t_center{text-align: center;}
 @mixin t_left{text-align: left;}
 @mixin t_bold{font-weight: bold;}
@@ -11,14 +11,28 @@
     padding-top: $frame_space;
     padding-bottom: $frame_space_bottom;
     margin-top: $frame_space;
-    margin-bottom: $frame_space;
+    // margin-bottom: $frame_space;
 }
 
 @mixin frame_margin_narrow{
     padding-top: $frame_space_narrow;
     padding-bottom: $frame_space_narrow_bottom;
     margin-top: $frame_space_narrow;
-    margin-bottom: $frame_space_narrow;
+    // margin-bottom: $frame_space_narrow;
+}
+
+@mixin frame_margin_pic{
+    padding-top: 0;
+    padding-bottom: $frame_space_pic_bottom;
+    margin-top: 0;
+}
+
+@mixin frame_border{
+    padding-top:1.6em;
+    padding-bottom:1.8em;
+    margin-top:$frame_space;
+
+    
 }
 
 @mixin sec_default{
@@ -27,6 +41,11 @@
     width:100%;
     @include v_center;
     @include t_center;
+}
+
+@mixin sec_product_pic{
+    position: relative;
+    @include v_center;
 }
 
 @mixin chapter_default{
@@ -40,6 +59,13 @@
 @mixin box_pic {
     height: 220px;
     background-color: #6dd89a;
+}
+
+@mixin box_pic_circle {
+    width:150px;
+    height:150px;
+    border-radius: 120px;
+    background-color: lightblue;
 }
 
 @mixin pic_size_small{
@@ -69,6 +95,7 @@
 @mixin grid_colum_third{grid-template-columns: repeat(3, 2fr);}
 @mixin grid_colum_quarter{grid-template-columns: repeat(4, 2fr);}
 @mixin grid_colum_one-third{grid-template-columns: 1fr 3fr;}
+@mixin grid_colum_onefour{grid-template-columns: 1fr 1fr;}
 
 
 
@@ -134,10 +161,11 @@
 // 추가요소 (중복 클래스 사용)
 @mixin insert_line{
     border-bottom: 1px solid $color-gray-border;
+    margin-top:$frame_space_narrow;
 }
 @mixin insert_line_margin_narrow{
     @include insert_line;
-    padding-bottom:0.7em;
+    margin-top: 0.8em;
 }
 @mixin insert_title_line{
     @include insert_line;
@@ -149,4 +177,21 @@
     @include b_radi;
     padding: $highlight_padding_top 0 $highlight_padding_bottom 0;
     margin-bottom: $highlight_padding_bottom;
+}
+
+@mixin RadioButton{
+    padding-top:$RadioPaddingTop;
+    padding-bottom:$RadioPaddingBottom;
+    padding-left:2em;
+    padding-right:2em;
+    border-radius: 5em;
+    color:white;
+    background-color: $color-ad_title;
+}
+
+@mixin RadioButtonGreen{
+    @include RadioButton;
+    padding-left:0;
+    padding-right:0;
+    background-color: $color-main;
 }
