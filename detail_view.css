@@ -49,9 +49,19 @@ img {
   padding-bottom: 2.7em;
   margin-top: 2.3em; }
 
+.frame_narrow {
+  width: 100%;
+  max-width: 860px;
+  background-color: #F9F9F9;
+  margin: 0 auto;
+  border-radius: 1.8em;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  margin-top: 1em; }
+
 .f_margin_narrow {
   padding-top: 1em;
-  padding-bottom: 1.3em;
+  padding-bottom: 1.5em;
   margin-top: 1em; }
 
 .f_bg_none {
@@ -75,8 +85,7 @@ img {
 
 .frame_display {
   width: 100%;
-  margin: 0 auto;
-  margin-top: 2em; }
+  margin: 0 auto; }
 
 .sec_ad {
   position: relative;
@@ -215,29 +224,6 @@ img {
       width: 100%;
       height: 300px;
       background-color: lightpink; }
-    .sec_product .box_division .cut_half {
-      display: grid;
-      grid-gap: 1.5em;
-      align-content: center;
-      grid-template-columns: repeat(2, 2fr); }
-    .sec_product .box_division .cut_third {
-      display: grid;
-      grid-gap: 1.5em;
-      align-content: center;
-      grid-template-columns: repeat(3, 2fr); }
-      .sec_product .box_division .cut_third li {
-        text-align: center; }
-    .sec_product .box_division .cut_quarter {
-      margin: 50px 0;
-      display: grid;
-      grid-gap: 1.5em;
-      align-content: center;
-      grid-template-columns: repeat(4, 2fr); }
-    .sec_product .box_division .cut_one-third {
-      display: grid;
-      grid-gap: 1.5em;
-      align-content: center;
-      grid-template-columns: 1fr 3fr; }
     .sec_product .box_division .scene_imagebox .imagebox_title {
       padding: 0.4em 0;
       border: 1px solid #dedede;
@@ -319,8 +305,8 @@ img {
       line-height: 1.52em;
       letter-spacing: -0.03em; }
   .sec_product .box_seal {
-    margin-top: 2.2em;
-    margin-bottom: 9.5em; }
+    margin-top: 8em;
+    margin-bottom: 14em; }
     .sec_product .box_seal .title {
       font-family: 'Pacifico', cursive;
       font-size: 1.2em;
@@ -367,50 +353,109 @@ img {
     .sec_product .box_info .chapter_title .scene_spec .category {
       padding-right: 0.5em;
       color: gray; }
-    .sec_product .box_info .chapter_title .scene_spec .num {
+    .sec_product .box_info .chapter_title .scene_spec .num, .sec_product .box_info .chapter_title .scene_spec .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_green, .sec_display .box_multiview .parts_explain .scene_front .division_info ul .sec_product .box_info .chapter_title .scene_spec .num_green, .sec_product .box_info .chapter_title .scene_spec .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_violet, .sec_display .box_multiview .parts_explain .scene_front .division_info ul .sec_product .box_info .chapter_title .scene_spec .num_violet, .sec_product .box_info .chapter_title .scene_spec .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_orange, .sec_display .box_multiview .parts_explain .scene_front .division_info ul .sec_product .box_info .chapter_title .scene_spec .num_orange {
       line-height: 0px; }
 
 .sec_display {
   position: relative;
   margin: 0 auto; }
+  .sec_display .box_poster {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    margin-top: 1.5em; }
+    .sec_display .box_poster .scene_front {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      text-align: center; }
+      .sec_display .box_poster .scene_front .category {
+        border: 1px solid red;
+        border-left: 0;
+        border-right: 0;
+        padding: 0.2em 0 0.4em 0; }
+      .sec_display .box_poster .scene_front .title {
+        font-size: 5em; }
+    .sec_display .box_poster .scene_bottom {
+      position: absolute;
+      bottom: 90px;
+      z-index: 1;
+      width: 100%;
+      text-align: center; }
   .sec_display .box_singleview {
     width: 100%;
     max-width: 860px;
     margin: 0 auto; }
   .sec_display .box_multiview {
     position: relative; }
-    .sec_display .box_multiview .parts_ {
-      position: relative; }
-      .sec_display .box_multiview .parts_ .scene_pic {
-        width: 90%;
-        max-width: 800px;
-        margin: 0 auto; }
-    .sec_display .box_multiview .chapter_division {
-      width: 90%;
-      max-width: 800px;
-      margin: 0 auto; }
-      .sec_display .box_multiview .chapter_division .scene_nts .pic {
+    .sec_display .box_multiview .parts_explain {
+      position: relative;
+      margin-top: 8em; }
+      .sec_display .box_multiview .parts_explain .scene_front .division_info {
         width: 100%;
-        height: 300px;
-        background-color: rosybrown; }
-    .sec_display .box_multiview .cut_one-third {
-      display: grid;
-      grid-gap: 1.5em;
-      align-content: center;
-      grid-template-columns: 1fr 3fr; }
-    .sec_display .box_multiview .cut_onefour {
-      display: grid;
-      grid-gap: 1.5em;
-      align-content: center;
-      grid-template-columns: 1fr 1fr; }
-  .sec_display .test {
-    position: absolute;
-    bottom: -1.5em;
-    right: 0;
-    width: 51%;
-    height: 8em;
-    z-index: -10;
-    background-color: lightgoldenrodyellow; }
+        max-width: 860px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 1.5em;
+        align-content: center; }
+        .sec_display .box_multiview .parts_explain .scene_front .division_info .pic {
+          width: 100%;
+          height: 400px;
+          background-color: rosybrown; }
+          .sec_display .box_multiview .parts_explain .scene_front .division_info .pic img {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            object-fit: cover;
+            background-size: cover; }
+        .sec_display .box_multiview .parts_explain .scene_front .division_info ul {
+          margin: 0 1em; }
+          .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num, .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_green, .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_violet, .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_orange {
+            font-size: 3.5em;
+            font-family: 'Righteous', cursive;
+            margin-top: 0.1em; }
+          .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_green {
+            color: #127C3B; }
+          .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_violet {
+            color: #531F7D; }
+          .sec_display .box_multiview .parts_explain .scene_front .division_info ul .num_orange {
+            color: #C98414; }
+          .sec_display .box_multiview .parts_explain .scene_front .division_info ul .title {
+            font-size: 3em;
+            font-family: 'Do Hyeon', sans-serif;
+            margin-top: -0.35em; }
+          .sec_display .box_multiview .parts_explain .scene_front .division_info ul .sub {
+            margin-top: 2.5em; }
+      .sec_display .box_multiview .parts_explain .scene_back .sq_box, .sec_display .box_multiview .parts_explain .scene_back .sq_lift_nomal, .sec_display .box_multiview .parts_explain .scene_back .sq_right_nomal, .sec_display .box_multiview .parts_explain .scene_back .sq_center {
+        position: absolute;
+        z-index: -1; }
+      .sec_display .box_multiview .parts_explain .scene_back .sq_color_left_yg, .sec_display .box_multiview .parts_explain .scene_back .sq_lift_nomal {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #c98414 30%, #127c3b 80%); }
+      .sec_display .box_multiview .parts_explain .scene_back .sq_color_right_vg, .sec_display .box_multiview .parts_explain .scene_back .sq_right_nomal {
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 10%, #127c3b 30%, #531f7d 80%); }
+      .sec_display .box_multiview .parts_explain .scene_back .sq_color_center, .sec_display .box_multiview .parts_explain .scene_back .sq_center {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 8%, #c98414 25%, #531f7d 50%, #127c3b 75%, rgba(255, 255, 255, 0) 92%); }
+      .sec_display .box_multiview .parts_explain .scene_back .sq_lift_nomal {
+        width: 50.3%;
+        height: 9em;
+        left: 0;
+        bottom: -1.2em; }
+      .sec_display .box_multiview .parts_explain .scene_back .sq_right_nomal {
+        width: 50.3%;
+        height: 9em;
+        right: 0;
+        bottom: -1.2em; }
+      .sec_display .box_multiview .parts_explain .scene_back .sq_center {
+        width: 100%;
+        height: 5.5em;
+        right: 50%;
+        bottom: -1.2em;
+        transform: translateX(50%); }
+    .sec_display .box_multiview .parts_3 {
+      margin-top: 10em; }
 
 .sec_graph {
   position: relative;
@@ -445,8 +490,44 @@ img {
       position: absolute;
       top: 47.8%; }
 
-.insert_margin_info {
-  margin: 2em 0 1.5em; }
+.cut_half {
+  display: grid;
+  grid-gap: 1.5em;
+  align-content: center;
+  grid-template-columns: repeat(2, 2fr); }
+
+.cut_third {
+  display: grid;
+  grid-gap: 1.5em;
+  align-content: center;
+  grid-template-columns: repeat(3, 2fr); }
+  .cut_third li {
+    text-align: center; }
+
+.cut_quarter {
+  margin: 50px 0;
+  display: grid;
+  grid-gap: 1.5em;
+  align-content: center;
+  grid-template-columns: repeat(4, 2fr); }
+
+.cut_one-third {
+  display: grid;
+  grid-gap: 1.5em;
+  align-content: center;
+  grid-template-columns: 1fr 3fr; }
+
+.cut_SevenEight {
+  display: grid;
+  grid-gap: 1.5em;
+  align-content: center;
+  grid-template-columns: 7fr 8fr; }
+
+.cut_EightSeven {
+  display: grid;
+  grid-gap: 1.5em;
+  align-content: center;
+  grid-template-columns: 8fr 7fr; }
 
 .fill_color_main {
   background-color: #127C3B;
@@ -466,6 +547,9 @@ img {
 
 .stroke_color_brown {
   border: 1px solid #C98414; }
+
+.insert_margin_info {
+  margin: 2em 0 1.5em; }
 
 .insert_line_title {
   border-bottom: 1px solid #dedede;

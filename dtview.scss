@@ -13,20 +13,17 @@
     margin-top: $frame_space;
     // margin-bottom: $frame_space;
 }
-
 @mixin frame_margin_narrow{
     padding-top: $frame_space_narrow;
     padding-bottom: $frame_space_narrow_bottom;
     margin-top: $frame_space_narrow;
     // margin-bottom: $frame_space_narrow;
 }
-
 @mixin frame_margin_pic{
     padding-top: 0;
     padding-bottom: $frame_space_pic_bottom;
     margin-top: 0;
 }
-
 @mixin frame_border{
     padding-top:1.6em;
     padding-bottom:1.8em;
@@ -35,6 +32,8 @@
     
 }
 
+
+//section
 @mixin sec_default{
     position: relative;
     max-width: $sec_width;
@@ -42,12 +41,12 @@
     @include v_center;
     @include t_center;
 }
-
 @mixin sec_product_pic{
     position: relative;
     @include v_center;
 }
 
+//Chapter
 @mixin chapter_default{
     @include grid_textbox;
     @include grid_colum_word;
@@ -55,7 +54,6 @@
     @include t_left;
     line-height: $line-height_sentence_basic;
 }
-
 @mixin box_pic {
     height: 220px;
     background-color: #6dd89a;
@@ -95,7 +93,9 @@
 @mixin grid_colum_third{grid-template-columns: repeat(3, 2fr);}
 @mixin grid_colum_quarter{grid-template-columns: repeat(4, 2fr);}
 @mixin grid_colum_one-third{grid-template-columns: 1fr 3fr;}
-@mixin grid_colum_onefour{grid-template-columns: 1fr 1fr;}
+@mixin grid_colum_ThreeFive{grid-template-columns: 3fr 5fr;}
+@mixin grid_colum_SevenEight{grid-template-columns: 7fr 8fr;}
+@mixin grid_colum_EightSeven{grid-template-columns: 8fr 7fr;}
 
 
 
@@ -194,4 +194,22 @@
     padding-left:0;
     padding-right:0;
     background-color: $color-main;
+}
+
+@mixin RadioButtonInfo{
+    width:5em;
+    @include t_center;
+    @include RadioButton;
+    padding-left:0;
+    padding-right:0;
+    background-color: $color-main;
+}
+
+
+@mixin square_box{
+    position: absolute;
+    bottom:-1.2em;
+    width:50.5%;
+    height: 9em;
+    z-index: -1;
 }

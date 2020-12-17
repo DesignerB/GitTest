@@ -16,17 +16,25 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover;}
     @include frame_margin_default;
 }
 
+.frame_narrow {
+    width: 100%;
+    max-width: $frame_width;
+    background-color: $color-gray;
+    @include v_center;
+    @include b_radi;
+    @include frame_margin_narrow;
+}
+
 .f_margin_narrow{@include frame_margin_narrow;}
 .f_bg_none{background-color: transparent;}
 .f_width_pic{background-color: transparent; max-width: $frame_pic_whdth; @include frame_margin_pic;}
 .f_border{border:2px solid $color-main; @include b_radi; background-color: transparent; max-width: $frame_pic_whdth_border; @include frame_border;}
 
 
+
 .frame_display{
     width: 100%;
     @include v_center;
-    // background-color: lightcyan;
-    margin-top: 2em;
 }
 
 //광고 섹션
@@ -110,26 +118,7 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover;}
             }
         }
 
-        .cut_half{
-            @include grid_default;
-            @include grid_colum_half;
-        }
-        .cut_third{            
-            @include grid_default;
-            @include grid_colum_third;
-            li{
-                @include t_center;
-            }
-        }
-        .cut_quarter{
-            margin:50px 0;
-            @include grid_default;
-            @include grid_colum_quarter;
-        }
-        .cut_one-third{
-            @include grid_default;
-            @include grid_colum_one-third;
-        }
+        
 
         .scene_imagebox{
             .imagebox_title{@include grid_title_box;}
@@ -163,8 +152,8 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover;}
         .chapter_textbox{}
     }
     .box_seal{
-        margin-top:2.2em;
-        margin-bottom:9.5em;
+        margin-top:8em;
+        margin-bottom:14em;
         .title {@include typo_seal_title;}
         .sub {@include typo_seal_sub; margin-top:1px;}
     }
@@ -196,10 +185,35 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover;}
 
 }
 
-
-
 .sec_display{
     @include sec_product_pic;
+    .box_poster{
+        position: relative;
+        width:100%;
+        max-width: $frame_width;
+        @include v_center;
+        margin-top:$margin_box-box;
+        .scene_front{
+            position: absolute;
+            top:100px;
+            left:0;
+            z-index: 1;
+            width:100%;
+            @include t_center;
+            .category{border: 1px solid red; border-left: 0; border-right:0; padding:0.2em 0 0.4em 0;}
+            .title{font-size: 5em;}
+        }
+        .scene_bottom{
+            position: absolute;
+            bottom:90px;
+            z-index: 1;
+            width:100%;
+            @include t_center;
+        }
+        .scene_back{
+            // .pic{width:100%; height:900px; background-color: lightgreen;}
+        }
+    }
     .box_singleview{
         width:100%;
         max-width: $frame_pic_whdth;
@@ -207,39 +221,76 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover;}
     }
     .box_multiview{
         position: relative;
-        .parts_{
+        // margin-top:$margin_frame;
+        .parts_explain{
             position: relative;
-            .scene_pic{
-                width:90%;
-                max-width: 800px;
-                @include v_center;
+            margin-top:8em;
+            .scene_front{
+                .division_info{
+                    width:100%;
+                    max-width:$frame_width;
+                    @include v_center;
+                    @include grid_default;
+                    .pic{
+                        width:100%; height: 400px; background-color: rosybrown;
+                        img{width:100%; height: 100%; border: 0; object-fit: cover; background-size: cover;}
+                    }
+                    ul{
+                        margin: 0 1em;
+                        .num{font-size: 3.5em; font-family: 'Righteous', cursive; margin-top:0.1em;}
+                        .num_green{@extend .num; color:$color-main;}
+                        .num_violet{@extend .num; color:$color-gridbox_title_wrong;}
+                        .num_orange{@extend .num; color:$color-ad_title;}
+                        .title{font-size:3em; font-family: 'Do Hyeon', sans-serif; margin-top: -0.35em;}
+                        .sub{margin-top:2.5em;}
+                    }
+                    
+                }
+            }
+            .scene_back{
+                .sq_box{
+                    position: absolute;
+                    z-index: -1;
+                }
+                .sq_color_left_yg{
+                    background: linear-gradient(90deg, rgba(255,255,255,0) 10%, rgba(201,132,20,1) 30%, rgba(18,124,59,1) 80%);
+                }
+                .sq_color_right_vg{
+                    background: linear-gradient(-90deg, rgba(255,255,255,0) 10%, rgba(18,124,59,1) 30%, rgba(83,31,125,1) 80%);
+                }
+                .sq_color_center{
+                    background: linear-gradient(90deg, rgba(255,255,255,0) 8%, rgba(201,132,20,1) 25%, rgba(83,31,125,1) 50%, rgba(18,124,59,1) 75%, rgba(255,255,255,0) 92%);
+                }
+                .sq_lift_nomal{
+                    @extend .sq_box;
+                    @extend .sq_color_left_yg;
+                    width:50.3%;
+                    height: 9em;
+                    left: 0;
+                    bottom:-1.2em;
+                }
+                .sq_right_nomal{
+                    @extend .sq_box;
+                    @extend .sq_color_right_vg;
+                    width:50.3%;
+                    height: 9em;
+                    right: 0;
+                    bottom:-1.2em;
+                }
+                .sq_center{
+                    @extend .sq_box;
+                    @extend .sq_color_center;
+                    width:100%;
+                    height: 5.5em;
+                    right: 50%;
+                    bottom:-1.2em;
+                    transform: translateX(50%);
+                }
             }
         }
-        .chapter_division{
-            width:90%;
-            max-width: 800px;
-            @include v_center;
-            .scene_nts{
-                .pic{width:100%; height: 300px; background-color: rosybrown;}
-            }
+        .parts_3{
+            margin-top:10em;
         }
-        .cut_one-third{
-            @include grid_default;
-            @include grid_colum_one-third;
-        }
-        .cut_onefour{
-            @include grid_default;
-            @include grid_colum_onefour;
-        }
-    }
-    .test{
-        position: absolute;
-        bottom:-1.5em;
-        right:0;
-        width:51%;
-        height: 8em;
-        z-index: -10;
-        background-color: lightgoldenrodyellow;
     }
 }
 
@@ -281,7 +332,35 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover;}
     }
 }
 
-.insert_margin_info{margin: 2em 0 1.5em;}
+
+.cut_half{
+    @include grid_default;
+    @include grid_colum_half;
+}
+.cut_third{            
+    @include grid_default;
+    @include grid_colum_third;
+    li{
+        @include t_center;
+    }
+}
+.cut_quarter{
+    margin:50px 0;
+    @include grid_default;
+    @include grid_colum_quarter;
+}
+.cut_one-third{
+    @include grid_default;
+    @include grid_colum_one-third;
+}
+.cut_SevenEight{
+    @include grid_default;
+    @include grid_colum_SevenEight;
+}
+.cut_EightSeven{
+    @include grid_default;
+    @include grid_colum_EightSeven;
+}
 
 
 .fill_color_main{background-color: $color-main; color:white;}
@@ -291,6 +370,7 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover;}
 .fill_color_base{background-color: $color-gray}
 .stroke_color_brown{border: 1px solid #C98414;}
 
+.insert_margin_info{margin: 2em 0 1.5em;}
 .insert_line_title{@include insert_title_line;}
 .insert_line{@include insert_line;}
 .insert_line_margin_narrow{@include insert_line_margin_narrow;}
