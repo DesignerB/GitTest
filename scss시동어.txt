@@ -1,1 +1,3 @@
 sass --watch detail_view.scss:detail_view.css
+
+sass --watch pdtext.scss:pdtext.css

@@ -1,0 +1,560 @@
+@charset "UTF-8";
+html {
+  font-size: 12px;
+  font-family: "Montserrat","Lato",arial,"Noto Sans KR",sans-serif;
+  letter-spacing: -0.5; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+ul, ol {
+  position: relative;
+  list-style: none;
+  word-break: break-word;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0; }
+
+.frame {
+  margin: 0 auto; }
+
+.box_Default, .sec_text .chap_SystemInfo, .sec_text .chap_PdInfo {
+  max-width: 860px;
+  margin: 0 auto; }
+
+.box_Photo {
+  max-width: 860px;
+  margin: 0 auto; }
+
+.box_Inside {
+  max-width: 760px;
+  margin: 0 auto; }
+
+.box_Stroke {
+  max-width: 856px;
+  margin: 0 auto;
+  border-radius: 2em;
+  border: 2px solid #127C3B; }
+
+.Split {
+  display: grid;
+  grid-gap: 1.5rem; }
+
+.CutHalf {
+  grid-template-columns: repeat(2, 5fr); }
+
+.CutThird {
+  grid-template-columns: repeat(3, 5fr); }
+
+.CutQuarter {
+  grid-template-columns: repeat(4, 5fr); }
+
+.CutOneThree {
+  grid-template-columns: 1fr 3fr; }
+
+.CutOneNine {
+  grid-template-columns: 1fr 9fr; }
+
+.Mg1 {
+  margin-top: 1rem; }
+
+.Mg2 {
+  margin-top: 2rem; }
+
+.Mg3 {
+  margin-top: 3rem; }
+
+.Mg4 {
+  margin-top: 4rem; }
+
+.Mg5 {
+  margin-top: 5rem; }
+
+.Mg6 {
+  margin-top: 6rem; }
+
+.Mg7 {
+  margin-top: 7rem; }
+
+.Mg8 {
+  margin-top: 8rem; }
+
+.Mg9 {
+  margin-top: 9rem; }
+
+.Mg10 {
+  margin-top: 10rem; }
+
+.Mg11 {
+  margin-top: 11rem; }
+
+.Mg12 {
+  margin-top: 12rem; }
+
+.Mg13 {
+  margin-top: 13rem; }
+
+.Mg14 {
+  margin-top: 14rem; }
+
+.Mg15 {
+  margin-top: 15rem; }
+
+img {
+  width: 100%;
+  border: 0;
+  object-fit: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0; }
+
+.sec_ad .chap_PdViewTop {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede; }
+  .sec_ad .chap_PdViewTop .scene_banner {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em; }
+    .sec_ad .chap_PdViewTop .scene_banner ul {
+      width: 100%; }
+    .sec_ad .chap_PdViewTop .scene_banner .pic {
+      height: 120px;
+      background-color: lightskyblue; }
+      .sec_ad .chap_PdViewTop .scene_banner .pic img {
+        height: 100%; }
+    .sec_ad .chap_PdViewTop .scene_banner .title {
+      text-align: center;
+      font-size: 1.45rem;
+      color: #127C3B;
+      font-weight: bold;
+      margin-top: 0.4em; }
+    .sec_ad .chap_PdViewTop .scene_banner .text {
+      text-align: center; }
+
+.sec_display .chap_PdIntro {
+  text-align: center; }
+  .sec_display .chap_PdIntro .category {
+    width: 5.5em;
+    font-size: 1.2em;
+    padding: 0.25em 0 0.3em;
+    border-radius: 3em;
+    color: white;
+    background-color: #C98414;
+    text-align: center;
+    margin: 0 auto; }
+  .sec_display .chap_PdIntro .title {
+    font-size: 2rem;
+    color: #127C3B;
+    font-weight: bold;
+    margin-top: 0.4em; }
+  .sec_display .chap_PdIntro .sub {
+    font-size: 1.25rem;
+    margin-top: 0.1em; }
+  .sec_display .chap_PdIntro .support {
+    width: 60%;
+    border: 1px solid #dedede;
+    margin: 0 auto;
+    margin-top: 1.1em;
+    padding: 0.5em 0; }
+.sec_display .chap_PdViewPoster .box_photo {
+  position: relative; }
+.sec_display .chap_PdViewPoster .scene_AbTitleTop {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  top: 5em;
+  z-index: 2;
+  text-align: center; }
+.sec_display .chap_PdViewPoster .scene_AbTitleBottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  bottom: 5em;
+  z-index: 2;
+  text-align: center; }
+.sec_display .chap_PdViewPoster .scene_Pic {
+  width: 100%;
+  height: 1200px;
+  background-color: lightpink;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: top; }
+.sec_display .chap_SingleView .box_Photo {
+  max-height: 900px;
+  background-color: lightgoldenrodyellow; }
+.sec_display .chap_MultiView .scene_feature {
+  position: relative; }
+  .sec_display .chap_MultiView .scene_feature .front ul {
+    padding-left: 2em;
+    padding-right: 2em; }
+  .sec_display .chap_MultiView .scene_feature .front .pic {
+    width: 100%;
+    height: 360px;
+    background-color: rosybrown;
+    background-size: cover;
+    background-position: center; }
+    .sec_display .chap_MultiView .scene_feature .front .pic img {
+      height: 100%; }
+  .sec_display .chap_MultiView .scene_feature .front .num, .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .num_orange {
+    font-size: 3.5em;
+    font-family: 'Righteous', cursive;
+    margin-top: 0.1em; }
+  .sec_display .chap_MultiView .scene_feature .front .num_green {
+    color: #127C3B; }
+  .sec_display .chap_MultiView .scene_feature .front .num_violet {
+    color: #531F7D; }
+  .sec_display .chap_MultiView .scene_feature .front .num_orange {
+    color: #C98414; }
+  .sec_display .chap_MultiView .scene_feature .front .title {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 3em;
+    margin-top: -0.35em; }
+  .sec_display .chap_MultiView .scene_feature .front .sub {
+    margin-top: 2.5em; }
+  .sec_display .chap_MultiView .scene_feature .back .DrawLine, .sec_display .chap_MultiView .scene_feature .back .DrawLineLeft, .sec_display .chap_MultiView .scene_feature .back .DrawLineRight {
+    position: absolute;
+    width: 50.3%;
+    height: 9em;
+    bottom: -1.2em;
+    z-index: -10; }
+  .sec_display .chap_MultiView .scene_feature .back .DrawLineLeft {
+    left: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #c98414 30%, #127c3b 80%); }
+  .sec_display .chap_MultiView .scene_feature .back .DrawLineRight {
+    right: 0;
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 10%, #127c3b 30%, #531f7d 80%); }
+  .sec_display .chap_MultiView .scene_feature .back .DrawLineCenter {
+    position: absolute;
+    width: 100%;
+    height: 8em;
+    bottom: -2em;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: -10;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 5%, #c98414 23%, #531f7d 50%, #127c3b 77%, rgba(255, 255, 255, 0) 95%); }
+.sec_display .chap_PdSpec .box_Stroke {
+  padding: 2.5em 0; }
+  .sec_display .chap_PdSpec .box_Stroke .scene_title {
+    width: 90%;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center; }
+    .sec_display .chap_PdSpec .box_Stroke .scene_title .title {
+      font-size: 1.6rem;
+      color: #127C3B;
+      font-weight: bold; }
+    .sec_display .chap_PdSpec .box_Stroke .scene_title .sub {
+      font-size: 1.25rem; }
+    .sec_display .chap_PdSpec .box_Stroke .scene_title .line {
+      border-top: 1px solid #dedede;
+      margin: 0.45em 0 0.6em 0; }
+  .sec_display .chap_PdSpec .box_Stroke .Split {
+    width: 90%;
+    max-width: 760px;
+    margin: 0 auto;
+    margin-top: 2em; }
+    .sec_display .chap_PdSpec .box_Stroke .Split .pic {
+      width: 100%;
+      height: 241.33px; }
+      .sec_display .chap_PdSpec .box_Stroke .Split .pic .circle {
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
+        background-color: lightpink;
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center; }
+    .sec_display .chap_PdSpec .box_Stroke .Split .category {
+      width: 5.5em;
+      font-size: 1.2em;
+      padding: 0.25em 0 0.3em;
+      border-radius: 3em;
+      color: white;
+      background-color: #C98414;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.1em;
+      background-color: #127C3B;
+      margin-top: -1em; }
+    .sec_display .chap_PdSpec .box_Stroke .Split .title {
+      font-size: 1.45rem;
+      color: #127C3B;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0.2em; }
+    .sec_display .chap_PdSpec .box_Stroke .Split .sub {
+      margin-top: 0.4em; }
+.sec_display .chap_PdEditor .scene_title {
+  text-align: center; }
+  .sec_display .chap_PdEditor .scene_title .title {
+    font-size: 1.6rem;
+    color: #127C3B;
+    font-weight: bold; }
+  .sec_display .chap_PdEditor .scene_title .sub {
+    font-size: 1.25rem; }
+  .sec_display .chap_PdEditor .scene_title .line {
+    border-top: 1px solid #dedede;
+    margin: 0.45em 0 0.6em 0; }
+.sec_display .chap_PdEditor .scene_EditDisplay {
+  background-color: #262626;
+  padding: 2px; }
+  .sec_display .chap_PdEditor .scene_EditDisplay .box_EditTap {
+    width: 16rem;
+    padding: 0.65rem 0 0.6rem 1rem;
+    color: #e1e1e1;
+    font-family: '돋움', san-serif;
+    background-color: #383838; }
+  .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
+    margin-top: 2px;
+    background-color: #383838;
+    padding: 1.25rem 2.5rem 2.2rem; }
+    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split {
+      grid-gap: 2.2rem; }
+    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info {
+      position: relative; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .tag {
+        width: 5.5em;
+        font-size: 1.2em;
+        padding: 0.25em 0 0.3em;
+        border-radius: 3em;
+        color: white;
+        background-color: #C98414;
+        text-align: center;
+        margin: 0 auto;
+        margin: 0;
+        font-weight: bold;
+        background-color: black; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .pic {
+        min-width: 50%;
+        max-width: 100%;
+        background-color: lightpink;
+        margin: 0 auto;
+        margin-top: 1rem; }
+.sec_display .chap_PdEditor .scene_EditExplain {
+  background-color: #262626; }
+  .sec_display .chap_PdEditor .scene_EditExplain .box_explain {
+    padding: 1.8rem 2.5rem 1.9rem;
+    color: white; }
+    .sec_display .chap_PdEditor .scene_EditExplain .box_explain .Split {
+      grid-gap: 1em;
+      row-gap: 0.9em; }
+    .sec_display .chap_PdEditor .scene_EditExplain .box_explain li {
+      font-size: 1.25rem; }
+    .sec_display .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
+      text-align: center;
+      background-color: #127C3B;
+      border-radius: 2rem;
+      padding: 0.18rem 0; }
+.sec_display .chap_PdOption .scene_title {
+  text-align: center; }
+  .sec_display .chap_PdOption .scene_title .title {
+    font-size: 1.6rem;
+    color: #127C3B;
+    font-weight: bold; }
+  .sec_display .chap_PdOption .scene_title .sub {
+    font-size: 1.25rem; }
+  .sec_display .chap_PdOption .scene_title .line {
+    border-top: 1px solid #dedede;
+    margin: 0.45em 0 0.6em 0; }
+.sec_display .chap_PdOption .scene_OptionView {
+  width: 95%;
+  margin: 0 auto; }
+  .sec_display .chap_PdOption .scene_OptionView .pic {
+    width: 100%;
+    height: 170px;
+    background: yellowgreen; }
+  .sec_display .chap_PdOption .scene_OptionView .title {
+    font-size: 1.45rem;
+    color: #127C3B;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5rem; }
+  .sec_display .chap_PdOption .scene_OptionView .sub {
+    font-size: 1.25rem;
+    text-align: center; }
+  .sec_display .chap_PdOption .scene_OptionView .money {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5rem; }
+
+.sec_text .chap_SystemInfo:first-child, .sec_text .chap_PdInfo:first-child {
+  margin-top: 0; }
+.sec_text .chap_SystemInfo, .sec_text .chap_PdInfo {
+  margin-top: 3rem;
+  border-radius: 2em;
+  padding: 2em 0;
+  background-color: #F9F9F9; }
+  .sec_text .chap_SystemInfo .scene_title, .sec_text .chap_PdInfo .scene_title {
+    text-align: center; }
+    .sec_text .chap_SystemInfo .scene_title .title, .sec_text .chap_PdInfo .scene_title .title {
+      font-size: 1.6rem;
+      color: #127C3B;
+      font-weight: bold; }
+    .sec_text .chap_SystemInfo .scene_title .sub, .sec_text .chap_PdInfo .scene_title .sub {
+      font-size: 1.25rem; }
+    .sec_text .chap_SystemInfo .scene_title .line, .sec_text .chap_PdInfo .scene_title .line {
+      border-top: 1px solid #dedede;
+      margin: 0.45em 0 0.6em 0; }
+  .sec_text .chap_SystemInfo .scene_info, .sec_text .chap_PdInfo .scene_info {
+    margin-top: 1.2rem; }
+    .sec_text .chap_SystemInfo .scene_info .Split:first-child, .sec_text .chap_PdInfo .scene_info .Split:first-child {
+      margin-top: 0; }
+    .sec_text .chap_SystemInfo .scene_info .Split, .sec_text .chap_PdInfo .scene_info .Split {
+      margin-top: 3rem;
+      width: 80%;
+      margin: 0 auto; }
+    .sec_text .chap_SystemInfo .scene_info .title, .sec_text .chap_PdInfo .scene_info .title {
+      padding-top: 0.7rem;
+      font-size: 1.45rem;
+      color: #127C3B;
+      font-weight: bold;
+      font-size: 1.1em; }
+    .sec_text .chap_SystemInfo .scene_info .text li, .sec_text .chap_PdInfo .scene_info .text li {
+      list-style-type: disc;
+      padding-top: 0.7rem;
+      font-size: 1.1em; }
+.sec_text .chap_PdInfo {
+  background-color: transparent; }
+.sec_text .chap_PdEditor .scene_title {
+  text-align: center; }
+  .sec_text .chap_PdEditor .scene_title .title {
+    font-size: 1.6rem;
+    color: #127C3B;
+    font-weight: bold; }
+  .sec_text .chap_PdEditor .scene_title .sub {
+    font-size: 1.25rem; }
+  .sec_text .chap_PdEditor .scene_title .line {
+    border-top: 1px solid #dedede;
+    margin: 0.45em 0 0.6em 0; }
+.sec_text .chap_PdEditor .scene_EditDisplay {
+  background-color: #262626;
+  padding: 2px; }
+  .sec_text .chap_PdEditor .scene_EditDisplay .box_EditTap {
+    width: 16rem;
+    padding: 0.65rem 0 0.6rem 1rem;
+    color: #e1e1e1;
+    font-family: '돋움', san-serif;
+    background-color: #383838; }
+  .sec_text .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
+    margin-top: 2px;
+    background-color: #383838;
+    padding: 1.25rem 2.5rem 2.2rem; }
+    .sec_text .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split {
+      grid-gap: 2.2rem; }
+    .sec_text .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info {
+      position: relative; }
+      .sec_text .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .tag {
+        width: 5.5em;
+        font-size: 1.2em;
+        padding: 0.25em 0 0.3em;
+        border-radius: 3em;
+        color: white;
+        background-color: #C98414;
+        text-align: center;
+        margin: 0 auto;
+        margin: 0;
+        font-weight: bold;
+        background-color: black; }
+      .sec_text .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .pic {
+        min-width: 50%;
+        max-width: 100%;
+        background-color: lightpink;
+        margin: 0 auto;
+        margin-top: 1rem; }
+.sec_text .chap_PdEditor .scene_EditExplain {
+  background-color: #262626; }
+  .sec_text .chap_PdEditor .scene_EditExplain .box_explain {
+    padding: 1.8rem 2.5rem 1.9rem;
+    color: white; }
+    .sec_text .chap_PdEditor .scene_EditExplain .box_explain .Split {
+      grid-gap: 1em;
+      row-gap: 0.9em; }
+    .sec_text .chap_PdEditor .scene_EditExplain .box_explain li {
+      font-size: 1.25rem; }
+    .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
+      text-align: center;
+      background-color: #127C3B;
+      border-radius: 2rem;
+      padding: 0.18rem 0; }
+
+.chap_SealMark {
+  text-align: center; }
+  .chap_SealMark .title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    color: lightgray; }
+  .chap_SealMark .sub {
+    font-family: 'Vollkorn', serif;
+    font-size: 0.85em;
+    letter-spacing: 0.18em;
+    margin-top: 2px;
+    color: lightgray; }
+
+@media only screen and (min-width: 0px) and (max-width: 860px) {
+  html {
+    font-size: 11px; }
+
+  .box_Default, .sec_text .chap_SystemInfo, .sec_text .chap_PdInfo {
+    width: 94%; }
+
+  .box_Inside {
+    width: 92%; }
+
+  .box_Stroke {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid #127C3B;
+    border-bottom: 2px solid #127C3B; }
+
+  .Split {
+    justify-content: space-evenly;
+    grid-gap: 1rem; }
+
+  .CutQuarter {
+    grid-template-columns: repeat(2, 2fr); }
+
+  .sec_ad .chap_PdViewTop .scene_banner .pic {
+    height: 110px; }
+
+  .sec_text .chap_SystemInfo .scene_info .Split, .sec_text .chap_PdInfo .scene_info .Split {
+    display: inline-block; }
+
+  .sec_display .chap_PdIntro .support {
+    width: 94%; }
+  .sec_display .chap_PdSpec .box_Stroke .Split {
+    width: 92%;
+    grid-gap: 1.5em; }
+    .sec_display .chap_PdSpec .box_Stroke .Split .pic {
+      height: 137.56px; }
+  .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
+    padding: 1.25rem 1.5rem 3rem; }
+    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split {
+      display: block; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .info:last-child {
+        margin-top: 2rem; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .tag {
+        width: 20%;
+        margin: 0 auto; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .pic {
+        margin-top: 1rem; }
+  .sec_display .chap_PdEditor .scene_EditExplain .box_explain {
+    padding: 1.25rem 1.5rem 2rem; }
+  .sec_display .chap_PdOption .scene_OptionView {
+    width: 100%; }
+
+  .scene_title .sub {
+    text-align: left;
+    padding: 0 0.2rem; }
+
+  .MobileCenter {
+    text-align: center !important; } }
+
+/*# sourceMappingURL=pdtext.css.map */

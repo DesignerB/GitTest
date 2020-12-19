@@ -1,10 +1,16 @@
 
 // basic control
 @mixin v_center{margin: 0 auto}
-@mixin b_radi{border-radius: 1.8em;}
+@mixin b_radi{border-radius: 1.5em;}
 @mixin t_center{text-align: center;}
 @mixin t_left{text-align: left;}
 @mixin t_bold{font-weight: bold;}
+
+
+
+
+
+
 
 //frame_margin_default
 @mixin frame_margin_default{
@@ -41,6 +47,14 @@
     @include v_center;
     @include t_center;
 }
+
+@mixin sec_fullsize{
+    @include sec_default;
+    max-width: $frame_width;
+}
+
+
+
 @mixin sec_product_pic{
     position: relative;
     @include v_center;
@@ -161,7 +175,7 @@
 // 추가요소 (중복 클래스 사용)
 @mixin insert_line{
     border-bottom: 1px solid $color-gray-border;
-    margin-top:$frame_space_narrow;
+    // margin-top:$frame_space_narrow;
 }
 @mixin insert_line_margin_narrow{
     @include insert_line;

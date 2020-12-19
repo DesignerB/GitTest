@@ -9,3 +9,27 @@ $color-gridbox_title_corret: #127C3B;
 $color-gridbox_title_wrong:#531F7D;
 $color-ad_title:#C98414;
 
+
+@mixin section_default{
+    max-width: $frame_width;
+    @include v_center;
+}
+
+@mixin section_info{
+    @include section_default;
+    background-color: $color-gray;
+    @include b_radi;
+    padding:2em 0;
+}
+
+@mixin box_outside{
+    position: relative;
+    max-width: $frame_width;
+    @include v_center;
+}
+
+@mixin box_inside{
+    position: relative;
+    max-width: $sec_width;
+    @include v_center;
+}

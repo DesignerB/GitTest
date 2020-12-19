@@ -34,7 +34,8 @@
 
 //구역별 추가 스타일
 @mixin ad_typo_text{
-    @include typo_title;
+    font-size: $typo_sub;
+    font-weight: bold;
     color:$color-ad_title;
 }
 

@@ -1,0 +1,50 @@
+@mixin vc{margin: 0 auto}
+@mixin tc{text-align: center;}
+@mixin tl{text-align: left;}
+@mixin tr{text-align: right;}
+@mixin tb{font-weight: bold;}
+
+@mixin b_radi{border-radius: 2em;}
+
+
+//Position Absolute
+@mixin AbCenter{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    @include tc;
+}
+
+//텍스트 제목
+@mixin SecTextTitle{
+    @include tc;
+    .title{@include FontTitle;}
+    .sub{@include FontSub;}
+    .line{border-top: 1px solid $color-gray-border; margin:0.45em 0 0.6em 0;}
+}
+
+
+//카데고리 배경
+@mixin BtnCategory{
+    width:5.5em;
+    font-size: 1.2em;
+    padding: 0.25em 0 0.3em; 
+    border-radius: 3em; 
+    color: white;
+    background-color: $color-ad_title;
+    @include tc;
+    @include vc;
+}
+
+@mixin BtnCategoryGreen{
+    @include BtnCategory;
+    font-size: 1.1em;
+    background-color: $color-main;
+}
+
+@mixin BtnCategoryWorkSpace{
+    @include BtnCategory;
+    margin:0;
+    font-weight: bold;
+    background-color: black;
+}
