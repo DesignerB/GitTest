@@ -127,6 +127,7 @@ img{width:100%; border: 0; object-fit: cover; background-size: cover; margin:0; 
         }
     }
     .chap_PdEditor{
+        background: $ColorPdEditorBackground;
         .scene_title{
             @include SecTextTitle;
             // background: #127C3B;

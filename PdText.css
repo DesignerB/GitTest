@@ -291,67 +291,69 @@ img {
       margin-top: 0.2em; }
     .sec_display .chap_PdSpec .box_Stroke .Split .sub {
       margin-top: 0.4em; }
-.sec_display .chap_PdEditor .scene_title {
-  text-align: center; }
-  .sec_display .chap_PdEditor .scene_title .title {
-    font-size: 1.6rem;
-    color: #127C3B;
-    font-weight: bold; }
-  .sec_display .chap_PdEditor .scene_title .sub {
-    font-size: 1.25rem; }
-  .sec_display .chap_PdEditor .scene_title .line {
-    border-top: 1px solid #dedede;
-    margin: 0.45em 0 0.6em 0; }
-.sec_display .chap_PdEditor .scene_EditDisplay {
-  background-color: #262626;
-  padding: 2px; }
-  .sec_display .chap_PdEditor .scene_EditDisplay .box_EditTap {
-    width: 16rem;
-    padding: 0.65rem 0 0.6rem 1rem;
-    color: #e1e1e1;
-    font-family: '돋움', san-serif;
-    background-color: #383838; }
-  .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
-    margin-top: 2px;
-    background-color: #383838;
-    padding: 1.25rem 2.5rem 2.2rem; }
-    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split {
-      grid-gap: 2.2rem; }
-    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info {
-      position: relative; }
-      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .tag {
-        width: 5.5em;
-        font-size: 1.2em;
-        padding: 0.25em 0 0.3em;
-        border-radius: 3em;
-        color: white;
-        background-color: #C98414;
-        text-align: center;
-        margin: 0 auto;
-        margin: 0;
-        font-weight: bold;
-        background-color: black; }
-      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .pic {
-        min-width: 50%;
-        max-width: 100%;
-        background-color: lightpink;
-        margin: 0 auto;
-        margin-top: 1rem; }
-.sec_display .chap_PdEditor .scene_EditExplain {
-  background-color: #262626; }
-  .sec_display .chap_PdEditor .scene_EditExplain .box_explain {
-    padding: 1.8rem 2.5rem 1.9rem;
-    color: white; }
-    .sec_display .chap_PdEditor .scene_EditExplain .box_explain .Split {
-      grid-gap: 1em;
-      row-gap: 0.9em; }
-    .sec_display .chap_PdEditor .scene_EditExplain .box_explain li {
+.sec_display .chap_PdEditor {
+  background: #262626; }
+  .sec_display .chap_PdEditor .scene_title {
+    text-align: center; }
+    .sec_display .chap_PdEditor .scene_title .title {
+      font-size: 1.6rem;
+      color: #127C3B;
+      font-weight: bold; }
+    .sec_display .chap_PdEditor .scene_title .sub {
       font-size: 1.25rem; }
-    .sec_display .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
-      text-align: center;
-      background-color: #127C3B;
-      border-radius: 2rem;
-      padding: 0.18rem 0; }
+    .sec_display .chap_PdEditor .scene_title .line {
+      border-top: 1px solid #dedede;
+      margin: 0.45em 0 0.6em 0; }
+  .sec_display .chap_PdEditor .scene_EditDisplay {
+    background-color: #262626;
+    padding: 2px; }
+    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditTap {
+      width: 16rem;
+      padding: 0.65rem 0 0.6rem 1rem;
+      color: #e1e1e1;
+      font-family: '돋움', san-serif;
+      background-color: #383838; }
+    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
+      margin-top: 2px;
+      background-color: #383838;
+      padding: 1.25rem 2.5rem 2.2rem; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split {
+        grid-gap: 2.2rem; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info {
+        position: relative; }
+        .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .tag {
+          width: 5.5em;
+          font-size: 1.2em;
+          padding: 0.25em 0 0.3em;
+          border-radius: 3em;
+          color: white;
+          background-color: #C98414;
+          text-align: center;
+          margin: 0 auto;
+          margin: 0;
+          font-weight: bold;
+          background-color: black; }
+        .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .info .pic {
+          min-width: 50%;
+          max-width: 100%;
+          background-color: lightpink;
+          margin: 0 auto;
+          margin-top: 1rem; }
+  .sec_display .chap_PdEditor .scene_EditExplain {
+    background-color: #262626; }
+    .sec_display .chap_PdEditor .scene_EditExplain .box_explain {
+      padding: 1.8rem 2.5rem 1.9rem;
+      color: white; }
+      .sec_display .chap_PdEditor .scene_EditExplain .box_explain .Split {
+        grid-gap: 1em;
+        row-gap: 0.9em; }
+      .sec_display .chap_PdEditor .scene_EditExplain .box_explain li {
+        font-size: 1.25rem; }
+      .sec_display .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
+        text-align: center;
+        background-color: #127C3B;
+        border-radius: 2rem;
+        padding: 0.18rem 0; }
 .sec_display .chap_PdOption .scene_title {
   text-align: center; }
   .sec_display .chap_PdOption .scene_title .title {
