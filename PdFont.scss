@@ -1,51 +1,79 @@
-$FontRighteous: 'Righteous', cursive;
-$FontDoHyeon: 'Do Hyeon', sans-serif;
-$FontPacifico: 'Pacifico', cursive;
-$FontVollkorn: 'Vollkorn', serif;
-@mixin FontDoHyeon {font-family: 'Do Hyeon', sans-serif;}
-@mixin FontRighteous {font-family: 'Righteous', cursive;;} 
-@mixin FontPacifico {font-family: 'Pacifico', cursive;}
-@mixin FontVollkorn {font-family: 'Vollkorn', serif;}
+$FontRighteous: "Righteous", cursive;
+$FontDoHyeon: "Do Hyeon", sans-serif;
+$FontPacifico: "Pacifico", cursive;
+$FontVollkorn: "Vollkorn", serif;
+@mixin FontDoHyeon {
+  font-family: "Do Hyeon", sans-serif;
+}
+@mixin FontRighteous {
+  font-family: "Righteous", cursive;
+}
+@mixin FontPacifico {
+  font-family: "Pacifico", cursive;
+}
+@mixin FontVollkorn {
+  font-family: "Vollkorn", serif;
+}
+@mixin NotoSans100 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 100;
+}
+@mixin NotoSans300 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+}
+@mixin NotoSans400 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+}
+@mixin NotoSans500 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+@mixin NotoSans700 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+}
+@mixin NotoSans900 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 900;
+}
 
 $SizeFontBigTitle: 2rem;
 $SizeFontTitle: 1.6rem;
 $SizeFontLittleTitle: 1.45rem;
 $SizeFontSub: 1.25rem;
 
-@mixin FontBigTitle{
-    font-size: $SizeFontBigTitle;
-    color: $color-main;
-    @include tb;
+@mixin FontBigTitle {
+  font-size: $SizeFontBigTitle;
+  color: $color-main;
+  @include tb;
 }
-@mixin FontLittleTitle{
-    font-size: $SizeFontLittleTitle;
-    color: $color-main;
-    @include tb;
+@mixin FontLittleTitle {
+  font-size: $SizeFontLittleTitle;
+  color: $color-main;
+  @include tb;
 }
-@mixin FontTitle{
-    font-size: $SizeFontTitle;
-    color: $color-main;
-    @include tb;
-    
+@mixin FontTitle {
+  font-size: $SizeFontTitle;
+  color: $color-main;
+  @include tb;
 }
-@mixin FontSub{
-    font-size: $SizeFontSub;
+@mixin FontSub {
+  font-size: $SizeFontSub;
 }
 
 //
 
-
-
-@mixin FontSealTitle{
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5em;
-    color:lightgray;
+@mixin FontSealTitle {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5em;
+  color: lightgray;
 }
-@mixin FontSealSub{
-    font-family: 'Vollkorn', serif;
-    font-size: 0.85em;
-    letter-spacing: 0.18em;
-    margin-top:2px;
-    color:lightgray;
+@mixin FontSealSub {
+  font-family: "Vollkorn", serif;
+  font-size: 0.85em;
+  letter-spacing: 0.18em;
+  margin-top: 2px;
+  color: lightgray;
 }
-

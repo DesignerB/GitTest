@@ -1,36 +1,39 @@
-$color-main: #127C3B;
+$color-main: hsl(143, 75%, 28%);
 $color-main-border: hsl(143, 74%, 22%);
-$color-main-hover: #129B3B;
-$color-gray: #F9F9F9;
+$color-main-hover: #129b3b;
+$color-gray: #f9f9f9;
 $color-gray-border: #dedede;
-$color-gray-hover: #F3F2F1;
+$color-gray-hover: #f3f2f1;
 $color-main-highlight: yellow;
-$color-gridbox_title_corret: #127C3B;
-$color-gridbox_title_wrong:#531F7D;
-$color-ad_title:#C98414;
+$color-gridbox_title_corret: #127c3b;
+$color-gridbox_title_wrong: #531f7d;
+$color-ad_title: #c98414;
 
-$ColorPdEditorBackground:hsl(0, 0%, 15%);
+$ColorHighLightBackground: rgb(255, 220, 10);
+$ColorHighLight: hsl(5, 100%, 50%);
 
-@mixin section_default{
-    max-width: $frame_width;
-    @include v_center;
+$ColorPdEditorBackground: hsl(0, 0%, 15%);
+
+@mixin section_default {
+  max-width: $frame_width;
+  @include v_center;
 }
 
-@mixin section_info{
-    @include section_default;
-    background-color: $color-gray;
-    @include b_radi;
-    padding:2em 0;
+@mixin section_info {
+  @include section_default;
+  background-color: $color-gray;
+  @include b_radi;
+  padding: 2em 0;
 }
 
-@mixin box_outside{
-    position: relative;
-    max-width: $frame_width;
-    @include v_center;
+@mixin box_outside {
+  position: relative;
+  max-width: $frame_width;
+  @include v_center;
 }
 
-@mixin box_inside{
-    position: relative;
-    max-width: $sec_width;
-    @include v_center;
+@mixin box_inside {
+  position: relative;
+  max-width: $sec_width;
+  @include v_center;
 }

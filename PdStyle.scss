@@ -1,50 +1,109 @@
-@mixin vc{margin: 0 auto}
-@mixin tc{text-align: center;}
-@mixin tl{text-align: left;}
-@mixin tr{text-align: right;}
-@mixin tb{font-weight: bold;}
+@mixin vc {
+  margin: 0 auto;
+}
+@mixin tc {
+  text-align: center;
+}
+@mixin tl {
+  text-align: left;
+}
+@mixin tr {
+  text-align: right;
+}
+@mixin tb {
+  font-weight: bold;
+}
 
-@mixin b_radi{border-radius: 2em;}
-
+@mixin b_radi {
+  border-radius: 2em;
+}
 
 //Position Absolute
-@mixin AbCenter{
-    position: absolute;
-    left:50%;
-    transform: translateX(-50%);
-    @include tc;
+@mixin AbCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  @include tc;
 }
 
 //텍스트 제목
-@mixin SecTextTitle{
-    @include tc;
-    .title{@include FontTitle;}
-    .sub{@include FontSub;}
-    .line{border-top: 1px solid $color-gray-border; margin:0.45em 0 0.6em 0;}
+@mixin SecTextTitle {
+  @include tc;
+  .title {
+    @include FontTitle;
+  }
+  .sub {
+    @include FontSub;
+  }
+  .line {
+    border-top: 1px solid $color-gray-border;
+    margin: 0.45em 0 0.6em 0;
+  }
 }
 
+@mixin GrayBox {
+  max-width: $SizeBoxDefault;
+  @include vc;
+  @include b_radi;
+  padding: 2em 0;
+  background-color: $color-gray;
+}
 
 //카데고리 배경
-@mixin BtnCategory{
-    width:5.5em;
-    font-size: 1.2em;
-    padding: 0.25em 0 0.3em; 
-    border-radius: 3em; 
-    color: white;
-    background-color: $color-ad_title;
-    @include tc;
+@mixin BtnCategory {
+  width: 5.5em;
+  font-size: 1.2em;
+  padding: 0.25em 0 0.3em;
+  border-radius: 3em;
+  color: white;
+  background-color: $color-ad_title;
+  @include tc;
+  @include vc;
+}
+
+@mixin BtnCategoryGreen {
+  @include BtnCategory;
+  font-size: 1.1em;
+  background-color: $color-main;
+}
+
+@mixin BtnCategoryWorkSpace {
+  @include BtnCategory;
+  margin: 0;
+  font-weight: bold;
+  background-color: black;
+}
+
+//chap_OrderInfo
+@mixin chap_OrderInfoTitle {
+  .title_eng {
+    font-family: $FontVollkorn;
+    color: $color-main;
+    padding-left: 7%;
+    font-size: 0.9rem;
+  }
+  .title {
+    width: 90%;
+    @include NotoSans700;
+    font-size: 2.4rem;
+    color: $color-main;
+    // background: yellow;
+    margin-top: 0.2rem;
+    // padding-top: 0.2rem;
+    // padding-bottom: 0.5rem;
+    padding-left: 5%;
+    line-height: 1;
+  }
+  .line {
+    width: 90%;
+    border-top: 1px solid lightgray;
     @include vc;
-}
-
-@mixin BtnCategoryGreen{
-    @include BtnCategory;
-    font-size: 1.1em;
-    background-color: $color-main;
-}
-
-@mixin BtnCategoryWorkSpace{
-    @include BtnCategory;
-    margin:0;
-    font-weight: bold;
-    background-color: black;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+  .text {
+    width: 90%;
+    line-height: 1.3;
+    @include vc;
+  }
 }

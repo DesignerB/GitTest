@@ -1,8 +1,9 @@
 @charset "UTF-8";
 html {
   font-size: 12px;
-  font-family: "Montserrat","Lato",arial,"Noto Sans KR",sans-serif;
-  letter-spacing: -0.5; }
+  font-family: "Montserrat", "Lato", arial, "Noto Sans KR", sans-serif;
+  letter-spacing: -0.3;
+  line-height: 1; }
 
 body {
   margin: 0;
@@ -10,7 +11,8 @@ body {
   overflow-x: hidden;
   overflow-y: auto; }
 
-ul, ol {
+ul,
+ol {
   position: relative;
   list-style: none;
   word-break: break-word;
@@ -20,46 +22,6 @@ ul, ol {
   margin-block-start: 0;
   -webkit-margin-after: 0;
   margin-block-end: 0; }
-
-.frame {
-  margin: 0 auto; }
-
-.box_Default, .sec_text .chap_SystemInfo, .sec_text .chap_PdInfo {
-  max-width: 860px;
-  margin: 0 auto; }
-
-.box_Photo {
-  max-width: 860px;
-  margin: 0 auto; }
-
-.box_Inside {
-  max-width: 760px;
-  margin: 0 auto; }
-
-.box_Stroke {
-  max-width: 856px;
-  margin: 0 auto;
-  border-radius: 2em;
-  border: 2px solid #127C3B; }
-
-.Split {
-  display: grid;
-  grid-gap: 1.5rem; }
-
-.CutHalf {
-  grid-template-columns: repeat(2, 5fr); }
-
-.CutThird {
-  grid-template-columns: repeat(3, 5fr); }
-
-.CutQuarter {
-  grid-template-columns: repeat(4, 5fr); }
-
-.CutOneThree {
-  grid-template-columns: 1fr 3fr; }
-
-.CutOneNine {
-  grid-template-columns: 1fr 9fr; }
 
 .Mg1 {
   margin-top: 1rem; }
@@ -106,6 +68,49 @@ ul, ol {
 .Mg15 {
   margin-top: 15rem; }
 
+.frame {
+  margin: 0 auto; }
+
+.box_Default {
+  max-width: 860px;
+  margin: 0 auto; }
+
+.box_Photo {
+  max-width: 860px;
+  margin: 0 auto; }
+
+.box_Inside {
+  max-width: 810px;
+  margin: 0 auto; }
+
+.box_Stroke {
+  max-width: 856px;
+  margin: 0 auto;
+  border-radius: 2em;
+  border: 2px solid #127d3b; }
+
+.Split {
+  display: grid;
+  grid-gap: 1.5rem; }
+
+.CutHalf {
+  grid-template-columns: repeat(2, 5fr); }
+
+.CutThird {
+  grid-template-columns: repeat(3, 5fr); }
+
+.CutQuarter {
+  grid-template-columns: repeat(4, 5fr); }
+
+.CutOneThree {
+  grid-template-columns: 1fr 3fr; }
+
+.CutOneFour {
+  grid-template-columns: 1fr 3fr; }
+
+.CutOneNine {
+  grid-template-columns: 1fr 9fr; }
+
 img {
   width: 100%;
   border: 0;
@@ -130,7 +135,7 @@ img {
     .sec_ad .chap_PdViewTop .scene_banner .title {
       text-align: center;
       font-size: 1.45rem;
-      color: #127C3B;
+      color: #127d3b;
       font-weight: bold;
       margin-top: 0.4em; }
     .sec_ad .chap_PdViewTop .scene_banner .text {
@@ -144,12 +149,12 @@ img {
     padding: 0.25em 0 0.3em;
     border-radius: 3em;
     color: white;
-    background-color: #C98414;
+    background-color: #c98414;
     text-align: center;
     margin: 0 auto; }
   .sec_display .chap_PdIntro .title {
     font-size: 2rem;
-    color: #127C3B;
+    color: #127d3b;
     font-weight: bold;
     margin-top: 0.4em; }
   .sec_display .chap_PdIntro .sub {
@@ -204,16 +209,16 @@ img {
       height: 100%; }
   .sec_display .chap_MultiView .scene_feature .front .num, .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .num_orange {
     font-size: 3.5em;
-    font-family: 'Righteous', cursive;
+    font-family: "Righteous", cursive;
     margin-top: 0.1em; }
   .sec_display .chap_MultiView .scene_feature .front .num_green {
-    color: #127C3B; }
+    color: #127d3b; }
   .sec_display .chap_MultiView .scene_feature .front .num_violet {
-    color: #531F7D; }
+    color: #531f7d; }
   .sec_display .chap_MultiView .scene_feature .front .num_orange {
-    color: #C98414; }
+    color: #c98414; }
   .sec_display .chap_MultiView .scene_feature .front .title {
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 3em;
     margin-top: -0.35em; }
   .sec_display .chap_MultiView .scene_feature .front .sub {
@@ -243,12 +248,12 @@ img {
   padding: 2.5em 0; }
   .sec_display .chap_PdSpec .box_Stroke .scene_title {
     width: 90%;
-    max-width: 760px;
+    max-width: 810px;
     margin: 0 auto;
     text-align: center; }
     .sec_display .chap_PdSpec .box_Stroke .scene_title .title {
       font-size: 1.6rem;
-      color: #127C3B;
+      color: #127d3b;
       font-weight: bold; }
     .sec_display .chap_PdSpec .box_Stroke .scene_title .sub {
       font-size: 1.25rem; }
@@ -257,7 +262,7 @@ img {
       margin: 0.45em 0 0.6em 0; }
   .sec_display .chap_PdSpec .box_Stroke .Split {
     width: 90%;
-    max-width: 760px;
+    max-width: 810px;
     margin: 0 auto;
     margin-top: 2em; }
     .sec_display .chap_PdSpec .box_Stroke .Split .pic {
@@ -277,15 +282,15 @@ img {
       padding: 0.25em 0 0.3em;
       border-radius: 3em;
       color: white;
-      background-color: #C98414;
+      background-color: #c98414;
       text-align: center;
       margin: 0 auto;
       font-size: 1.1em;
-      background-color: #127C3B;
+      background-color: #127d3b;
       margin-top: -1em; }
     .sec_display .chap_PdSpec .box_Stroke .Split .title {
       font-size: 1.45rem;
-      color: #127C3B;
+      color: #127d3b;
       font-weight: bold;
       text-align: center;
       margin-top: 0.2em; }
@@ -297,7 +302,7 @@ img {
     text-align: center; }
     .sec_display .chap_PdEditor .scene_title .title {
       font-size: 1.6rem;
-      color: #127C3B;
+      color: #127d3b;
       font-weight: bold; }
     .sec_display .chap_PdEditor .scene_title .sub {
       font-size: 1.25rem; }
@@ -311,7 +316,7 @@ img {
       width: 16rem;
       padding: 0.65rem 0 0.6rem 1rem;
       color: #e1e1e1;
-      font-family: '돋움', san-serif;
+      font-family: "돋움", san-serif;
       background-color: #383838; }
     .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
       margin-top: 2px;
@@ -327,7 +332,7 @@ img {
           padding: 0.25em 0 0.3em;
           border-radius: 3em;
           color: white;
-          background-color: #C98414;
+          background-color: #c98414;
           text-align: center;
           margin: 0 auto;
           margin: 0;
@@ -351,14 +356,14 @@ img {
         font-size: 1.25rem; }
       .sec_display .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
         text-align: center;
-        background-color: #127C3B;
+        background-color: #127d3b;
         border-radius: 2rem;
         padding: 0.18rem 0; }
 .sec_display .chap_PdOption .scene_title {
   text-align: center; }
   .sec_display .chap_PdOption .scene_title .title {
     font-size: 1.6rem;
-    color: #127C3B;
+    color: #127d3b;
     font-weight: bold; }
   .sec_display .chap_PdOption .scene_title .sub {
     font-size: 1.25rem; }
@@ -374,7 +379,7 @@ img {
     background: yellowgreen; }
   .sec_display .chap_PdOption .scene_OptionView .title {
     font-size: 1.45rem;
-    color: #127C3B;
+    color: #127d3b;
     font-weight: bold;
     text-align: center;
     margin-top: 0.5rem; }
@@ -390,14 +395,16 @@ img {
   margin-top: 0; }
 .sec_text .chap_SystemInfo, .sec_text .chap_PdInfo {
   margin-top: 3rem;
+  max-width: 860px;
+  margin: 0 auto;
   border-radius: 2em;
   padding: 2em 0;
-  background-color: #F9F9F9; }
+  background-color: #f9f9f9; }
   .sec_text .chap_SystemInfo .scene_title, .sec_text .chap_PdInfo .scene_title {
     text-align: center; }
     .sec_text .chap_SystemInfo .scene_title .title, .sec_text .chap_PdInfo .scene_title .title {
       font-size: 1.6rem;
-      color: #127C3B;
+      color: #127d3b;
       font-weight: bold; }
     .sec_text .chap_SystemInfo .scene_title .sub, .sec_text .chap_PdInfo .scene_title .sub {
       font-size: 1.25rem; }
@@ -415,7 +422,7 @@ img {
     .sec_text .chap_SystemInfo .scene_info .title, .sec_text .chap_PdInfo .scene_info .title {
       padding-top: 0.7rem;
       font-size: 1.45rem;
-      color: #127C3B;
+      color: #127d3b;
       font-weight: bold;
       font-size: 1.1em; }
     .sec_text .chap_SystemInfo .scene_info .text li, .sec_text .chap_PdInfo .scene_info .text li {
@@ -428,7 +435,7 @@ img {
   text-align: center; }
   .sec_text .chap_PdEditor .scene_title .title {
     font-size: 1.6rem;
-    color: #127C3B;
+    color: #127d3b;
     font-weight: bold; }
   .sec_text .chap_PdEditor .scene_title .sub {
     font-size: 1.25rem; }
@@ -442,7 +449,7 @@ img {
     width: 16rem;
     padding: 0.65rem 0 0.6rem 1rem;
     color: #e1e1e1;
-    font-family: '돋움', san-serif;
+    font-family: "돋움", san-serif;
     background-color: #383838; }
   .sec_text .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
     margin-top: 2px;
@@ -458,7 +465,7 @@ img {
         padding: 0.25em 0 0.3em;
         border-radius: 3em;
         color: white;
-        background-color: #C98414;
+        background-color: #c98414;
         text-align: center;
         margin: 0 auto;
         margin: 0;
@@ -482,18 +489,130 @@ img {
       font-size: 1.25rem; }
     .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
       text-align: center;
-      background-color: #127C3B;
+      background-color: #127d3b;
       border-radius: 2rem;
       padding: 0.18rem 0; }
+.sec_text .chap_OrderInfo .scene_MakeInfoDesign {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 2em;
+  padding: 2em 0;
+  background-color: #f9f9f9; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .title_eng {
+    font-family: "Vollkorn", serif;
+    color: #127d3b;
+    padding-left: 7%;
+    font-size: 0.9rem; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .title {
+    width: 90%;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #127d3b;
+    margin-top: 0.2rem;
+    padding-left: 5%;
+    line-height: 1; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .line {
+    width: 90%;
+    border-top: 1px solid lightgray;
+    margin: 0 auto;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .text {
+    width: 90%;
+    line-height: 1.3;
+    margin: 0 auto; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub {
+    color: #383838; }
+    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .main {
+      font-size: 1.3rem;
+      line-height: 1.65;
+      letter-spacing: -0.7;
+      font-weight: 500; }
+      .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .main span {
+        background: #ffdc0a;
+        color: #ff1500;
+        font-weight: 500;
+        padding: 1px 0.5rem 2px 0.5rem;
+        border-radius: 0.5rem; }
+    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .sub {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #99603d;
+      font-weight: 400; }
+      .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .sub span {
+        text-decoration: underline;
+        font-weight: 500;
+        color: #ff1500; }
+.sec_text .chap_OrderInfo .scene_MakeInfoNameCard {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 2em;
+  padding: 2em 0;
+  background-color: #f9f9f9; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .title_eng {
+    font-family: "Vollkorn", serif;
+    color: #127d3b;
+    padding-left: 7%;
+    font-size: 0.9rem; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .title {
+    width: 90%;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #127d3b;
+    margin-top: 0.2rem;
+    padding-left: 5%;
+    line-height: 1; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .line {
+    width: 90%;
+    border-top: 1px solid lightgray;
+    margin: 0 auto;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .text {
+    width: 90%;
+    line-height: 1.3;
+    margin: 0 auto; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub ul {
+    position: relative; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num, .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num_green, .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num_violet, .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num_orange {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: white;
+    color: #127d3b;
+    line-height: 2.2rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .pic {
+    height: 160px;
+    background: lightgreen;
+    border-radius: 1rem; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .title {
+    font-size: 1.45rem;
+    color: #127d3b;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.7rem; }
+  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .text {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0.4rem; }
 
 .chap_SealMark {
   text-align: center; }
   .chap_SealMark .title {
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     font-size: 1.5em;
     color: lightgray; }
   .chap_SealMark .sub {
-    font-family: 'Vollkorn', serif;
+    font-family: "Vollkorn", serif;
     font-size: 0.85em;
     letter-spacing: 0.18em;
     margin-top: 2px;
@@ -503,7 +622,7 @@ img {
   html {
     font-size: 11px; }
 
-  .box_Default, .sec_text .chap_SystemInfo, .sec_text .chap_PdInfo {
+  .box_Default {
     width: 94%; }
 
   .box_Inside {
@@ -513,8 +632,8 @@ img {
     width: 100%;
     border: 0;
     border-radius: 0;
-    border-top: 2px solid #127C3B;
-    border-bottom: 2px solid #127C3B; }
+    border-top: 2px solid #127d3b;
+    border-bottom: 2px solid #127d3b; }
 
   .Split {
     justify-content: space-evenly;

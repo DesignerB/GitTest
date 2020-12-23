@@ -6,320 +6,661 @@
 
 // ul{width: 100%;}
 
-.frame{@include vc;}
-.box_Default{max-width: $SizeBoxDefault; @include vc;}
-.box_Photo{max-width: $SizeBoxDefault; @include vc;}
-.box_Inside{max-width: $SizeBoxInside; @include vc;}
-.box_Stroke{max-width: $SizeBoxStroke; @include vc; @include b_radi; border:2px solid $color-main;}
+.frame {
+  @include vc;
+}
+.box_Default {
+  max-width: $SizeBoxDefault;
+  @include vc;
+}
+.box_Photo {
+  max-width: $SizeBoxDefault;
+  @include vc;
+}
+.box_Inside {
+  max-width: $SizeBoxInside;
+  @include vc;
+}
+.box_Stroke {
+  max-width: $SizeBoxStroke;
+  @include vc;
+  @include b_radi;
+  border: 2px solid $color-main;
+}
 
-.Split{display: grid; grid-gap:$SizeGridGap;}
-.CutHalf{grid-template-columns: repeat(2, 5fr);}
-.CutThird{grid-template-columns: repeat(3, 5fr);}
-.CutQuarter{grid-template-columns: repeat(4, 5fr);}
-.CutOneThree{grid-template-columns: 1fr 3fr;}
-.CutOneNine{grid-template-columns: 1fr 9fr;}
-.Mg1{margin-top:1rem;}.Mg2{margin-top:2rem;}.Mg3{margin-top: 3rem;}.Mg4{margin-top: 4rem;}.Mg5{margin-top: 5rem;}.Mg6{margin-top: 6rem;}.Mg7{margin-top: 7rem;}.Mg8{margin-top: 8rem;}.Mg9{margin-top: 9rem;}.Mg10{margin-top: 10rem;}.Mg11{margin-top: 11rem;}.Mg12{margin-top: 12rem;}.Mg13{margin-top: 13rem;}.Mg14{margin-top: 14rem;}.Mg15{margin-top: 15rem;}
+.Split {
+  display: grid;
+  grid-gap: $SizeGridGap;
+}
+.CutHalf {
+  grid-template-columns: repeat(2, 5fr);
+}
+.CutThird {
+  grid-template-columns: repeat(3, 5fr);
+}
+.CutQuarter {
+  grid-template-columns: repeat(4, 5fr);
+}
+.CutOneThree {
+  grid-template-columns: 1fr 3fr;
+}
+.CutOneFour {
+  grid-template-columns: 1fr 3fr;
+}
+.CutOneNine {
+  grid-template-columns: 1fr 9fr;
+}
 
-img{width:100%; border: 0; object-fit: cover; background-size: cover; margin:0; padding:0;}
+img {
+  width: 100%;
+  border: 0;
+  object-fit: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
 
 //광고섹션
-.sec_ad{
-    .chap_PdViewTop{
-        border-top:1px solid $color-gray-border;
-        border-bottom:1px solid $color-gray-border;
-        .scene_banner{
-            margin-top:1.2em;
-            margin-bottom:1.2em;
-            ul{width:100%;}
-            .pic{height:120px; background-color: lightskyblue; img{height: 100%;}}
-            .title{@include tc; @include FontLittleTitle; margin-top: 0.4em;}
-            .text{@include tc;}
+.sec_ad {
+  .chap_PdViewTop {
+    border-top: 1px solid $color-gray-border;
+    border-bottom: 1px solid $color-gray-border;
+    .scene_banner {
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+      ul {
+        width: 100%;
+      }
+      .pic {
+        height: 120px;
+        background-color: lightskyblue;
+        img {
+          height: 100%;
         }
+      }
+      .title {
+        @include tc;
+        @include FontLittleTitle;
+        margin-top: 0.4em;
+      }
+      .text {
+        @include tc;
+      }
     }
+  }
 }
 
 //이미지가 주로 첨부된 항목(매번 새롭게 만들어주어야 되는것)
-.sec_display{
-    .chap_PdIntro{
-        @include tc;
-        .category{@include BtnCategory;}
-        .title{@include FontBigTitle; margin-top: 0.4em;}
-        .sub{@include FontSub; margin-top: 0.1em;}
-        .support{width: 60%; border:1px solid $color-gray-border; @include vc; margin-top: 1.1em; padding:0.5em 0;}
+.sec_display {
+  .chap_PdIntro {
+    @include tc;
+    .category {
+      @include BtnCategory;
     }
-    .chap_PdViewPoster{
-        .box_photo{position: relative;}
-        .scene_AbTitleTop{
-            @include AbCenter;
-            top:5em;
-            z-index:2;
-            @include tc;
+    .title {
+      @include FontBigTitle;
+      margin-top: 0.4em;
+    }
+    .sub {
+      @include FontSub;
+      margin-top: 0.1em;
+    }
+    .support {
+      width: 60%;
+      border: 1px solid $color-gray-border;
+      @include vc;
+      margin-top: 1.1em;
+      padding: 0.5em 0;
+    }
+  }
+  .chap_PdViewPoster {
+    .box_photo {
+      position: relative;
+    }
+    .scene_AbTitleTop {
+      @include AbCenter;
+      top: 5em;
+      z-index: 2;
+      @include tc;
+    }
+    .scene_AbTitleBottom {
+      @include AbCenter;
+      bottom: 5em;
+      z-index: 2;
+      @include tc;
+    }
+    .scene_Pic {
+      width: 100%;
+      height: 1200px;
+      background-color: lightpink;
+      @include vc;
+      background-size: cover;
+      background-position: top;
+    }
+  }
+  .chap_SingleView {
+    .box_Photo {
+      max-height: 900px;
+      background-color: lightgoldenrodyellow;
+    }
+  }
+  .chap_MultiView {
+    .scene_feature {
+      position: relative;
+      .front {
+        ul {
+          padding-left: 2em;
+          padding-right: 2em;
         }
-        .scene_AbTitleBottom{
-            @include AbCenter;
-            bottom:5em;
-            z-index:2;
-            @include tc;
+        .pic {
+          width: 100%;
+          height: 360px;
+          background-color: rosybrown;
+          background-size: cover;
+          background-position: center;
+          img {
+            height: 100%;
+          }
         }
-        .scene_Pic{
-            width: 100%;
-            height: 1200px;
+        .num {
+          font-size: 3.5em;
+          font-family: "Righteous", cursive;
+          margin-top: 0.1em;
+        }
+        .num_green {
+          @extend .num;
+          color: $color-main;
+        }
+        .num_violet {
+          @extend .num;
+          color: $color-gridbox_title_wrong;
+        }
+        .num_orange {
+          @extend .num;
+          color: $color-ad_title;
+        }
+        .title {
+          @include FontDoHyeon;
+          font-size: 3em;
+          margin-top: -0.35em;
+        }
+        .sub {
+          margin-top: 2.5em;
+        }
+      }
+      .back {
+        .DrawLine {
+          position: absolute;
+          width: 50.3%;
+          height: 9em;
+          bottom: -1.2em;
+          z-index: -10;
+        }
+        .DrawLineLeft {
+          @extend .DrawLine;
+          left: 0;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 10%,
+            rgba(201, 132, 20, 1) 30%,
+            rgba(18, 124, 59, 1) 80%
+          );
+        }
+        .DrawLineRight {
+          @extend .DrawLine;
+          right: 0;
+          background: linear-gradient(
+            -90deg,
+            rgba(255, 255, 255, 0) 10%,
+            rgba(18, 124, 59, 1) 30%,
+            rgba(83, 31, 125, 1) 80%
+          );
+        }
+        .DrawLineCenter {
+          position: absolute;
+          width: 100%;
+          height: 8em;
+          bottom: -2em;
+          right: 50%;
+          transform: translateX(50%);
+          z-index: -10;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 5%,
+            rgba(201, 132, 20, 1) 23%,
+            rgba(83, 31, 125, 1) 50%,
+            rgba(18, 124, 59, 1) 77%,
+            rgba(255, 255, 255, 0) 95%
+          );
+        }
+      }
+    }
+    .Split {
+    }
+  }
+  .chap_PdSpec {
+    .box_Stroke {
+      padding: 2.5em 0;
+      .scene_title {
+        width: 90%;
+        max-width: $SizeBoxInside;
+        @include vc;
+        @include SecTextTitle;
+      }
+      .Split {
+        width: 90%;
+        max-width: $SizeBoxInside;
+        @include vc;
+        margin-top: 2em;
+        .pic {
+          width: 100%;
+          height: 241.33px;
+          .circle {
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
             background-color: lightpink;
             @include vc;
             background-size: cover;
-            background-position: top;
+            background-position: center;
+          }
         }
+        .category {
+          @include BtnCategoryGreen;
+          margin-top: -1em;
+        }
+        .title {
+          @include FontLittleTitle;
+          @include tc;
+          margin-top: 0.2em;
+        }
+        .sub {
+          margin-top: 0.4em;
+        }
+      }
     }
-    .chap_SingleView{
-        .box_Photo{
-            max-height:900px; background-color: lightgoldenrodyellow;
-            
-        }
-    }
-    .chap_MultiView{
-        .scene_feature{
-            position: relative;
-            .front{
-                ul{padding-left: 2em; padding-right: 2em;}
-                .pic{width:100%; height: 360px; background-color: rosybrown; 
-                    background-size: cover; background-position: center;
-                    img{height: 100%;}}
-                .num{font-size: 3.5em; font-family: 'Righteous', cursive; margin-top:0.1em;}
-                .num_green{@extend .num; color:$color-main;}
-                .num_violet{@extend .num; color:$color-gridbox_title_wrong;}
-                .num_orange{@extend .num; color:$color-ad_title;}
-                .title{@include FontDoHyeon; font-size:3em; margin-top: -0.35em;}
-                .sub{margin-top:2.5em;}
-            }
-            .back{
-                .DrawLine{position: absolute; width:50.3%; height: 9em; bottom:-1.2em; z-index: -10;}
-                .DrawLineLeft{
-                    @extend .DrawLine; left: 0;
-                    background: linear-gradient(90deg, rgba(255,255,255,0) 10%, rgba(201,132,20,1) 30%, rgba(18,124,59,1) 80%);
-                }
-                .DrawLineRight{
-                    @extend .DrawLine; right: 0;
-                    background: linear-gradient(-90deg, rgba(255,255,255,0) 10%, rgba(18,124,59,1) 30%, rgba(83,31,125,1) 80%);
-                }
-                .DrawLineCenter{
-                    position: absolute; width:100%; height:8em; bottom:-2em; right: 50%; transform: translateX(50%); z-index: -10;
-                    background: linear-gradient(90deg, rgba(255,255,255,0) 5%, rgba(201,132,20,1) 23%, rgba(83,31,125,1) 50%, rgba(18,124,59,1) 77%, rgba(255,255,255,0) 95%);
-                }
-            }
-        }
-        .Split{
+  }
+  .chap_PdEditor {
+    background: $ColorPdEditorBackground;
+    .scene_title {
+      @include SecTextTitle;
+      // background: #127C3B;
+      // padding-bottom:1rem;
 
-        }
+      // .title{background: #383838; padding:1rem 0;}
+      // .sub {background: #262626;}
     }
-    .chap_PdSpec{
-        .box_Stroke{ 
-            padding: 2.5em 0;
-            .scene_title{width: 90%; max-width:$SizeBoxInside; @include vc; @include SecTextTitle;}
-            .Split{ width:90%; max-width:$SizeBoxInside; @include vc; margin-top: 2em;
-                .pic{width:100%; height:241.33px;
-                    .circle{width:85%; height: 85%; border-radius: 50%; background-color: lightpink; @include vc; background-size: cover; background-position: center;
-                    }
-                }
-                .category{@include BtnCategoryGreen; margin-top: -1em;}
-                .title{@include FontLittleTitle; @include tc; margin-top: 0.2em;}
-                .sub{ margin-top: 0.4em;}
-            }
+    .scene_EditDisplay {
+      background-color: #262626;
+      padding: 2px;
+      .box_EditTap {
+        width: 16rem;
+        padding: 0.65rem 0 0.6rem 1rem;
+        color: #e1e1e1;
+        font-family: "돋움", san-serif;
+        background-color: #383838;
+      }
+      .box_EditWorkSpace {
+        margin-top: 2px;
+        background-color: #383838;
+        padding: 1.25rem 2.5rem 2.2rem;
+        .Split {
+          grid-gap: 2.2rem;
         }
-    }
-    .chap_PdEditor{
-        background: $ColorPdEditorBackground;
-        .scene_title{
-            @include SecTextTitle;
-            // background: #127C3B;
-            // padding-bottom:1rem;
-            
-            // .title{background: #383838; padding:1rem 0;}
-            // .sub {background: #262626;}
-        }
-        .scene_EditDisplay{
-            background-color: #262626;
-            padding:2px;
-            .box_EditTap{
-                width:16rem;
-                padding:0.65rem 0 0.6rem 1rem;
-                color:#e1e1e1;
-                font-family: '돋움', san-serif;
-                background-color: #383838;
-            }
-            .box_EditWorkSpace{
-                margin-top:2px;
-                background-color: #383838;
-                padding:1.25rem 2.5rem 2.2rem;
-                .Split{grid-gap:2.2rem;}
-                .info{
-                    position: relative;
-                    .tag{@include BtnCategoryWorkSpace;}
-                    .pic{min-width:50%; max-width:100%; background-color: lightpink; @include vc; margin-top: 1rem;}
-                }
-            }
-        }
-        .scene_EditExplain{
-            background-color: #262626;
-            .box_explain{
-                padding:1.8rem 2.5rem 1.9rem;
-                color: white;
-                .Split{grid-gap:1em; row-gap:0.9em;}
-                // li{color:white; border: 1px solid red;}
-                li{font-size: $SizeFontSub;}
-                .num{@include tc; background-color: $color-main; border-radius: 2rem; padding:0.18rem 0;}
-            }
-        }
-        
-    }
-    .chap_PdOption {
-        .scene_title{
-            @include SecTextTitle;
-        }
-        .scene_OptionView{
-            width:95%;
+        .info {
+          position: relative;
+          .tag {
+            @include BtnCategoryWorkSpace;
+          }
+          .pic {
+            min-width: 50%;
+            max-width: 100%;
+            background-color: lightpink;
             @include vc;
-            .pic{width:100%; height:170px; background: yellowgreen;}
-            .title{@include FontLittleTitle; @include tc; margin-top:0.5rem;}
-            .sub{@include FontSub; @include tc;}
-            .money{font-weight: bold; @include tc; margin-top:0.5rem;}
+            margin-top: 1rem;
+          }
         }
+      }
     }
+    .scene_EditExplain {
+      background-color: #262626;
+      .box_explain {
+        padding: 1.8rem 2.5rem 1.9rem;
+        color: white;
+        .Split {
+          grid-gap: 1em;
+          row-gap: 0.9em;
+        }
+        // li{color:white; border: 1px solid red;}
+        li {
+          font-size: $SizeFontSub;
+        }
+        .num {
+          @include tc;
+          background-color: $color-main;
+          border-radius: 2rem;
+          padding: 0.18rem 0;
+        }
+      }
+    }
+  }
+  .chap_PdOption {
+    .scene_title {
+      @include SecTextTitle;
+    }
+    .scene_OptionView {
+      width: 95%;
+      @include vc;
+      .pic {
+        width: 100%;
+        height: 170px;
+        background: yellowgreen;
+      }
+      .title {
+        @include FontLittleTitle;
+        @include tc;
+        margin-top: 0.5rem;
+      }
+      .sub {
+        @include FontSub;
+        @include tc;
+      }
+      .money {
+        font-weight: bold;
+        @include tc;
+        margin-top: 0.5rem;
+      }
+    }
+  }
 }
 
 //글자가 주인 항목 (반복적으로 쓰이는 것)
-.sec_text{
-    .chap_SystemInfo:first-child{margin-top: 0;}
-    .chap_SystemInfo{
-        margin-top:3rem;
-        @extend .box_Default;
-        @include b_radi;
-        padding: 2em 0;        
-        background-color: $color-gray;
-        .scene_title{@include SecTextTitle;}
-        .scene_info{
-            margin-top:1.2rem;
-            .Split:first-child{margin-top:0;}
-            .Split{margin-top:3rem; width:80%; @include vc;}
-            .title{padding-top:0.7rem; @include FontLittleTitle; font-size: 1.1em;}
-            .text{
-                li{list-style-type: disc; padding-top:0.7rem; font-size: 1.1em;}
-            }
-        }
+.sec_text {
+  .chap_SystemInfo:first-child {
+    margin-top: 0;
+  }
+  .chap_SystemInfo {
+    margin-top: 3rem;
+    @include GrayBox;
+    .scene_title {
+      @include SecTextTitle;
     }
-    .chap_PdInfo{
-        @extend .chap_SystemInfo;
-        background-color: transparent;
-    }
-    .chap_PdEditor{
-        .scene_title{@include SecTextTitle;}
-        .scene_EditDisplay{
-            background-color: #262626;
-            padding:2px;
-            .box_EditTap{
-                width:16rem;
-                padding:0.65rem 0 0.6rem 1rem;
-                color:#e1e1e1;
-                font-family: '돋움', san-serif;
-                background-color: #383838;
-            }
-            .box_EditWorkSpace{
-                margin-top:2px;
-                background-color: #383838;
-                padding:1.25rem 2.5rem 2.2rem;
-                .Split{grid-gap:2.2rem;}
-                .info{
-                    position: relative;
-                    .tag{@include BtnCategoryWorkSpace;}
-                    .pic{min-width:50%; max-width:100%; background-color: lightpink; @include vc; margin-top: 1rem;}
-                }
-            }
+    .scene_info {
+      margin-top: 1.2rem;
+      .Split:first-child {
+        margin-top: 0;
+      }
+      .Split {
+        margin-top: 3rem;
+        width: 80%;
+        @include vc;
+      }
+      .title {
+        padding-top: 0.7rem;
+        @include FontLittleTitle;
+        font-size: 1.1em;
+      }
+      .text {
+        li {
+          list-style-type: disc;
+          padding-top: 0.7rem;
+          font-size: 1.1em;
         }
-        .scene_EditExplain{
-            background-color: #262626;
-            .box_explain{
-                padding:1.8rem 2.5rem 1.9rem;
-                color: white;
-                .Split{grid-gap:1em; row-gap:0.9em;}
-                // li{color:white; border: 1px solid red;}
-                li{font-size: $SizeFontSub;}
-                .num{@include tc; background-color: $color-main; border-radius: 2rem; padding:0.18rem 0;}
-            }
-        }
-        
+      }
     }
+  }
+  .chap_PdInfo {
+    @extend .chap_SystemInfo;
+    background-color: transparent;
+  }
+  .chap_PdEditor {
+    .scene_title {
+      @include SecTextTitle;
+    }
+    .scene_EditDisplay {
+      background-color: #262626;
+      padding: 2px;
+      .box_EditTap {
+        width: 16rem;
+        padding: 0.65rem 0 0.6rem 1rem;
+        color: #e1e1e1;
+        font-family: "돋움", san-serif;
+        background-color: #383838;
+      }
+      .box_EditWorkSpace {
+        margin-top: 2px;
+        background-color: #383838;
+        padding: 1.25rem 2.5rem 2.2rem;
+        .Split {
+          grid-gap: 2.2rem;
+        }
+        .info {
+          position: relative;
+          .tag {
+            @include BtnCategoryWorkSpace;
+          }
+          .pic {
+            min-width: 50%;
+            max-width: 100%;
+            background-color: lightpink;
+            @include vc;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+    .scene_EditExplain {
+      background-color: #262626;
+      .box_explain {
+        padding: 1.8rem 2.5rem 1.9rem;
+        color: white;
+        .Split {
+          grid-gap: 1em;
+          row-gap: 0.9em;
+        }
+        // li{color:white; border: 1px solid red;}
+        li {
+          font-size: $SizeFontSub;
+        }
+        .num {
+          @include tc;
+          background-color: $color-main;
+          border-radius: 2rem;
+          padding: 0.18rem 0;
+        }
+      }
+    }
+  }
+  .chap_OrderInfo {
+    .scene_MakeInfoDesign {
+      @include GrayBox;
+      .InfoTitle {
+        @include chap_OrderInfoTitle;
+      }
+      .InfoSub {
+        color: #383838;
+        .main {
+          // margin-top: 1rem;
+          font-size: 1.3rem;
+          line-height: 1.65;
+          letter-spacing: -0.7;
+          font-weight: 500;
+          span {
+            background: $ColorHighLightBackground;
+            color: $ColorHighLight;
+            font-weight: 500;
+            padding: 1px 0.5rem 2px 0.5rem;
+            border-radius: 0.5rem;
+          }
+        }
+        .sub {
+          font-size: 1.1rem;
+          line-height: 1.5;
+          // color: $color-ad_title;
+          color: #99603d;
+          font-weight: 400;
+          span {
+            text-decoration: underline;
+            font-weight: 500;
+            color: $ColorHighLight;
+          }
+        }
+      }
+    }
+    .scene_MakeInfoNameCard {
+      @include GrayBox;
+      .InfoTitle {
+        @include chap_OrderInfoTitle;
+      }
+      .InfoSub {
+        ul {
+          position: relative;
+        }
+        .num {
+          position: absolute;
+          top: 0.5rem;
+          left: 0.5rem;
+          width: 2.2rem;
+          height: 2.2rem;
+          border-radius: 50%;
+          background-color: white;
+          color: $color-main;
+          line-height: 2.2rem;
+          font-weight: 700;
+          font-size: 1.3rem;
+          @include tc;
+        }
+        .pic {
+          height: 160px;
+          background: lightgreen;
+          border-radius: 1rem;
+        }
+        .title {
+          @include FontLittleTitle;
+          @include tc;
+          margin-top: 0.7rem;
+        }
+        .text {
+          width: 90%;
+          @include vc;
+          @include tc;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
 }
 
-
-
-
-.chap_SealMark{
-    @include tc;
-    .title {@include FontSealTitle;}
-    .sub {@include FontSealSub;}
+.chap_SealMark {
+  @include tc;
+  .title {
+    @include FontSealTitle;
+  }
+  .sub {
+    @include FontSealSub;
+  }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 860px) {
+  html {
+    font-size: 11px;
+  }
+  .box_Default {
+    width: $SizeMobileBoxDefault;
+  }
+  .box_Inside {
+    width: $SizeMobileBoxInside;
+  }
+  .box_Stroke {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid $color-main;
+    border-bottom: 2px solid $color-main;
+  }
 
+  .Split {
+    justify-content: space-evenly;
+    grid-gap: 1rem;
+  }
+  .CutQuarter {
+    grid-template-columns: repeat(2, 2fr);
+  }
 
-@media only screen and (min-width : 0px) and (max-width : 860px){
-    html{font-size: 11px;}
-    .box_Default {width:$SizeMobileBoxDefault;}
-    .box_Inside {width:$SizeMobileBoxInside;}
-    .box_Stroke {width: 100%; border:0; border-radius: 0; border-top:2px solid $color-main; border-bottom:2px solid $color-main;}
-    
-    .Split{justify-content: space-evenly; grid-gap: 1rem;}
-    .CutQuarter{grid-template-columns: repeat(2, 2fr);}
+  .sec_ad {
+    .chap_PdViewTop {
+      .scene_banner {
+        .pic {
+          height: 110px;
+        }
+      }
+    }
+  }
+  .sec_text {
+    .chap_SystemInfo {
+      .scene_info {
+        .Split {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .sec_display {
+    .chap_PdIntro {
+      .support {
+        width: $SizeMobileBoxDefault;
+      }
+    }
+    .chap_PdSpec {
+      .box_Stroke {
+        .Split {
+          width: $SizeMobileBoxInside;
+          grid-gap: 1.5em;
+          .pic {
+            height: 137.56px;
+          }
+        }
+      }
+    }
+    .chap_PdEditor {
+      .scene_EditDisplay {
+        .box_EditWorkSpace {
+          padding: 1.25rem 1.5rem 3rem;
+          .Split {
+            display: block;
+            .info:last-child {
+              margin-top: 2rem;
+            }
+            .tag {
+              width: 20%;
+              @include vc;
+            }
+            .pic {
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+      .scene_EditExplain {
+        .box_explain {
+          padding: 1.25rem 1.5rem 2rem;
+        }
+      }
+    }
+    .chap_PdOption {
+      .scene_OptionView {
+        width: 100%;
+      }
+    }
+  }
 
-    .sec_ad{
-        .chap_PdViewTop{
-            .scene_banner{;
-                .pic{height:110px;}
-            }
-        }
+  .scene_title {
+    .sub {
+      @include tl;
+      padding: 0 0.2rem;
     }
-    .sec_text{
-        .chap_SystemInfo{
-            .scene_info{
-                .Split{display: inline-block;}
-            }
-        }
-    }
-    .sec_display{
-        .chap_PdIntro{
-            .support{width:$SizeMobileBoxDefault;}
-        }
-        .chap_PdSpec{
-            .box_Stroke{
-                .Split{
-                    width:$SizeMobileBoxInside; grid-gap: 1.5em;
-                    .pic{height:137.56px;}
-                }
-            }
-        }
-        .chap_PdEditor{
-            .scene_EditDisplay{
-                .box_EditWorkSpace{
-                    padding:1.25rem 1.5rem 3rem;
-                    .Split{display: block;
-                        .info:last-child{margin-top:2rem;}
-                        .tag{ width:20%; @include vc;}
-                        .pic{ margin-top:1rem; }
-                    }
-                }
-            }
-            .scene_EditExplain{
-                .box_explain{padding:1.25rem 1.5rem 2rem;}
-            }
-        }
-        .chap_PdOption{
-            .scene_OptionView{width:100%;}
-        }
-    }
-    
-
-    .scene_title{
-        .sub{@include tl; padding:0 0.2rem;}
-    }
-    .MobileCenter{
-        text-align: center !important;
-    }
+  }
+  .MobileCenter {
+    text-align: center !important;
+  }
 }
