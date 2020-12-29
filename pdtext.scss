@@ -63,10 +63,16 @@ img {
 //광고섹션
 .sec_ad {
   .chap_PdViewTop {
-    background-color: $color-gray;
+    margin-top: 5rem;
+    background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 96%, 1) 0%,
+      hsla(0, 0%, 96%, 0.5) 70%,
+      hsla(0, 0%, 96%, 0) 100%
+    );
+    // background: hsla(0, 0%, 96%, 0);
     border-top: 1px solid $color-gray-border;
-    border-bottom: 1px solid $color-gray-border;
-    padding: 1.5rem 0;
+    padding: 0.5rem 0 5rem;
     .scene_AdBanner {
       .thumbnail {
         position: relative;
@@ -93,7 +99,12 @@ img {
         height: 7rem;
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem;
-        background-color: $ColorHighLightBackground;
+        background: linear-gradient(
+          to bottom,
+          hsla(51, 100%, 52%, 1) 0%,
+          hsla(51, 100%, 52%, 0.3) 100%
+        );
+        border-bottom: 1px solid hsla(51, 100%, 52%, 1);
       }
 
       .title {
@@ -133,28 +144,60 @@ img {
     }
   }
   .chap_PdViewPoster {
+    position: relative;
+    padding-top: 15rem;
+    background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 96%, 0) 0%,
+      hsla(0, 0%, 96%, 0.8) 50%,
+      hsla(0, 0%, 96%, 1) 100%
+    );
     .box_photo {
       position: relative;
     }
     .scene_AbTitleTop {
       @include AbCenter;
-      top: 5em;
-      z-index: 2;
+      width: 66%;
+      top: 1em;
+      z-index: 5;
       @include tc;
+      font-size: 5rem;
+      font-weight: 700;
     }
     .scene_AbTitleBottom {
       @include AbCenter;
       bottom: 5em;
-      z-index: 2;
+      z-index: 5;
       @include tc;
+      line-height: 1.5;
+      .tag {
+        font-weight: 500;
+      }
     }
     .scene_Pic {
       width: 100%;
       height: 1200px;
       background-color: lightpink;
       @include vc;
+      @include b_radi;
       background-size: cover;
       background-position: top;
+    }
+    .AbCardLeft {
+      @include AbCardLeft;
+      width: 400px;
+      height: 600px;
+      background: lightgreen;
+      bottom: 0;
+      z-index: 3;
+    }
+    .AbCardRight {
+      @include AbCardRight;
+      width: 60%;
+      height: 70%;
+      background: lightgreen;
+      bottom: 0;
+      z-index: 3;
     }
   }
   .chap_SingleView {
@@ -449,6 +492,15 @@ img {
     }
     .scene_clause:first-child {
       margin-top: 0;
+    }
+    .scene_InfoMake {
+      @extend .scene_clause;
+      @include chap_OrderInfoBackgroundAni;
+      .scene_MadeBySample {
+        background: white;
+        margin: $SizeOrderInfoSubMargin;
+        border-radius: $SizeOrderInfoSubRadius;
+      }
     }
   }
   .chap_PdInfo {

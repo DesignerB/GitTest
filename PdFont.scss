@@ -77,13 +77,13 @@ $SizeFontLittleTitleMobile: 1.25rem;
 
 @mixin FontSealTitle {
   font-family: "Pacifico", cursive;
-  font-size: 1.5em;
-  color: lightgray;
+  font-size: 1.5rem;
+  color: $color-gray-border;
 }
 @mixin FontSealSub {
   font-family: "Vollkorn", serif;
-  font-size: 0.85em;
+  font-size: 0.85rem;
   letter-spacing: 0.18em;
-  margin-top: 2px;
-  color: lightgray;
+  margin-top: 0.7rem;
+  color: $color-gray-border;
 }
