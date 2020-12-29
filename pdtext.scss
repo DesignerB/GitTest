@@ -47,8 +47,8 @@
 .CutOneFour {
   grid-template-columns: 1fr 4fr;
 }
-.CutOneNine {
-  grid-template-columns: 1fr 9fr;
+.CutThreeTenths {
+  grid-template-columns: 3fr 10fr;
 }
 
 img {
@@ -379,14 +379,11 @@ img {
   .chap_SystemInfo {
     background-color: $color-gray;
     padding: 3rem 0;
-    .WhiteBox {
+    .scene_clause {
+      margin-top: 2rem;
       background: white;
-      // margin: 1rem 0;
       padding: 1.5rem 0 2.5rem 0;
       @include b-radi;
-    }
-    .ContSystem {
-      margin-top: 2rem;
       .scene_title {
         width: $SizeSecTextSystemInfoWidth;
         @include vc;
@@ -431,7 +428,7 @@ img {
         }
       }
     }
-    .ContSystem:first-child {
+    .scene_clause:first-child {
       margin-top: 0;
     }
   }
@@ -498,33 +495,51 @@ img {
     }
   }
   .chap_OrderInfo {
+    // background-color: $color-gray;
+    // padding: 3rem 0;
     .scene_MakeInfoDesign {
-      @include GrayBox;
+      @include RadiusBox;
+      @include vc;
+      @include chap_OrderInfoBackgroundAni;
+      // background-color: $color-gray;
+      .Split {
+        grid-gap: 0;
+      }
       .InfoTitle {
         @include chap_OrderInfoTitle;
+        color: white;
       }
       .InfoSub {
-        color: #383838;
+        @include chap_OrderInfoSub;
+        padding-left: 0;
+        padding-right: 0;
+        li {
+          margin: 0 $SizeGridGap;
+        }
         .main {
           // margin-top: 1rem;
           font-size: 1.3rem;
-          line-height: 1.65;
+          line-height: 1.5;
           letter-spacing: -0.7;
           font-weight: 500;
+          padding: 0.7rem 0;
+          border-bottom: 1px solid hsl(0, 0%, 88%);
           span {
             background: $ColorHighLightBackground;
             color: $ColorHighLight;
-            font-weight: 500;
-            padding: 1px 0.5rem 2px 0.5rem;
-            border-radius: 0.5rem;
+            // font-weight: 500;
+            padding: 1px 5px 1px;
           }
+        }
+        .main:first-child {
+          padding-top: 0;
         }
         .sub {
           font-size: 1.1rem;
           line-height: 1.5;
-          // color: $color-ad_title;
           color: #99603d;
           font-weight: 400;
+          margin-top: 2rem;
           span {
             text-decoration: underline;
             font-weight: 500;
@@ -534,11 +549,16 @@ img {
       }
     }
     .scene_MakeInfoNameCard {
-      @include GrayBox;
+      @include RadiusBox;
+      @include vc;
+      // background: hsl(50, 100%, 98%);
+      @include chap_OrderInfoBackgroundAniReverse;
       .InfoTitle {
         @include chap_OrderInfoTitle;
+        padding-top: 26px;
       }
       .InfoSub {
+        @include chap_OrderInfoSub;
         ul {
           position: relative;
         }
@@ -573,6 +593,9 @@ img {
           margin-top: 0.4rem;
         }
       }
+    }
+    .scene_MakeInfoNameCard > .Split {
+      grid-gap: 0;
     }
   }
 }
@@ -625,7 +648,7 @@ img {
 
   .sec_text {
     .chap_SystemInfo {
-      .ContSystem {
+      .scene_clause {
         .scene_title {
           width: 90%;
         }
