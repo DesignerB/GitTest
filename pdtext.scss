@@ -63,28 +63,47 @@ img {
 //광고섹션
 .sec_ad {
   .chap_PdViewTop {
+    background-color: $color-gray;
     border-top: 1px solid $color-gray-border;
     border-bottom: 1px solid $color-gray-border;
-    .scene_banner {
-      margin-top: 1.2em;
-      margin-bottom: 1.2em;
-      ul {
-        width: 100%;
+    padding: 1.5rem 0;
+    .scene_AdBanner {
+      .thumbnail {
+        position: relative;
+        height: 10rem;
+        // background-color: white;
       }
       .pic {
-        height: 120px;
-        background-color: lightskyblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+        z-index: 2;
         img {
           height: 100%;
+          object-fit: contain;
         }
+        // background-color: red;
       }
+      .bg {
+        @extend .pic;
+        top: 3rem;
+        z-index: 1;
+        height: 7rem;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        background-color: $ColorHighLightBackground;
+      }
+
       .title {
         @include tc;
         @include FontLittleTitle;
-        margin-top: 0.4em;
+        padding-top: 0.6em;
       }
       .text {
         @include tc;
+        padding-top: 0.3em;
       }
     }
   }
