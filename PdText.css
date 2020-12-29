@@ -423,8 +423,8 @@ img {
     .sec_text .chap_SystemInfo .ContSystem .scene_info, .sec_text .chap_PdInfo .ContSystem .scene_info {
       padding: 0; }
       .sec_text .chap_SystemInfo .ContSystem .scene_info .Split, .sec_text .chap_PdInfo .ContSystem .scene_info .Split {
-        margin: 0 auto;
         width: 75%;
+        margin: 0 auto;
         margin-top: 1rem; }
         .sec_text .chap_SystemInfo .ContSystem .scene_info .Split .title, .sec_text .chap_PdInfo .ContSystem .scene_info .Split .title {
           padding-top: 0.7rem;
@@ -663,8 +663,23 @@ img {
   .sec_ad .chap_PdViewTop .scene_banner .pic {
     height: 110px; }
 
-  .sec_text .chap_SystemInfo .scene_info .Split, .sec_text .chap_PdInfo .scene_info .Split {
-    display: inline-block; }
+  .sec_text .chap_SystemInfo .ContSystem .scene_title, .sec_text .chap_PdInfo .ContSystem .scene_title {
+    width: 90%; }
+  .sec_text .chap_SystemInfo .ContSystem .scene_info .Split, .sec_text .chap_PdInfo .ContSystem .scene_info .Split {
+    width: 90%; }
+    .sec_text .chap_SystemInfo .ContSystem .scene_info .Split .title, .sec_text .chap_PdInfo .ContSystem .scene_info .Split .title {
+      margin-top: 1.2rem;
+      font-size: 1.25rem; }
+    .sec_text .chap_SystemInfo .ContSystem .scene_info .Split .text li:first-child, .sec_text .chap_PdInfo .ContSystem .scene_info .Split .text li:first-child {
+      padding-top: 0; }
+    .sec_text .chap_SystemInfo .ContSystem .scene_info .Split .text li, .sec_text .chap_PdInfo .ContSystem .scene_info .Split .text li {
+      list-style-type: none;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ebebeb; }
+  .sec_text .chap_SystemInfo .ContSystem .scene_info .Split:first-child .title, .sec_text .chap_PdInfo .ContSystem .scene_info .Split:first-child .title {
+    margin-top: 0; }
+  .sec_text .chap_SystemInfo .ContSystem .scene_info .CutOneFour, .sec_text .chap_PdInfo .ContSystem .scene_info .CutOneFour {
+    grid-template-columns: repeat(1, 1fr); }
 
   .sec_display .chap_PdIntro .support {
     width: 94%; }

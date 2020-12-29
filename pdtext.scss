@@ -405,8 +405,8 @@ img {
       .scene_info {
         padding: 0;
         .Split {
-          @include vc;
           width: $SizeSecTextSystemInfoWidth;
+          @include vc;
           margin-top: $SizeSecTextSystemInfoMargin;
           .title {
             padding-top: 0.7rem;
@@ -625,9 +625,36 @@ img {
 
   .sec_text {
     .chap_SystemInfo {
-      .scene_info {
-        .Split {
-          display: inline-block;
+      .ContSystem {
+        .scene_title {
+          width: 90%;
+        }
+        .scene_info {
+          .Split {
+            width: 90%;
+            .title {
+              margin-top: 1.2rem;
+              font-size: $SizeFontLittleTitleMobile;
+            }
+            .text {
+              li:first-child {
+                padding-top: 0;
+              }
+              li {
+                list-style-type: none;
+                padding-bottom: 5px;
+                border-bottom: 1px solid hsl(0, 0%, 92%);
+              }
+            }
+          }
+          .Split:first-child {
+            .title {
+              margin-top: 0;
+            }
+          }
+          .CutOneFour {
+            grid-template-columns: repeat(1, 1fr);
+          }
         }
       }
     }

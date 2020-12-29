@@ -45,6 +45,8 @@ $SizeFontLittleTitle: 1.45rem;
 $SizeFontSub: 1.2rem;
 $SizeFontText: 1.1rem;
 
+$SizeFontLittleTitleMobile: 1.25rem;
+
 @mixin FontBigTitle {
   font-size: $SizeFontBigTitle;
   color: $color-main;
