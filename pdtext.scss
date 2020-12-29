@@ -25,7 +25,7 @@
   max-width: $SizeBoxStroke;
   @include vc;
   @include b_radi;
-  border: 2px solid $color-main;
+  border: 10px solid $color-main;
 }
 
 .Split {
@@ -72,6 +72,7 @@ img {
     );
     // background: hsla(0, 0%, 96%, 0);
     border-top: 1px solid $color-gray-border;
+    border-bottom: 1px solid $color-gray-border;
     padding: 0.5rem 0 5rem;
     .scene_AdBanner {
       .thumbnail {
@@ -145,12 +146,13 @@ img {
   }
   .chap_PdViewPoster {
     position: relative;
-    padding-top: 15rem;
+    padding-top: 20rem;
+    padding-bottom: 23rem;
     background: linear-gradient(
       to bottom,
       hsla(0, 0%, 96%, 0) 0%,
       hsla(0, 0%, 96%, 0.8) 50%,
-      hsla(0, 0%, 96%, 1) 100%
+      hsla(0, 0%, 96%, 1) 80%
     );
     .box_photo {
       position: relative;
@@ -158,7 +160,7 @@ img {
     .scene_AbTitleTop {
       @include AbCenter;
       width: 66%;
-      top: 1em;
+      top: 5%;
       z-index: 5;
       @include tc;
       font-size: 5rem;
@@ -166,7 +168,7 @@ img {
     }
     .scene_AbTitleBottom {
       @include AbCenter;
-      bottom: 5em;
+      bottom: 5%;
       z-index: 5;
       @include tc;
       line-height: 1.5;
@@ -176,7 +178,7 @@ img {
     }
     .scene_Pic {
       width: 100%;
-      height: 1200px;
+      height: 900px;
       background-color: lightpink;
       @include vc;
       @include b_radi;
@@ -185,8 +187,8 @@ img {
     }
     .AbCardLeft {
       @include AbCardLeft;
-      width: 400px;
-      height: 600px;
+      width: 40%;
+      height: 40%;
       background: lightgreen;
       bottom: 0;
       z-index: 3;

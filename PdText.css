@@ -84,10 +84,10 @@ ol {
   margin: 0 auto; }
 
 .box_Stroke {
-  max-width: 856px;
+  max-width: 840px;
   margin: 0 auto;
   border-radius: 24px;
-  border: 2px solid #127d3b; }
+  border: 10px solid #127d3b; }
 
 .Split {
   display: grid;
@@ -123,6 +123,7 @@ img {
   margin-top: 5rem;
   background: linear-gradient(to bottom, whitesmoke 0%, rgba(245, 245, 245, 0.5) 70%, rgba(245, 245, 245, 0) 100%);
   border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   padding: 0.5rem 0 5rem; }
   .sec_ad .chap_PdViewTop .scene_AdBanner .thumbnail {
     position: relative;
@@ -183,8 +184,9 @@ img {
     padding: 0.5em 0; }
 .sec_display .chap_PdViewPoster {
   position: relative;
-  padding-top: 15rem;
-  background: linear-gradient(to bottom, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.8) 50%, whitesmoke 100%); }
+  padding-top: 20rem;
+  padding-bottom: 23rem;
+  background: linear-gradient(to bottom, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.8) 50%, whitesmoke 80%); }
   .sec_display .chap_PdViewPoster .box_photo {
     position: relative; }
   .sec_display .chap_PdViewPoster .scene_AbTitleTop {
@@ -193,7 +195,7 @@ img {
     transform: translateX(-50%);
     text-align: center;
     width: 66%;
-    top: 1em;
+    top: 5%;
     z-index: 5;
     text-align: center;
     font-size: 5rem;
@@ -203,7 +205,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    bottom: 5em;
+    bottom: 5%;
     z-index: 5;
     text-align: center;
     line-height: 1.5; }
@@ -211,7 +213,7 @@ img {
       font-weight: 500; }
   .sec_display .chap_PdViewPoster .scene_Pic {
     width: 100%;
-    height: 1200px;
+    height: 900px;
     background-color: lightpink;
     margin: 0 auto;
     border-radius: 24px;
@@ -221,8 +223,8 @@ img {
     position: absolute;
     left: -200px;
     text-align: center;
-    width: 400px;
-    height: 600px;
+    width: 40%;
+    height: 40%;
     background: lightgreen;
     bottom: 0;
     z-index: 3; }
