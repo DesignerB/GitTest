@@ -42,7 +42,8 @@ $FontVollkorn: "Vollkorn", serif;
 $SizeFontBigTitle: 2rem;
 $SizeFontTitle: 1.6rem;
 $SizeFontLittleTitle: 1.45rem;
-$SizeFontSub: 1.25rem;
+$SizeFontSub: 1.2rem;
+$SizeFontText: 1.1rem;
 
 @mixin FontBigTitle {
   font-size: $SizeFontBigTitle;
@@ -61,6 +62,13 @@ $SizeFontSub: 1.25rem;
 }
 @mixin FontSub {
   font-size: $SizeFontSub;
+  line-height: 1.3;
+}
+
+@mixin FontText {
+  font-size: 1.1em;
+  line-height: 1.3;
+  color: $ColorFontGray;
 }
 
 //

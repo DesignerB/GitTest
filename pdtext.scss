@@ -45,7 +45,7 @@
   grid-template-columns: 1fr 3fr;
 }
 .CutOneFour {
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
 }
 .CutOneNine {
   grid-template-columns: 1fr 9fr;
@@ -376,37 +376,63 @@ img {
 
 //글자가 주인 항목 (반복적으로 쓰이는 것)
 .sec_text {
-  .chap_SystemInfo:first-child {
-    margin-top: 0;
-  }
   .chap_SystemInfo {
-    margin-top: 3rem;
-    @include GrayBox;
-    .scene_title {
-      @include SecTextTitle;
+    background-color: $color-gray;
+    padding: 3rem 0;
+    .WhiteBox {
+      background: white;
+      // margin: 1rem 0;
+      padding: 1.5rem 0 2.5rem 0;
+      @include b-radi;
     }
-    .scene_info {
-      margin-top: 1.2rem;
-      .Split:first-child {
-        margin-top: 0;
-      }
-      .Split {
-        margin-top: 3rem;
-        width: 80%;
+    .ContSystem {
+      margin-top: 2rem;
+      .scene_title {
+        width: $SizeSecTextSystemInfoWidth;
         @include vc;
-      }
-      .title {
-        padding-top: 0.7rem;
-        @include FontLittleTitle;
-        font-size: 1.1em;
-      }
-      .text {
-        li {
-          list-style-type: disc;
-          padding-top: 0.7rem;
-          font-size: 1.1em;
+        border-bottom: 1px solid $color-gray-border;
+        padding: 1rem 0;
+        @include tc;
+        .title {
+          @include FontTitle;
+        }
+        .sub {
+          @include FontSub;
+          font-weight: 500;
+          margin-top: 5px;
         }
       }
+      .scene_info {
+        padding: 0;
+        .Split {
+          @include vc;
+          width: $SizeSecTextSystemInfoWidth;
+          margin-top: $SizeSecTextSystemInfoMargin;
+          .title {
+            padding-top: 0.7rem;
+            @include FontLittleTitle;
+            font-size: 1.1em;
+          }
+          .text {
+            li {
+              list-style-type: disc;
+              padding-top: 5px;
+              @include FontText;
+              span.highlight {
+                background: $ColorHighLightBackground;
+                padding: 0 4px;
+                text-decoration: none;
+              }
+              span {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ContSystem:first-child {
+      margin-top: 0;
     }
   }
   .chap_PdInfo {
@@ -596,6 +622,7 @@ img {
       }
     }
   }
+
   .sec_text {
     .chap_SystemInfo {
       .scene_info {
