@@ -86,6 +86,10 @@ ol {
   max-width: 810px;
   margin: 0 auto; }
 
+.box_SiteDefault {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .box_Stroke {
   max-width: 840px;
   margin: 0 auto;
@@ -123,12 +127,37 @@ img {
   margin: 0;
   padding: 0; }
 
+.header_top_ad_box {
+  width: 100%;
+  height: 36px;
+  background-color: #127d3b;
+  background: linear-gradient(135deg, #007e41 20%, #590c7d 80%); }
+  .header_top_ad_box .header_top_ad {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; }
+    .header_top_ad_box .header_top_ad table {
+      width: 100%;
+      height: 100%; }
+      .header_top_ad_box .header_top_ad table tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit; }
+      .header_top_ad_box .header_top_ad table tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit; }
+      .header_top_ad_box .header_top_ad table td {
+        text-transform: uppercase;
+        vertical-align: middle;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        font-family: 'Montserrat','Lato',arial,sans-serif,Malgun Gothic,"맑은 고딕",'Nanum Gothic',AppleGothic,Dotum,"돋움",sans-serif; }
+
 .sec_ad .chap_PdViewTop {
-  margin-top: 5rem;
-  background: linear-gradient(to bottom, whitesmoke 0%, rgba(245, 245, 245, 0.5) 70%, rgba(245, 245, 245, 0) 100%);
   border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-  padding: 0.5rem 0 5rem; }
+  padding: 2rem 0 2rem; }
   .sec_ad .chap_PdViewTop .scene_AdBanner .thumbnail {
     position: relative;
     height: 10rem; }

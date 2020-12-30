@@ -21,6 +21,10 @@
   max-width: $SizeBoxInside;
   @include vc;
 }
+.box_SiteDefault{
+  max-width: $SizeBoxSiteDefault;
+  @include vc;
+}
 .box_Stroke {
   max-width: $SizeBoxStroke;
   @include vc;
@@ -62,21 +66,55 @@ img {
   margin: 0;
   padding: 0;
 }
+//임시
+.header_top_ad_box{
+  width:100%;
+  height:36px;
+  background-color: $color-main;
+  background: linear-gradient(135deg, rgba(0,126,65,1) 20%, rgba(89,12,125,1) 80%);
+  .header_top_ad{
+    width:100%;
+    max-width: $SizeBoxSiteDefault;
+    @include vc;
+    table{width:100%; height:100%;
+      tbody{    display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit
+      }
+      tr{
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+      }
+      td{
+        text-transform: uppercase;
+        // font-weight: bold;
+        vertical-align: middle;
+        font-size: 1rem;
+        color:white;
+        @include tc;
+        font-family: 'Montserrat','Lato',arial,sans-serif,Malgun Gothic,"맑은 고딕",'Nanum Gothic',AppleGothic,Dotum,"돋움",sans-serif;
+      }
+    }
+  }
+}
+
 
 //광고섹션
 .sec_ad {
   .chap_PdViewTop {
-    margin-top: 5rem;
-    background: linear-gradient(
-      to bottom,
-      hsla(0, 0%, 96%, 1) 0%,
-      hsla(0, 0%, 96%, 0.5) 70%,
-      hsla(0, 0%, 96%, 0) 100%
-    );
+    // margin-top: 20rem;
+    // background: linear-gradient(
+    //   to bottom,
+    //   hsla(0, 0%, 96%, 1) 0%,
+    //   hsla(0, 0%, 96%, 0.5) 70%,
+    //   hsla(0, 0%, 96%, 0) 100%
+    // );
     // background: hsla(0, 0%, 96%, 0);
     border-top: 1px solid $color-gray-border;
-    border-bottom: 1px solid $color-gray-border;
-    padding: 0.5rem 0 5rem;
+    // border-bottom: 1px solid $color-gray-border;
+    padding: 2rem 0 2rem;
+    // background: $color-gray;
     .scene_AdBanner {
       .thumbnail {
         position: relative;
@@ -452,6 +490,9 @@ img {
 .sec_text {
   .chap_InfoOrder {
     background-color: hsl(230, 75%, 10%);
+    // background: radial-gradient(circle, rgba(245,245,245,1) 0%, rgba(250,250,250,1) 50%, rgba(245,245,245,1) 100%);
+    // background: radial-gradient(circle, rgba(245,245,245,1) 0%, rgba(0,122,67,1) 100%);
+    // background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
     padding: 9rem 0 11rem;
     .scene_MakeInfoDesign {
       @include RadiusBox;
