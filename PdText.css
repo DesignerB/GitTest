@@ -438,7 +438,7 @@ img {
     margin-top: 0.5rem; }
 
 .sec_text .chap_InfoOrder {
-  background-color: #060d2d;
+  background: #060d2d;
   padding: 9rem 0 11rem; }
   .sec_text .chap_InfoOrder .scene_MakeInfoDesign {
     max-width: 860px;
@@ -650,7 +650,7 @@ img {
   .sec_text .chap_InfoOrder .scene_MakeInfoNameCard > .Split {
     grid-gap: 0; }
 .sec_text .chap_InfoMake {
-  background-color: #060d2d;
+  background: linear-gradient(0deg, #050b24 0%, #060d2d 10%, #060d2d 90%, #050b24 100%);
   padding: 10rem 0 11rem; }
   .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default {
     background: linear-gradient(-45deg, #127d3b, #531f7d);

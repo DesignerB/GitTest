@@ -451,7 +451,7 @@ img {
 //글자가 주인 항목 (반복적으로 쓰이는 것)
 .sec_text {
   .chap_InfoOrder {
-    background-color: hsl(230, 75%, 10%);
+    background: hsla(229, 76%, 10%, 1);
     padding: 9rem 0 11rem;
     .scene_MakeInfoDesign {
       @include RadiusBox;
@@ -554,7 +554,14 @@ img {
     }
   }
   .chap_InfoMake {
-    background-color: hsl(230, 75%, 10%);
+    background: linear-gradient(
+      0deg,
+      hsla(229, 76%, 8%, 1) 0%,
+      hsla(229, 76%, 10%, 1) 10%,
+      hsla(229, 76%, 10%, 1) 90%,
+      hsla(229, 76%, 8%, 1) 100%
+    );
+
     padding: 10rem 0 11rem;
     .scene_NoticeMakeSample {
       .box_Default {
