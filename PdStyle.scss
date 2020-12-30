@@ -26,20 +26,6 @@
   @include tc;
 }
 
-@mixin AbCardLeft {
-  position: absolute;
-  left: -200px;
-  @include tc;
-}
-
-@mixin AbCardRight {
-  position: absolute;
-  right: -200px;
-  // bottom: -20px;
-  // transform: translateX(-50%);
-  @include tc;
-}
-
 //텍스트 제목
 @mixin SecTextTitle {
   @include tc;
@@ -112,7 +98,7 @@
 
   .line {
     width: 90%;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.5);
     @include vc;
     margin-top: 0.7rem;
     margin-bottom: 0.7rem;
@@ -132,7 +118,7 @@
   background: white;
   padding: $SizeGridGap;
   margin: $SizeOrderInfoSubMargin;
-  margin-left: $SizeGridGap;
+  // margin-left: $SizeGridGap;
 }
 
 @mixin chap_OrderInfoBackgroundAni {

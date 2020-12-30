@@ -21,7 +21,10 @@ ol {
   -webkit-margin-before: 0;
   margin-block-start: 0;
   -webkit-margin-after: 0;
-  margin-block-end: 0; }
+  margin-block-end: 0;
+  margin: 0;
+  padding: 0;
+  border: 0 none; }
 
 .Mg1 {
   margin-top: 1rem; }
@@ -86,8 +89,9 @@ ol {
 .box_Stroke {
   max-width: 840px;
   margin: 0 auto;
-  border-radius: 24px;
-  border: 10px solid #127d3b; }
+  border-radius: 14px;
+  border: 10px solid #127d3b;
+  background-color: white; }
 
 .Split {
   display: grid;
@@ -156,6 +160,53 @@ img {
     text-align: center;
     padding-top: 0.3em; }
 
+.sec_display .chap_PdViewPoster {
+  position: relative;
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+  background: linear-gradient(to bottom, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.8) 50%, whitesmoke 80%); }
+  .sec_display .chap_PdViewPoster .box_photo {
+    position: relative; }
+    .sec_display .chap_PdViewPoster .box_photo .AbTitleTop {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 66%;
+      top: 5%;
+      z-index: 5;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 700; }
+    .sec_display .chap_PdViewPoster .box_photo .AbTitleBottom {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      bottom: 5%;
+      z-index: 5;
+      text-align: center;
+      line-height: 1.5; }
+      .sec_display .chap_PdViewPoster .box_photo .AbTitleBottom .tag {
+        font-weight: 500; }
+    .sec_display .chap_PdViewPoster .box_photo .AbCardLeft {
+      position: absolute;
+      left: 0;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 70%;
+      height: 40%;
+      background: lightgreen;
+      bottom: 20%;
+      z-index: 3; }
+    .sec_display .chap_PdViewPoster .box_photo .scene_background {
+      width: 100%;
+      height: 2400px;
+      background-color: lightpink;
+      margin: 0 auto;
+      border-radius: 24px;
+      background-size: cover;
+      background-position: top; }
 .sec_display .chap_PdIntro {
   text-align: center; }
   .sec_display .chap_PdIntro .category {
@@ -182,61 +233,6 @@ img {
     margin: 0 auto;
     margin-top: 1.1em;
     padding: 0.5em 0; }
-.sec_display .chap_PdViewPoster {
-  position: relative;
-  padding-top: 20rem;
-  padding-bottom: 23rem;
-  background: linear-gradient(to bottom, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.8) 50%, whitesmoke 80%); }
-  .sec_display .chap_PdViewPoster .box_photo {
-    position: relative; }
-  .sec_display .chap_PdViewPoster .scene_AbTitleTop {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 66%;
-    top: 5%;
-    z-index: 5;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 700; }
-  .sec_display .chap_PdViewPoster .scene_AbTitleBottom {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    bottom: 5%;
-    z-index: 5;
-    text-align: center;
-    line-height: 1.5; }
-    .sec_display .chap_PdViewPoster .scene_AbTitleBottom .tag {
-      font-weight: 500; }
-  .sec_display .chap_PdViewPoster .scene_Pic {
-    width: 100%;
-    height: 900px;
-    background-color: lightpink;
-    margin: 0 auto;
-    border-radius: 24px;
-    background-size: cover;
-    background-position: top; }
-  .sec_display .chap_PdViewPoster .AbCardLeft {
-    position: absolute;
-    left: -200px;
-    text-align: center;
-    width: 40%;
-    height: 40%;
-    background: lightgreen;
-    bottom: 0;
-    z-index: 3; }
-  .sec_display .chap_PdViewPoster .AbCardRight {
-    position: absolute;
-    right: -200px;
-    text-align: center;
-    width: 60%;
-    height: 70%;
-    background: lightgreen;
-    bottom: 0;
-    z-index: 3; }
 .sec_display .chap_SingleView .box_Photo {
   max-height: 900px;
   background-color: lightgoldenrodyellow; }
@@ -441,56 +437,361 @@ img {
     text-align: center;
     margin-top: 0.5rem; }
 
-.sec_text .chap_SystemInfo, .sec_text .chap_PdInfo {
+.sec_text .chap_InfoOrder {
+  background-color: #060d2d;
+  padding: 9rem 0 11rem; }
+  .sec_text .chap_InfoOrder .scene_MakeInfoDesign {
+    max-width: 860px;
+    margin: 0 auto;
+    border-radius: 24px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    background: linear-gradient(-45deg, #127d3b, #531f7d);
+    background-size: 150% 120%;
+    -webkit-animation: InfoDraft 4s ease infinite;
+    -moz-animation: InfoDraft 4s ease infinite;
+    -o-animation: InfoDraft 4s ease infinite;
+    animation: InfoDraft 4s ease infinite;
+    padding-bottom: 1px; }
+@-webkit-keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@-moz-keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@-o-keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+    .sec_text .chap_InfoOrder .scene_MakeInfoDesign .Split {
+      grid-gap: 0; }
+    .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoTitle {
+      padding: 23px 1.5rem;
+      color: white;
+      color: white; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoTitle .title {
+        width: 90%;
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-top: 0.2rem;
+        padding-left: 5%;
+        line-height: 1; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoTitle .title_eng {
+        font-family: "Vollkorn", serif;
+        margin-top: 8px;
+        padding-left: 7%;
+        font-size: 1.1rem;
+        line-height: 1.3; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoTitle .line {
+        width: 90%;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        margin-top: 0.7rem;
+        margin-bottom: 0.7rem; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoTitle .text {
+        width: 90%;
+        line-height: 1.3;
+        margin: 0 auto; }
+    .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub {
+      border-radius: 14px;
+      background: white;
+      padding: 1.5rem;
+      margin: 10px;
+      padding-left: 0;
+      padding-right: 0; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub li {
+        margin: 0 1.5rem; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub .main {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        letter-spacing: -0.7;
+        font-weight: 500;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid #e0e0e0; }
+        .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub .main span {
+          background: #ffda0a;
+          color: #ff1500;
+          padding: 1px 5px 1px; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub .main:first-child {
+        padding-top: 0; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub .sub {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #99603d;
+        font-weight: 400;
+        margin-top: 2rem; }
+        .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub .sub span {
+          text-decoration: underline;
+          font-weight: 500;
+          color: #ff1500; }
+  .sec_text .chap_InfoOrder .scene_MakeInfoNameCard {
+    max-width: 860px;
+    margin: 0 auto;
+    border-radius: 24px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    background: linear-gradient(-45deg, #531f7d, #127d3b);
+    background-size: 130% 110%;
+    -webkit-animation: InfoDraftReverse 4s ease infinite;
+    -moz-animation: InfoDraftReverse 4s ease infinite;
+    -o-animation: InfoDraftReverse 4s ease infinite;
+    animation: InfoDraftReverse 4s ease infinite;
+    padding-bottom: 1px; }
+@-webkit-keyframes InfoDraftReverse {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@-moz-keyframes InfoDraftReverse {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@-o-keyframes InfoDraftReverse {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@keyframes InfoDraftReverse {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+    .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoTitle {
+      padding: 23px 1.5rem;
+      color: white;
+      padding-top: 26px; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoTitle .title {
+        width: 90%;
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-top: 0.2rem;
+        padding-left: 5%;
+        line-height: 1; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoTitle .title_eng {
+        font-family: "Vollkorn", serif;
+        margin-top: 8px;
+        padding-left: 7%;
+        font-size: 1.1rem;
+        line-height: 1.3; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoTitle .line {
+        width: 90%;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        margin-top: 0.7rem;
+        margin-bottom: 0.7rem; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoTitle .text {
+        width: 90%;
+        line-height: 1.3;
+        margin: 0 auto; }
+    .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub {
+      border-radius: 14px;
+      background: white;
+      padding: 1.5rem;
+      margin: 10px; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub ul {
+        position: relative; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num, .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num_green, .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num_violet, .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num_orange {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        background-color: white;
+        color: #127d3b;
+        line-height: 2.2rem;
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-align: center; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .pic, .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .bg {
+        height: 160px;
+        background: lightgreen;
+        border-radius: 1rem; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .title {
+        font-size: 1.45rem;
+        color: #127d3b;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0.7rem; }
+      .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .text {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 0.4rem; }
+  .sec_text .chap_InfoOrder .scene_MakeInfoNameCard > .Split {
+    grid-gap: 0; }
+.sec_text .chap_InfoMake {
+  background-color: #060d2d;
+  padding: 10rem 0 11rem; }
+  .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default {
+    background: linear-gradient(-45deg, #127d3b, #531f7d);
+    background-size: 150% 120%;
+    -webkit-animation: InfoDraft 4s ease infinite;
+    -moz-animation: InfoDraft 4s ease infinite;
+    -o-animation: InfoDraft 4s ease infinite;
+    animation: InfoDraft 4s ease infinite;
+    max-width: 520px;
+    border-radius: 24px;
+    padding: 10px; }
+@-webkit-keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@-moz-keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@-o-keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+@keyframes InfoDraft {
+  0% {
+    background-position: 0% 0%; }
+  50% {
+    background-position: 80% 80%; }
+  100% {
+    background-position: 0% 0%; } }
+    .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .scene_title, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .scene_title {
+      padding-top: 1.3rem; }
+      .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .scene_title .title, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .scene_title .title {
+        font-size: 1.6rem;
+        color: #127d3b;
+        font-weight: bold;
+        text-align: center;
+        color: white; }
+      .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .scene_title .sub, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .scene_title .sub {
+        font-size: 1.2rem;
+        line-height: 1.3;
+        font-weight: 400;
+        margin-top: 5px;
+        text-align: center;
+        color: rgba(230, 230, 230, 0.8);
+        line-height: 1.4; }
+      .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .scene_title .highlight, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .scene_title .highlight {
+        background: #ffda0a;
+        padding: 0 3px;
+        border-radius: 2px;
+        color: #ff1500; }
+    .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure {
+      position: relative; }
+      .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure .scene_InfoSample, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure .scene_InfoSample {
+        width: 94%;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        padding: 3% 0; }
+        .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure .scene_InfoSample .pic, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure .scene_InfoSample .pic, .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure .scene_InfoSample .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure .scene_InfoSample .bg, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure .scene_InfoSample .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure .scene_InfoSample .bg {
+          height: 150px;
+          background: rgba(255, 255, 255, 0.5); }
+        .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure .scene_InfoSample .title, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure .scene_InfoSample .title {
+          font-size: 1.2rem;
+          line-height: 1.3;
+          color: white;
+          margin-top: 1rem;
+          text-align: center; }
+        .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure .scene_InfoSample .text, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure .scene_InfoSample .text {
+          margin-top: 2px;
+          color: rgba(230, 230, 230, 0.5);
+          line-height: 1.3;
+          text-align: center; }
+      .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .box_InnerSqure .scene_bg, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .box_InnerSqure .scene_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        border-radius: 14px;
+        background-color: white;
+        opacity: 0.1; }
+.sec_text .chap_InfoSystem {
   background-color: whitesmoke;
   padding: 3rem 0; }
-  .sec_text .chap_SystemInfo .scene_clause, .sec_text .chap_PdInfo .scene_clause, .sec_text .chap_SystemInfo .scene_InfoMake, .sec_text .chap_PdInfo .scene_InfoMake {
+  .sec_text .chap_InfoSystem .scene_clause, .sec_text .chap_InfoSystem .scene_InfoMake {
     margin-top: 2rem;
     background: white;
     padding: 1.5rem 0 2.5rem 0;
     border-radius: 24px; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_title, .sec_text .chap_PdInfo .scene_clause .scene_title, .sec_text .chap_SystemInfo .scene_InfoMake .scene_title, .sec_text .chap_PdInfo .scene_InfoMake .scene_title {
+    .sec_text .chap_InfoSystem .scene_clause .scene_title, .sec_text .chap_InfoSystem .scene_InfoMake .scene_title {
       width: 75%;
       margin: 0 auto;
       border-bottom: 1px solid #e6e6e6;
       padding: 1rem 0;
       text-align: center; }
-      .sec_text .chap_SystemInfo .scene_clause .scene_title .title, .sec_text .chap_PdInfo .scene_clause .scene_title .title, .sec_text .chap_SystemInfo .scene_InfoMake .scene_title .title, .sec_text .chap_PdInfo .scene_InfoMake .scene_title .title {
+      .sec_text .chap_InfoSystem .scene_clause .scene_title .title, .sec_text .chap_InfoSystem .scene_InfoMake .scene_title .title {
         font-size: 1.6rem;
         color: #127d3b;
         font-weight: bold; }
-      .sec_text .chap_SystemInfo .scene_clause .scene_title .sub, .sec_text .chap_PdInfo .scene_clause .scene_title .sub, .sec_text .chap_SystemInfo .scene_InfoMake .scene_title .sub, .sec_text .chap_PdInfo .scene_InfoMake .scene_title .sub {
+      .sec_text .chap_InfoSystem .scene_clause .scene_title .sub, .sec_text .chap_InfoSystem .scene_InfoMake .scene_title .sub {
         font-size: 1.2rem;
         line-height: 1.3;
         font-weight: 500;
         margin-top: 5px; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_info, .sec_text .chap_PdInfo .scene_clause .scene_info, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info, .sec_text .chap_PdInfo .scene_InfoMake .scene_info {
+    .sec_text .chap_InfoSystem .scene_clause .scene_info, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info {
       padding: 0; }
-      .sec_text .chap_SystemInfo .scene_clause .scene_info .Split, .sec_text .chap_PdInfo .scene_clause .scene_info .Split, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split {
+      .sec_text .chap_InfoSystem .scene_clause .scene_info .Split, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info .Split {
         width: 75%;
         margin: 0 auto;
         margin-top: 1rem; }
-        .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .title, .sec_text .chap_PdInfo .scene_clause .scene_info .Split .title, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split .title, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split .title {
+        .sec_text .chap_InfoSystem .scene_clause .scene_info .Split .title, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info .Split .title {
           padding-top: 0.7rem;
           font-size: 1.45rem;
           color: #127d3b;
           font-weight: bold;
           font-size: 1.1em; }
-        .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li, .sec_text .chap_PdInfo .scene_clause .scene_info .Split .text li, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split .text li {
+        .sec_text .chap_InfoSystem .scene_clause .scene_info .Split .text li, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li {
           list-style-type: disc;
           padding-top: 5px;
           font-size: 1.1em;
           line-height: 1.3;
           color: #404040; }
-          .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li span.highlight, .sec_text .chap_PdInfo .scene_clause .scene_info .Split .text li span.highlight, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li span.highlight, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split .text li span.highlight {
+          .sec_text .chap_InfoSystem .scene_clause .scene_info .Split .text li span.highlight, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li span.highlight {
             background: #ffda0a;
             padding: 0 4px;
             text-decoration: none; }
-          .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li span, .sec_text .chap_PdInfo .scene_clause .scene_info .Split .text li span, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li span, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split .text li span {
+          .sec_text .chap_InfoSystem .scene_clause .scene_info .Split .text li span, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li span {
             text-decoration: underline; }
-  .sec_text .chap_SystemInfo .scene_clause:first-child, .sec_text .chap_PdInfo .scene_clause:first-child, .sec_text .chap_SystemInfo .scene_InfoMake:first-child, .sec_text .chap_PdInfo .scene_InfoMake:first-child {
+  .sec_text .chap_InfoSystem .scene_clause:first-child, .sec_text .chap_InfoSystem .scene_InfoMake:first-child {
     margin-top: 0; }
-  .sec_text .chap_SystemInfo .scene_InfoMake, .sec_text .chap_PdInfo .scene_InfoMake {
+  .sec_text .chap_InfoSystem .scene_InfoMake {
     background: linear-gradient(-45deg, #127d3b, #531f7d);
     background-size: 150% 120%;
     -webkit-animation: InfoDraft 4s ease infinite;
@@ -525,12 +826,10 @@ img {
     background-position: 80% 80%; }
   100% {
     background-position: 0% 0%; } }
-    .sec_text .chap_SystemInfo .scene_InfoMake .scene_MadeBySample, .sec_text .chap_PdInfo .scene_InfoMake .scene_MadeBySample {
+    .sec_text .chap_InfoSystem .scene_InfoMake .scene_MadeBySample {
       background: white;
       margin: 10px;
       border-radius: 14px; }
-.sec_text .chap_PdInfo {
-  background-color: transparent; }
 .sec_text .chap_PdEditor .scene_title {
   text-align: center; }
   .sec_text .chap_PdEditor .scene_title .title {
@@ -593,215 +892,6 @@ img {
       background-color: #127d3b;
       border-radius: 2rem;
       padding: 0.18rem 0; }
-.sec_text .chap_OrderInfo .scene_MakeInfoDesign {
-  max-width: 860px;
-  margin: 0 auto;
-  border-radius: 24px;
-  background-color: whitesmoke;
-  margin: 0 auto;
-  background: linear-gradient(-45deg, #127d3b, #531f7d);
-  background-size: 150% 120%;
-  -webkit-animation: InfoDraft 4s ease infinite;
-  -moz-animation: InfoDraft 4s ease infinite;
-  -o-animation: InfoDraft 4s ease infinite;
-  animation: InfoDraft 4s ease infinite; }
-@-webkit-keyframes InfoDraft {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-@-moz-keyframes InfoDraft {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-@-o-keyframes InfoDraft {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-@keyframes InfoDraft {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .Split {
-    grid-gap: 0; }
-  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle {
-    padding: 23px 1.5rem;
-    color: white;
-    color: white; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .title {
-      width: 90%;
-      font-family: "Noto Sans KR", sans-serif;
-      font-weight: 700;
-      font-size: 2rem;
-      margin-top: 0.2rem;
-      padding-left: 5%;
-      line-height: 1; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .title_eng {
-      font-family: "Vollkorn", serif;
-      margin-top: 8px;
-      padding-left: 7%;
-      font-size: 1.1rem;
-      line-height: 1.3; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .line {
-      width: 90%;
-      border-top: 1px solid lightgray;
-      margin: 0 auto;
-      margin-top: 0.7rem;
-      margin-bottom: 0.7rem; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoTitle .text {
-      width: 90%;
-      line-height: 1.3;
-      margin: 0 auto; }
-  .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub {
-    border-radius: 14px;
-    background: white;
-    padding: 1.5rem;
-    margin: 10px;
-    margin-left: 1.5rem;
-    padding-left: 0;
-    padding-right: 0; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub li {
-      margin: 0 1.5rem; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .main {
-      font-size: 1.3rem;
-      line-height: 1.5;
-      letter-spacing: -0.7;
-      font-weight: 500;
-      padding: 0.7rem 0;
-      border-bottom: 1px solid #e0e0e0; }
-      .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .main span {
-        background: #ffda0a;
-        color: #ff1500;
-        padding: 1px 5px 1px; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .main:first-child {
-      padding-top: 0; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .sub {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: #99603d;
-      font-weight: 400;
-      margin-top: 2rem; }
-      .sec_text .chap_OrderInfo .scene_MakeInfoDesign .InfoSub .sub span {
-        text-decoration: underline;
-        font-weight: 500;
-        color: #ff1500; }
-.sec_text .chap_OrderInfo .scene_MakeInfoNameCard {
-  max-width: 860px;
-  margin: 0 auto;
-  border-radius: 24px;
-  background-color: whitesmoke;
-  margin: 0 auto;
-  background: linear-gradient(-45deg, #531f7d, #127d3b);
-  background-size: 130% 110%;
-  -webkit-animation: InfoDraftReverse 4s ease infinite;
-  -moz-animation: InfoDraftReverse 4s ease infinite;
-  -o-animation: InfoDraftReverse 4s ease infinite;
-  animation: InfoDraftReverse 4s ease infinite; }
-@-webkit-keyframes InfoDraftReverse {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-@-moz-keyframes InfoDraftReverse {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-@-o-keyframes InfoDraftReverse {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-@keyframes InfoDraftReverse {
-  0% {
-    background-position: 0% 0%; }
-  50% {
-    background-position: 80% 80%; }
-  100% {
-    background-position: 0% 0%; } }
-  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle {
-    padding: 23px 1.5rem;
-    color: white;
-    padding-top: 26px; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .title {
-      width: 90%;
-      font-family: "Noto Sans KR", sans-serif;
-      font-weight: 700;
-      font-size: 2rem;
-      margin-top: 0.2rem;
-      padding-left: 5%;
-      line-height: 1; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .title_eng {
-      font-family: "Vollkorn", serif;
-      margin-top: 8px;
-      padding-left: 7%;
-      font-size: 1.1rem;
-      line-height: 1.3; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .line {
-      width: 90%;
-      border-top: 1px solid lightgray;
-      margin: 0 auto;
-      margin-top: 0.7rem;
-      margin-bottom: 0.7rem; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoTitle .text {
-      width: 90%;
-      line-height: 1.3;
-      margin: 0 auto; }
-  .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub {
-    border-radius: 14px;
-    background: white;
-    padding: 1.5rem;
-    margin: 10px;
-    margin-left: 1.5rem; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub ul {
-      position: relative; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num, .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num_green, .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num_violet, .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .num_orange {
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      width: 2.2rem;
-      height: 2.2rem;
-      border-radius: 50%;
-      background-color: white;
-      color: #127d3b;
-      line-height: 2.2rem;
-      font-weight: 700;
-      font-size: 1.3rem;
-      text-align: center; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .pic, .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .bg {
-      height: 160px;
-      background: lightgreen;
-      border-radius: 1rem; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .title {
-      font-size: 1.45rem;
-      color: #127d3b;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 0.7rem; }
-    .sec_text .chap_OrderInfo .scene_MakeInfoNameCard .InfoSub .text {
-      width: 90%;
-      margin: 0 auto;
-      text-align: center;
-      margin-top: 0.4rem; }
-.sec_text .chap_OrderInfo .scene_MakeInfoNameCard > .Split {
-  grid-gap: 0; }
 
 .chap_SealMark {
   text-align: center; }
@@ -843,22 +933,22 @@ img {
   .sec_ad .chap_PdViewTop .scene_banner .pic, .sec_ad .chap_PdViewTop .scene_banner .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .scene_banner .bg {
     height: 110px; }
 
-  .sec_text .chap_SystemInfo .scene_clause .scene_title, .sec_text .chap_PdInfo .scene_clause .scene_title, .sec_text .chap_SystemInfo .scene_InfoMake .scene_title, .sec_text .chap_PdInfo .scene_InfoMake .scene_title {
+  .sec_text .chap_SystemInfo .scene_clause .scene_title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_title {
     width: 90%; }
-  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split, .sec_text .chap_PdInfo .scene_clause .scene_info .Split, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split {
+  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split {
     width: 90%; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .title, .sec_text .chap_PdInfo .scene_clause .scene_info .Split .title, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split .title, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split .title {
+    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .title {
       margin-top: 1.2rem;
       font-size: 1.25rem; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li:first-child, .sec_text .chap_PdInfo .scene_clause .scene_info .Split .text li:first-child, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li:first-child, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split .text li:first-child {
+    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li:first-child, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li:first-child, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li:first-child {
       padding-top: 0; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li, .sec_text .chap_PdInfo .scene_clause .scene_info .Split .text li, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split .text li {
+    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li {
       list-style-type: none;
       padding-bottom: 5px;
       border-bottom: 1px solid #ebebeb; }
-  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split:first-child .title, .sec_text .chap_PdInfo .scene_clause .scene_info .Split:first-child .title, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .Split:first-child .title, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .Split:first-child .title {
+  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split:first-child .title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split:first-child .title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split:first-child .title {
     margin-top: 0; }
-  .sec_text .chap_SystemInfo .scene_clause .scene_info .CutOneFour, .sec_text .chap_PdInfo .scene_clause .scene_info .CutOneFour, .sec_text .chap_SystemInfo .scene_InfoMake .scene_info .CutOneFour, .sec_text .chap_PdInfo .scene_InfoMake .scene_info .CutOneFour {
+  .sec_text .chap_SystemInfo .scene_clause .scene_info .CutOneFour, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .CutOneFour, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .CutOneFour {
     grid-template-columns: repeat(1, 1fr); }
 
   .sec_display .chap_PdIntro .support {

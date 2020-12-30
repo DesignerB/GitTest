@@ -24,8 +24,11 @@
 .box_Stroke {
   max-width: $SizeBoxStroke;
   @include vc;
-  @include b_radi;
+  border-radius: $SizeOrderInfoSubRadius;
   border: 10px solid $color-main;
+
+  // @include chap_OrderInfoBackgroundAniReverse;
+  background-color: white;
 }
 
 .Split {
@@ -123,6 +126,70 @@ img {
 
 //이미지가 주로 첨부된 항목(매번 새롭게 만들어주어야 되는것)
 .sec_display {
+  .chap_PdViewPoster {
+    position: relative;
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+    background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 96%, 0) 0%,
+      hsla(0, 0%, 96%, 0.8) 50%,
+      hsla(0, 0%, 96%, 1) 80%
+    );
+    .box_photo {
+      position: relative;
+      .AbTitleTop {
+        @include AbCenter;
+        width: 66%;
+        top: 5%;
+        z-index: 5;
+        @include tc;
+        font-size: 5rem;
+        font-weight: 700;
+      }
+      .AbTitleBottom {
+        @include AbCenter;
+        bottom: 5%;
+        z-index: 5;
+        @include tc;
+        line-height: 1.5;
+        .tag {
+          font-weight: 500;
+        }
+      }
+      .AbCardLeft {
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        @include tc;
+        width: 70%;
+        height: 40%;
+        background: lightgreen;
+        bottom: 20%;
+        z-index: 3;
+      }
+      // .AbCardRight {
+      //   position: absolute;
+      //   left: 0;
+      //   transform: translateX(150%);
+      //   @include tc;
+      //   width: 50%;
+      //   height: 70%;
+      //   background: lightgreen;
+      //   bottom: 5%;
+      //   z-index: 3;
+      // }
+      .scene_background {
+        width: 100%;
+        height: 2400px;
+        background-color: lightpink;
+        @include vc;
+        @include b_radi;
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
   .chap_PdIntro {
     @include tc;
     .category {
@@ -144,64 +211,7 @@ img {
       padding: 0.5em 0;
     }
   }
-  .chap_PdViewPoster {
-    position: relative;
-    padding-top: 20rem;
-    padding-bottom: 23rem;
-    background: linear-gradient(
-      to bottom,
-      hsla(0, 0%, 96%, 0) 0%,
-      hsla(0, 0%, 96%, 0.8) 50%,
-      hsla(0, 0%, 96%, 1) 80%
-    );
-    .box_photo {
-      position: relative;
-    }
-    .scene_AbTitleTop {
-      @include AbCenter;
-      width: 66%;
-      top: 5%;
-      z-index: 5;
-      @include tc;
-      font-size: 5rem;
-      font-weight: 700;
-    }
-    .scene_AbTitleBottom {
-      @include AbCenter;
-      bottom: 5%;
-      z-index: 5;
-      @include tc;
-      line-height: 1.5;
-      .tag {
-        font-weight: 500;
-      }
-    }
-    .scene_Pic {
-      width: 100%;
-      height: 900px;
-      background-color: lightpink;
-      @include vc;
-      @include b_radi;
-      background-size: cover;
-      background-position: top;
-    }
-    .AbCardLeft {
-      @include AbCardLeft;
-      width: 40%;
-      height: 40%;
-      background: lightgreen;
-      bottom: 0;
-      z-index: 3;
-    }
-    .AbCardRight {
-      @include AbCardRight;
-      width: 60%;
-      height: 70%;
-      background: lightgreen;
-      bottom: 0;
-      z-index: 3;
-    }
-  }
+
   .chap_SingleView {
     .box_Photo {
       max-height: 900px;
@@ -440,7 +450,184 @@ img {
 
 //글자가 주인 항목 (반복적으로 쓰이는 것)
 .sec_text {
-  .chap_SystemInfo {
+  .chap_InfoOrder {
+    background-color: hsl(230, 75%, 10%);
+    padding: 9rem 0 11rem;
+    .scene_MakeInfoDesign {
+      @include RadiusBox;
+      @include vc;
+      @include chap_OrderInfoBackgroundAni;
+      padding-bottom: 1px; // IE10 오류 수정용.
+      .Split {
+        grid-gap: 0;
+      }
+      .InfoTitle {
+        @include chap_OrderInfoTitle;
+        color: white;
+      }
+      .InfoSub {
+        @include chap_OrderInfoSub;
+        padding-left: 0;
+        padding-right: 0;
+        li {
+          margin: 0 $SizeGridGap;
+        }
+        .main {
+          font-size: 1.3rem;
+          line-height: 1.5;
+          letter-spacing: -0.7;
+          font-weight: 500;
+          padding: 0.7rem 0;
+          border-bottom: 1px solid hsl(0, 0%, 88%);
+          span {
+            background: $ColorHighLightBackground;
+            color: $ColorHighLight;
+            padding: 1px 5px 1px;
+          }
+        }
+        .main:first-child {
+          padding-top: 0;
+        }
+        .sub {
+          font-size: 1.1rem;
+          line-height: 1.5;
+          color: #99603d;
+          font-weight: 400;
+          margin-top: 2rem;
+          span {
+            text-decoration: underline;
+            font-weight: 500;
+            color: $ColorHighLight;
+          }
+        }
+      }
+    }
+    .scene_MakeInfoNameCard {
+      @include RadiusBox;
+      @include vc;
+      // background: hsl(50, 100%, 98%);
+      @include chap_OrderInfoBackgroundAniReverse;
+      padding-bottom: 1px; // IE10 오류 수정용.
+      .InfoTitle {
+        @include chap_OrderInfoTitle;
+        padding-top: 26px;
+      }
+      .InfoSub {
+        @include chap_OrderInfoSub;
+        ul {
+          position: relative;
+        }
+        .num {
+          position: absolute;
+          top: 0.5rem;
+          left: 0.5rem;
+          width: 2.2rem;
+          height: 2.2rem;
+          border-radius: 50%;
+          background-color: white;
+          color: $color-main;
+          line-height: 2.2rem;
+          font-weight: 700;
+          font-size: 1.3rem;
+          @include tc;
+        }
+        .pic {
+          height: 160px;
+          background: lightgreen;
+          border-radius: 1rem;
+        }
+        .title {
+          @include FontLittleTitle;
+          @include tc;
+          margin-top: 0.7rem;
+        }
+        .text {
+          width: 90%;
+          @include vc;
+          @include tc;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+    .scene_MakeInfoNameCard > .Split {
+      grid-gap: 0;
+    }
+  }
+  .chap_InfoMake {
+    background-color: hsl(230, 75%, 10%);
+    padding: 10rem 0 11rem;
+    .scene_NoticeMakeSample {
+      .box_Default {
+        @include chap_OrderInfoBackgroundAni;
+        max-width: $SizeBoxNotice;
+        @include b-radi;
+        padding: $SizeOrderInfoSubMargin;
+        .scene_title {
+          padding-top: 1.3rem;
+          .title {
+            @include FontTitle;
+            @include tc;
+            // color: yellow;
+            color: hsla(0, 0%, 100%, 1);
+          }
+          .sub {
+            @include FontSub;
+            font-weight: 400;
+            margin-top: 5px;
+            @include tc;
+            color: hsla(0, 0%, 90%, 0.8);
+            line-height: 1.4;
+          }
+          .highlight {
+            background: $ColorHighLightBackground;
+            padding: 0 3px;
+            border-radius: 2px;
+            color: $ColorHighLight;
+          }
+        }
+        .box_InnerSqure {
+          position: relative;
+          .scene_InfoSample {
+            width: 94%;
+            @include vc;
+            margin-top: 1.5rem;
+            padding: 3% 0;
+            .pic {
+              height: 150px;
+              background: hsla(0, 0%, 100%, 0.5);
+            }
+            .title {
+              @include FontSub;
+              color: hsla(0, 0%, 100%, 1);
+              margin-top: 1rem;
+              @include tc;
+            }
+            .text {
+              margin-top: 2px;
+              color: hsla(0, 0%, 90%, 0.5);
+              line-height: 1.3;
+              @include tc;
+            }
+          }
+          .scene_bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            border-radius: $SizeOrderInfoSubRadius;
+            background-color: white;
+            opacity: 0.1;
+          }
+        }
+      }
+    }
+    .scene_NoticeMakeCustom {
+      @extend .scene_NoticeMakeSample;
+    }
+  }
+  .chap_InfoSystem {
     background-color: $color-gray;
     padding: 3rem 0;
     .scene_clause {
@@ -505,10 +692,6 @@ img {
       }
     }
   }
-  .chap_PdInfo {
-    @extend .chap_SystemInfo;
-    background-color: transparent;
-  }
   .chap_PdEditor {
     .scene_title {
       @include SecTextTitle;
@@ -565,110 +748,6 @@ img {
           padding: 0.18rem 0;
         }
       }
-    }
-  }
-  .chap_OrderInfo {
-    // background-color: $color-gray;
-    // padding: 3rem 0;
-    .scene_MakeInfoDesign {
-      @include RadiusBox;
-      @include vc;
-      @include chap_OrderInfoBackgroundAni;
-      // background-color: $color-gray;
-      .Split {
-        grid-gap: 0;
-      }
-      .InfoTitle {
-        @include chap_OrderInfoTitle;
-        color: white;
-      }
-      .InfoSub {
-        @include chap_OrderInfoSub;
-        padding-left: 0;
-        padding-right: 0;
-        li {
-          margin: 0 $SizeGridGap;
-        }
-        .main {
-          // margin-top: 1rem;
-          font-size: 1.3rem;
-          line-height: 1.5;
-          letter-spacing: -0.7;
-          font-weight: 500;
-          padding: 0.7rem 0;
-          border-bottom: 1px solid hsl(0, 0%, 88%);
-          span {
-            background: $ColorHighLightBackground;
-            color: $ColorHighLight;
-            // font-weight: 500;
-            padding: 1px 5px 1px;
-          }
-        }
-        .main:first-child {
-          padding-top: 0;
-        }
-        .sub {
-          font-size: 1.1rem;
-          line-height: 1.5;
-          color: #99603d;
-          font-weight: 400;
-          margin-top: 2rem;
-          span {
-            text-decoration: underline;
-            font-weight: 500;
-            color: $ColorHighLight;
-          }
-        }
-      }
-    }
-    .scene_MakeInfoNameCard {
-      @include RadiusBox;
-      @include vc;
-      // background: hsl(50, 100%, 98%);
-      @include chap_OrderInfoBackgroundAniReverse;
-      .InfoTitle {
-        @include chap_OrderInfoTitle;
-        padding-top: 26px;
-      }
-      .InfoSub {
-        @include chap_OrderInfoSub;
-        ul {
-          position: relative;
-        }
-        .num {
-          position: absolute;
-          top: 0.5rem;
-          left: 0.5rem;
-          width: 2.2rem;
-          height: 2.2rem;
-          border-radius: 50%;
-          background-color: white;
-          color: $color-main;
-          line-height: 2.2rem;
-          font-weight: 700;
-          font-size: 1.3rem;
-          @include tc;
-        }
-        .pic {
-          height: 160px;
-          background: lightgreen;
-          border-radius: 1rem;
-        }
-        .title {
-          @include FontLittleTitle;
-          @include tc;
-          margin-top: 0.7rem;
-        }
-        .text {
-          width: 90%;
-          @include vc;
-          @include tc;
-          margin-top: 0.4rem;
-        }
-      }
-    }
-    .scene_MakeInfoNameCard > .Split {
-      grid-gap: 0;
     }
   }
 }
