@@ -11,8 +11,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto; }
 
-ul,
-ol {
+ul, ol, table, tr, th, td {
   position: relative;
   list-style: none;
   word-break: break-word;
@@ -24,7 +23,8 @@ ol {
   margin-block-end: 0;
   margin: 0;
   padding: 0;
-  border: 0 none; }
+  border: 0 none;
+  vertical-align: middle; }
 
 .Mg1 {
   margin-top: 1rem; }
@@ -74,6 +74,10 @@ ol {
 .frame {
   margin: 0 auto; }
 
+.box_Windows {
+  max-width: 1100px;
+  margin: 0 auto; }
+
 .box_Default {
   max-width: 860px;
   margin: 0 auto; }
@@ -86,10 +90,6 @@ ol {
   max-width: 810px;
   margin: 0 auto; }
 
-.box_SiteDefault {
-  max-width: 1200px;
-  margin: 0 auto; }
-
 .box_Stroke {
   max-width: 840px;
   margin: 0 auto;
@@ -98,25 +98,36 @@ ol {
   background-color: white; }
 
 .Split {
+  display: -ms-grid;
   display: grid;
   grid-gap: 1.5rem; }
 
 .CutHalf {
-  grid-template-columns: repeat(2, 5fr); }
+  -ms-grid-columns: 1fr [2];
+  grid-template-columns: repeat(2, 1fr); }
 
 .CutThird {
-  grid-template-columns: repeat(3, 5fr); }
+  -ms-grid-columns: 1fr [3];
+  grid-template-columns: repeat(3, 1fr); }
 
 .CutQuarter {
-  grid-template-columns: repeat(4, 5fr); }
+  -ms-grid-columns: 1fr [4];
+  grid-template-columns: repeat(4, 1fr); }
 
 .CutOneThree {
+  -ms-grid-columns: 1fr 3fr;
   grid-template-columns: 1fr 3fr; }
 
 .CutOneFour {
+  -ms-grid-columns: 1fr 4fr;
   grid-template-columns: 1fr 4fr; }
 
+.CutOneNine {
+  -ms-grid-columns: 1fr 9fr;
+  grid-template-columns: 1fr 9fr; }
+
 .CutThreeTenths {
+  -ms-grid-columns: 3fr 10fr;
   grid-template-columns: 3fr 10fr; }
 
 img {
@@ -127,37 +138,55 @@ img {
   margin: 0;
   padding: 0; }
 
-.header_top_ad_box {
+.containerTop .upLine {
+  position: relative;
   width: 100%;
-  height: 36px;
-  background-color: #127d3b;
-  background: linear-gradient(135deg, #007e41 20%, #590c7d 80%); }
-  .header_top_ad_box .header_top_ad {
+  height: 38px;
+  background: linear-gradient(135deg, #007e41 10%, #590c7d 90%); }
+  .containerTop .upLine table {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; }
-    .header_top_ad_box .header_top_ad table {
-      width: 100%;
-      height: 100%; }
-      .header_top_ad_box .header_top_ad table tbody {
-        display: table-row-group;
-        vertical-align: middle;
-        border-color: inherit; }
-      .header_top_ad_box .header_top_ad table tr {
-        display: table-row;
-        vertical-align: inherit;
-        border-color: inherit; }
-      .header_top_ad_box .header_top_ad table td {
-        text-transform: uppercase;
-        vertical-align: middle;
-        font-size: 1rem;
-        color: white;
-        text-align: center;
-        font-family: 'Montserrat','Lato',arial,sans-serif,Malgun Gothic,"맑은 고딕",'Nanum Gothic',AppleGothic,Dotum,"돋움",sans-serif; }
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%; }
+    .containerTop .upLine table td {
+      text-align: center;
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8); }
+.containerTop .nav .Split div {
+  width: 100%; }
+.containerTop .nav .Split div:nth-child(odd) {
+  background-color: #ffda0a; }
+.containerTop .nav .Split div:nth-child(even) {
+  background-color: #adff0a; }
+.containerTop .nav .Split div:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3; }
+.containerTop .nav .Split div:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-row: 1 min; }
+.containerTop .nav .Split div:nth-child(3) {
+  -ms-grid-column: 3;
+  -ms-grid-row: 1; }
+.containerTop .nav .Split div:nth-child(4) {
+  -ms-grid-column: 4;
+  -ms-grid-row: 1; }
+.containerTop .nav .Split div:nth-child(5) {
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4; }
+.containerTop .nav .Split div:nth-child(6) {
+  -ms-grid-column: 4;
+  -ms-grid-row: 2; }
 
 .sec_ad .chap_PdViewTop {
+  margin-top: 5rem;
+  background: linear-gradient(to bottom, whitesmoke 0%, rgba(245, 245, 245, 0.5) 70%, rgba(245, 245, 245, 0) 100%);
   border-top: 1px solid #e6e6e6;
-  padding: 2rem 0 2rem; }
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.5rem 0 5rem; }
   .sec_ad .chap_PdViewTop .scene_AdBanner .thumbnail {
     position: relative;
     height: 10rem; }
@@ -515,7 +544,10 @@ img {
     .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoTitle {
       padding: 23px 1.5rem;
       color: white;
-      color: white; }
+      color: white;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
+      -ms-grid-column-span: 1; }
       .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoTitle .title {
         width: 90%;
         font-family: "Noto Sans KR", sans-serif;
@@ -546,7 +578,10 @@ img {
       padding: 1.5rem;
       margin: 10px;
       padding-left: 0;
-      padding-right: 0; }
+      padding-right: 0;
+      -ms-grid-column: 2;
+      -ms-grid-row: 1;
+      -ms-grid-column-span: 1; }
       .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub li {
         margin: 0 1.5rem; }
       .sec_text .chap_InfoOrder .scene_MakeInfoDesign .InfoSub .main {
@@ -616,7 +651,10 @@ img {
     .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoTitle {
       padding: 23px 1.5rem;
       color: white;
-      padding-top: 26px; }
+      padding-top: 26px;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
+      -ms-grid-column-span: 1; }
       .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoTitle .title {
         width: 90%;
         font-family: "Noto Sans KR", sans-serif;
@@ -645,7 +683,10 @@ img {
       border-radius: 14px;
       background: white;
       padding: 1.5rem;
-      margin: 10px; }
+      margin: 10px;
+      -ms-grid-column: 2;
+      -ms-grid-row: 1;
+      -ms-grid-column-span: 1; }
       .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub ul {
         position: relative; }
       .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num, .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num_green, .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num_violet, .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .sec_display .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .num_orange {

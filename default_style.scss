@@ -12,8 +12,7 @@ body {
   overflow-y: auto;
 }
 
-ul,
-ol {
+ul, ol, table, tr, th, td {
   position: relative;
   //     display: inline-block;
   list-style: none;
@@ -27,4 +26,5 @@ ol {
   margin: 0;
   padding: 0;
   border: 0 none;
+  vertical-align: middle;
 }

@@ -26,6 +26,82 @@
   @include tc;
 }
 
+
+
+// ul{width: 100%;}
+
+.frame {
+  @include vc;
+}
+.box_Windows{
+  max-width: $SizeBoxSiteDefault;
+  @include vc;
+}
+.box_Default {
+  max-width: $SizeBoxDefault;
+  @include vc;
+}
+.box_Photo {
+  max-width: $SizeBoxDefault;
+  @include vc;
+}
+.box_Inside {
+  max-width: $SizeBoxInside;
+  @include vc;
+}
+.box_Stroke {
+  max-width: $SizeBoxStroke;
+  @include vc;
+  border-radius: $SizeOrderInfoSubRadius;
+  border: 10px solid $color-main;
+  // @include chap_OrderInfoBackgroundAniReverse;
+  background-color: white;
+}
+
+
+.Split {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: $SizeGridGap;
+}
+.CutHalf {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+.CutThird {
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+.CutQuarter {
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+.CutOneThree {
+  -ms-grid-columns: 1fr 3fr;
+  grid-template-columns: 1fr 3fr;
+}
+.CutOneFour {
+  -ms-grid-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr;
+}
+.CutOneNine {
+  -ms-grid-columns: 1fr 9fr;
+  grid-template-columns: 1fr 9fr;
+}
+.CutThreeTenths {
+  -ms-grid-columns: 3fr 10fr;
+  grid-template-columns: 3fr 10fr;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  object-fit: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
 //텍스트 제목
 @mixin SecTextTitle {
   @include tc;

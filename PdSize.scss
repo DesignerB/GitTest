@@ -1,10 +1,14 @@
 //BOX SIZE,
-$SizeBoxSiteDefault:1200px;
+$SizeBoxSiteDefault:1100px;
 $SizeBoxDefault: 860px;
 $SizeBoxInside: 810px;
 $SizeBoxStroke: 840px;
 $SizeBoxNotice: 520px;
-
+@mixin SizeWindows{
+  width:100%;
+  max-width:$SizeBoxSiteDefault;
+  @include vc;
+}
 
 
 //GRID

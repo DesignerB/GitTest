@@ -14,22 +14,60 @@
       
     <body>
         <div class="frame">
-            <div class="header_top_ad_box">
-                <div class="header_top_ad" >
+            <div class="containerTop">
+                <div class="upLine">
                     <table>
                         <th>
-                            <td>Green B Design Studio</td>
-                        </th>			
+                            <td class="text">Green B Design Studio</td>
+                        </th>
                     </table>
                 </div>
-            </div>
-            <div style="width:1200px; margin:0 auto; margin-bottom:80px;">
-                <img src="./image/top.jpg" alt="">
+                <div class="nav" style="margin:2rem 0;">
+                    <div class="box_Windows">
+                        <div class="Split" style="grid-template-columns: 1fr 3fr 2fr 2fr">
+                                <div class="logo">
+                                    <img src="./image/logogreenb-01.svg" alt="로고" style="width:100px;">
+                                </div>
+                                <div class="search">
+                                    <input type="text" placeholder="검색" name="search">
+                                    <button type="submit">검색</button>
+                                </div>
+                                <div class="adBanner">
+                                    광고
+                                </div>
+                                <div class="member">
+                                    <ul class="top_member_box">
+                                        <li>로그인</li>
+                                        <li>회원가입</li>
+                                        <li>장바구니 <span>- 0</span></li>
+                                        <li>주문내역</li>
+                                        <li>마이페이지</li>
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <ul class="menu">
+                                        <li>명함</li>
+                                        <li>현수막</li>
+                                        <li>배너</li>
+                                        <li>스티커</li>
+                                        <li>현판</li>
+                                    </ul>
+                                </div>
+                                <div class="board">
+                                    <ul class="board">
+                                        <li>시안요청</li>
+                                        <li>디자인상담</li>
+                                        <li>제작가이드</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
             <!-- 광고 -->
-            <div class="sec_ad">
+            <!-- <div class="sec_ad">
                 <div class="chap_PdViewTop">
                     <div class="scene_AdBanner">
                         <div class="box_SiteDefault">
@@ -54,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- 주문방법 -->
             <div class="sec_text">
                 <div class="chap_InfoOrder">
@@ -93,37 +131,37 @@
                             </div>
                             <div class="InfoSub">
                                 <div class="Split CutThird">
-                                    <ul>
+                                    <ul style="-ms-grid-column: 1; -ms-grid-row: 1;">
                                         <li class="num">1</li>
                                         <li class="pic"></li>
                                         <li class="title">용지 선택</li>
                                         <li class="text">인쇄할 용지를 선택해주세요.</li>
                                     </ul>
-                                    <ul>
+                                    <ul style="-ms-grid-column: 2; -ms-grid-row: 1;">
                                         <li class="num">2</li>
                                         <li class="pic"></li>
                                         <li class="title">제작 매수 설정</li>
                                         <li class="text"></li>
                                     </ul>
-                                    <ul>
+                                    <ul style="-ms-grid-column: 3; -ms-grid-row: 1; -ms-grid-column-span: 1;">
                                         <li class="num">3</li>
                                         <li class="pic"></li>
                                         <li class="title">후가공 선택</li>
                                         <li class="text"></li>
                                     </ul>
-                                    <ul>
+                                    <ul style="-ms-grid-column: 1; -ms-grid-row: 2; -ms-grid-column-span: 1;">
                                         <li class="num">4</li>
                                         <li class="pic"></li>
                                         <li class="title">추가옵션 선택</li>
                                         <li class="text"></li>
                                     </ul>
-                                    <ul>
+                                    <ul style="-ms-grid-column: 2; -ms-grid-row: 2; -ms-grid-column-span: 1;">
                                         <li class="num">5</li>
                                         <li class="pic"></li>
                                         <li class="title">결재</li>
                                         <li class="text"></li>
                                     </ul>
-                                    <ul>
+                                    <ul style="-ms-grid-column: 3; -ms-grid-row: 2; -ms-grid-column-span: 1;">
                                         <li class="num">6</li>
                                         <li class="pic"></li>
                                         <li class="title">제작정보 전달</li>
@@ -165,6 +203,7 @@
                 </div>
             </div>
             <!-- 제품안내 -->
+
             <div class="sec_text">
                 <div class="chap_InfoMake">
                     <div class="scene_NoticeMakeSample">
