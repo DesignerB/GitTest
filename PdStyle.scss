@@ -1,3 +1,16 @@
+//Layout Style
+@mixin mgCenter {
+  margin: 0 auto;
+}
+@mixin textCenter {
+  text-align: center;
+}
+
+//text Style
+@mixin textWhite {
+  color: white;
+}
+//
 @mixin vc {
   margin: 0 auto;
 }
@@ -26,14 +39,12 @@
   @include tc;
 }
 
-
-
 // ul{width: 100%;}
 
 .frame {
   @include vc;
 }
-.box_Windows{
+.box_Windows {
   max-width: $SizeBoxSiteDefault;
   @include vc;
 }
@@ -58,22 +69,21 @@
   background-color: white;
 }
 
-
 .Split {
   display: -ms-grid;
   display: grid;
   grid-gap: $SizeGridGap;
 }
 .CutHalf {
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: (1fr) [2];
   grid-template-columns: repeat(2, 1fr);
 }
 .CutThird {
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: (1fr) [3];
   grid-template-columns: repeat(3, 1fr);
 }
 .CutQuarter {
-  -ms-grid-columns: (1fr)[4];
+  -ms-grid-columns: (1fr) [4];
   grid-template-columns: repeat(4, 1fr);
 }
 .CutOneThree {

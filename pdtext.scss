@@ -3,58 +3,334 @@
 @import "Pdfont.scss";
 @import "PdSize.scss";
 @import "PdStyle.scss";
+@import "PdtextMedia.scss";
 
-.containerTop{
-  .upLine{
-    position: relative;
-    width:100%;
-    height:38px;
-    background: linear-gradient(135deg, rgba(0,126,65,1) 10%, rgba(89,12,125,1) 90%);
-    table{
-      @include SizeWindows;
-      height: 100%;
-      td{
-        @include tc;
-        font-size: 1.2rem;
-        color: $colorWhiteTrans;
+// 윈도우 사이즈 랩.
+.wrap {
+  max-width: $SizeWindowDefault;
+  @include mgCenter;
+  padding: 0.3rem 0.5rem;
+}
+.body {
+  position: relative;
+}
+
+//내비게이션
+nav {
+  width: 100%;
+  font-size: 0.75em;
+  article[id="nav__topBar"] {
+    background: $color-main;
+    text-decoration: none;
+    transition: all 0.1s;
+    a {
+      color: white;
+    }
+    .wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      section {
+        position: relative;
+        height: 100%;
+        @include textWhite;
+        &:first-child {
+          max-width: 100%;
+          flex: 1 1 0;
+        }
+        &:last-child {
+          width: auto;
+          flex: 0 0 auto;
+          margin-left: auto;
+          a {
+            display: inline-block;
+            border: 1px solid white;
+            text-decoration: none;
+            padding: 0.5em 0.7em;
+            &:last-child {
+              margin-right: 0;
+            }
+            span {
+              color: white;
+            }
+          }
+        }
       }
     }
   }
-  .nav{
-    .Split div{width: 100%;}
-    .Split div:nth-child(odd){background-color: hsla(51, 100%, 52%, 1);}
-    .Split div:nth-child(even){background-color: hsla(80, 100%, 52%, 1);}
-    .Split div:nth-child(1){-ms-grid-column:1; -ms-grid-row:1; -ms-grid-row-span:2; grid-row:1/3}
-    .Split div:nth-child(2){-ms-grid-column:2; -ms-grid-row:1 min}
-    .Split div:nth-child(3){-ms-grid-column:3; -ms-grid-row:1}
-    .Split div:nth-child(4){-ms-grid-column:4; -ms-grid-row:1}
-    .Split div:nth-child(5){-ms-grid-column: 2; -ms-grid-row:2; -ms-grid-column-span: 2;grid-column: 2/4;}
-    .Split div:nth-child(6){-ms-grid-column:4; -ms-grid-row:2}
-    .logo{}
-    // .menu{-ms-grid-column: 2;-ms-grid-column-span: 2;grid-column: 2/4;}
-    // @include SizeWindows;
+  article[id="nav__menuBar"] {
+    // position: sticky;
+    border-bottom: 1px solid $colorGrayBorder;
+    background: white;
+    .wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      #btn__hamburger {
+        display: block;
+        position: relative;
+        flex: 0 0 auto;
+        width: 24px;
+        height: auto;
+        text-decoration: none;
+        cursor: pointer;
+        span {
+          display: block;
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          height: 2px;
+          border-radius: 3px;
+          background: $colorGrayBtn;
+          color: transparent;
+          transition: all 0.1s;
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            background: $colorGrayBtn;
+            border-radius: 3px;
+            transition: all 0.3s;
+          }
+          &:before {
+            top: -6px;
+          }
+          &:after {
+            top: 6px;
+          }
+        }
+      }
+      #btn__hamburger.on {
+        span {
+          background: transparent;
+          &:before {
+            top: 0;
+            transform: rotate(45deg);
+            background: $colorMain;
+          }
+          &:after {
+            top: 0;
+            transform: rotate(-45deg);
+            background: $colorMain;
+          }
+        }
+      }
+      ol[class="nav__menu"] {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        li {
+          cursor: pointer;
+          padding: 0.7em 1.5em;
+          &:first-child {
+            margin-left: 1em;
+          }
+          &:hover,
+          &:active {
+            color: $colorMain;
+            border-radius: 2rem;
+          }
+        }
+      }
+      ol[class="nav__operator"] {
+        display: flex;
+        flex: 0 0 auto;
+        margin-left: auto;
+        border-left: 1px solid $colorGrayBorder;
+        li {
+          cursor: pointer;
+          padding: 0.7em 1em;
+          &:first-child {
+            margin-left: 0.5rem;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+          &:hover,
+          &:active {
+            color: $colorMain;
+            border-radius: 2rem;
+          }
+        }
+      }
+    }
+  }
+  article[id="nav__extendMenu"] {
+    display: none;
+    padding: 1rem;
+    border-bottom: 1px solid $colorMain;
+    .wrap {
+      display: grid;
+      grid-template-columns: 6fr 1fr 1fr;
+      section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        h2 {
+          grid-column: 1/6;
+          color: $colorMain;
+        }
+        &:first-child {
+          margin-left: 1rem;
+          li {
+            background: hotpink;
+          }
+        }
+        &:nth-child(2) {
+          grid-template-columns: 1fr;
+          li {
+            background: greenyellow;
+          }
+        }
+        &:last-child {
+          grid-template-columns: 1fr;
+          li {
+            background: cornflowerblue;
+          }
+        }
+      }
+    }
+  }
+  article[id="nav__extendMenu"].on {
+    animation: scale-display 1.2s;
+    display: block;
+  }
+  @keyframes scale-display {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+      -webkit-transform: scale(1);
+    }
 
-    // .underline{width: 100%;border-bottom: 1px solid #dddddd;}
-    // .box_Flex{
-    //   display: flex;
-    //   .logo{flex:none;}
-    //   .search{flex:none;}
-    //   .function{
-    //     margin-left: auto;
-    //     li{display: inline-block;}
-    //   }
-      
-
-    // }
-    // li{
-    //   display: inline-block;
-    //   float: left;
-    // }
-
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      -webkit-transform: scale(1);
+    }
   }
 }
-.containerBody{}
-.containerFooter{}
+
+//메인, 광고란
+aside[id="ad__index"] {
+  background: $colorIndexAd;
+  height: auto;
+  padding: 3rem 0 5rem;
+  @include textCenter;
+  .wrap {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  article {
+    @include textCenter;
+    @include mgCenter;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    flex: 1;
+    background-color: white;
+    img {
+      width: 100%;
+    }
+    h2 {
+      margin-top: 1rem;
+    }
+    p {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+footer {
+  margin-top: 5rem;
+  header {
+    padding: 0.35em 0;
+    border-top: 1px solid $colorGrayBorder;
+    border-bottom: 1px solid $colorGrayBorder;
+    font-size: 0.7em;
+    .wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+    a {
+      display: block;
+      flex: 0 0 auto;
+      padding: 0 1rem;
+      @include textCenter;
+      color: hsla(0, 0, 0, 0.8);
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      &:hover {
+        color: $colorMain;
+      }
+    }
+  }
+  article {
+    font-size: 0.6rem;
+    margin: 0.8rem 0 2rem;
+    .wrap {
+      display: flex;
+      flex-direction: row;
+      justify-items: flex-start;
+      align-items: stretch;
+      flex-wrap: wrap;
+      section {
+        flex: 1;
+        h2 {
+          color: $colorMain;
+        }
+        address {
+          font-size: 0.6rem;
+          margin-top: 0.4em;
+          line-height: 1.3;
+          font-style: nomal !important;
+        }
+        p {
+          display: block;
+          font-size: 0.65rem;
+          margin-top: 0.2em;
+          line-height: 1.2;
+        }
+        &:first-child {
+          width: 100px;
+          flex: 0 0 auto;
+        }
+        &:nth-child(2) {
+          width: 43%;
+          // background: forestgreen;
+          div:last-child {
+            margin-top: 0.5rem;
+            margin-left: 3px;
+            font-size: 0.4em;
+          }
+        }
+        &:last-child {
+          width: 300px;
+          flex: 0 0 auto;
+          margin-left: auto;
+          background: $colorIndexAd;
+          border: 1px solid $colorGrayBorder;
+          @include textCenter;
+        }
+      }
+    }
+  }
+}
 
 //광고섹션
 .sec_ad {
@@ -457,13 +733,17 @@
       .InfoTitle {
         @include chap_OrderInfoTitle;
         color: white;
-        -ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-column-span: 1;
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-column-span: 1;
       }
       .InfoSub {
         @include chap_OrderInfoSub;
         padding-left: 0;
         padding-right: 0;
-        -ms-grid-column: 2; -ms-grid-row: 1; -ms-grid-column-span: 1;
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-column-span: 1;
         li {
           margin: 0 $SizeGridGap;
         }
@@ -506,11 +786,15 @@
       .InfoTitle {
         @include chap_OrderInfoTitle;
         padding-top: 26px;
-        -ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-column-span: 1;
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-column-span: 1;
       }
       .InfoSub {
         @include chap_OrderInfoSub;
-        -ms-grid-column: 2; -ms-grid-row: 1; -ms-grid-column-span: 1;
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-column-span: 1;
         ul {
           position: relative;
         }
@@ -763,137 +1047,5 @@
   }
   .sub {
     @include FontSealSub;
-  }
-}
-
-@media only screen and (min-width: 0px) and (max-width: 860px) {
-  html {
-    font-size: 11px;
-  }
-  .box_Default {
-    width: $SizeMobileBoxDefault;
-  }
-  .box_Inside {
-    width: $SizeMobileBoxInside;
-  }
-  .box_Stroke {
-    width: 100%;
-    border: 0;
-    border-radius: 0;
-    border-top: 2px solid $color-main;
-    border-bottom: 2px solid $color-main;
-  }
-
-  .Split {
-    justify-content: space-evenly;
-    grid-gap: 1rem;
-  }
-  .CutQuarter {
-    grid-template-columns: repeat(2, 2fr);
-  }
-
-  .sec_ad {
-    .chap_PdViewTop {
-      .scene_banner {
-        .pic {
-          height: 110px;
-        }
-      }
-    }
-  }
-
-  .sec_text {
-    .chap_SystemInfo {
-      .scene_clause {
-        .scene_title {
-          width: 90%;
-        }
-        .scene_info {
-          .Split {
-            width: 90%;
-            .title {
-              margin-top: 1.2rem;
-              font-size: $SizeFontLittleTitleMobile;
-            }
-            .text {
-              li:first-child {
-                padding-top: 0;
-              }
-              li {
-                list-style-type: none;
-                padding-bottom: 5px;
-                border-bottom: 1px solid hsl(0, 0%, 92%);
-              }
-            }
-          }
-          .Split:first-child {
-            .title {
-              margin-top: 0;
-            }
-          }
-          .CutOneFour {
-            grid-template-columns: repeat(1, 1fr);
-          }
-        }
-      }
-    }
-  }
-  .sec_display {
-    .chap_PdIntro {
-      .support {
-        width: $SizeMobileBoxDefault;
-      }
-    }
-    .chap_PdSpec {
-      .box_Stroke {
-        .Split {
-          width: $SizeMobileBoxInside;
-          grid-gap: 1.5em;
-          .pic {
-            height: 137.56px;
-          }
-        }
-      }
-    }
-    .chap_PdEditor {
-      .scene_EditDisplay {
-        .box_EditWorkSpace {
-          padding: 1.25rem 1.5rem 3rem;
-          .Split {
-            display: block;
-            .info:last-child {
-              margin-top: 2rem;
-            }
-            .tag {
-              width: 20%;
-              @include vc;
-            }
-            .pic {
-              margin-top: 1rem;
-            }
-          }
-        }
-      }
-      .scene_EditExplain {
-        .box_explain {
-          padding: 1.25rem 1.5rem 2rem;
-        }
-      }
-    }
-    .chap_PdOption {
-      .scene_OptionView {
-        width: 100%;
-      }
-    }
-  }
-
-  .scene_title {
-    .sub {
-      @include tl;
-      padding: 0 0.2rem;
-    }
-  }
-  .MobileCenter {
-    text-align: center !important;
   }
 }

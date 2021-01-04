@@ -1,0 +1,163 @@
+// 모바일 사이즈
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    font-size: 1rem;
+  }
+
+  nav {
+    ol[class="nav__menu"] {
+      li {
+        flex: 1;
+        @include textCenter;
+        padding: 0.7em 0 !important;
+        &:first-child {
+          margin-left: 0.5rem !important;
+        }
+      }
+    }
+    ol[class="nav__operator"] {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .wrap {
+    max-width: $SizeWindowWide !important;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 860px) {
+  //   html {
+  //     font-size: 11px;
+  //   }
+  .box_Default {
+    width: $SizeMobileBoxDefault;
+  }
+  .box_Inside {
+    width: $SizeMobileBoxInside;
+  }
+  .box_Stroke {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid $color-main;
+    border-bottom: 2px solid $color-main;
+  }
+
+  .Split {
+    justify-content: space-evenly;
+    grid-gap: 1rem;
+  }
+  .CutQuarter {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .sec_ad {
+    .chap_PdViewTop {
+      .scene_banner {
+        .pic {
+          height: 110px;
+        }
+      }
+    }
+  }
+
+  .sec_text {
+    .chap_SystemInfo {
+      .scene_clause {
+        .scene_title {
+          width: 90%;
+        }
+        .scene_info {
+          .Split {
+            width: 90%;
+            .title {
+              margin-top: 1.2rem;
+              font-size: $SizeFontLittleTitleMobile;
+            }
+            .text {
+              li:first-child {
+                padding-top: 0;
+              }
+              li {
+                list-style-type: none;
+                padding-bottom: 5px;
+                border-bottom: 1px solid hsl(0, 0%, 92%);
+              }
+            }
+          }
+          .Split:first-child {
+            .title {
+              margin-top: 0;
+            }
+          }
+          .CutOneFour {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+      }
+    }
+  }
+  .sec_display {
+    .chap_PdIntro {
+      .support {
+        width: $SizeMobileBoxDefault;
+      }
+    }
+    .chap_PdSpec {
+      .box_Stroke {
+        .Split {
+          width: $SizeMobileBoxInside;
+          grid-gap: 1.5em;
+          .pic {
+            height: 137.56px;
+          }
+        }
+      }
+    }
+    .chap_PdEditor {
+      .scene_EditDisplay {
+        .box_EditWorkSpace {
+          padding: 1.25rem 1.5rem 3rem;
+          .Split {
+            display: block;
+            .info:last-child {
+              margin-top: 2rem;
+            }
+            .tag {
+              width: 20%;
+              @include vc;
+            }
+            .pic {
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+      .scene_EditExplain {
+        .box_explain {
+          padding: 1.25rem 1.5rem 2rem;
+        }
+      }
+    }
+    .chap_PdOption {
+      .scene_OptionView {
+        width: 100%;
+      }
+    }
+  }
+
+  .scene_title {
+    .sub {
+      @include tl;
+      padding: 0 0.2rem;
+    }
+  }
+  .MobileCenter {
+    text-align: center !important;
+  }
+}

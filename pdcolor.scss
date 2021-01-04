@@ -1,7 +1,12 @@
-$colorWhiteTrans:hsla(0, 0%, 100%, 0.8);
+$colorMain: rgba(0, 126, 65, 1);
+// $colorIndexAd: hsl(40, 50%, 88%);
+$colorIndexAd: hsl(36, 16%, 94%);
+// $colorIndexAd: floralwhite;
+$colorWhiteTrans: hsla(0, 0%, 100%, 0.8);
+$colorGrayBorder: hsl(0, 0%, 90%);
+$colorGrayBtn: hsl(0, 0%, 70%);
 
-
-$color-main: hsl(143, 75%, 28%);
+$color-main: rgba(0, 126, 65, 1);
 $color-main-border: hsl(143, 74%, 22%);
 $color-main-hover: #129b3b;
 $color-gray: hsl(0, 0%, 96%);
@@ -11,8 +16,6 @@ $color-main-highlight: yellow;
 $color-gridbox_title_corret: #127c3b;
 $color-gridbox_title_wrong: #531f7d;
 $color-ad_title: #c98414;
-
-
 
 $ColorHighLightBackground: hsl(51, 100%, 52%);
 $ColorHighLight: hsl(5, 100%, 50%);

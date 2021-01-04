@@ -1,15 +1,22 @@
 //BOX SIZE,
-$SizeBoxSiteDefault:1100px;
+$SizeWindowDefault: 960px;
+$SizeWindowWide: 1200px;
+
+$SizeBoxSiteDefault: 1100px;
 $SizeBoxDefault: 860px;
 $SizeBoxInside: 810px;
 $SizeBoxStroke: 840px;
 $SizeBoxNotice: 520px;
-@mixin SizeWindows{
-  width:100%;
-  max-width:$SizeBoxSiteDefault;
+@mixin SizeWindows {
+  width: 100%;
+  max-width: $SizeBoxSiteDefault;
   @include vc;
 }
 
+//Font SIZE
+p {
+  font-size: 0.7em;
+}
 
 //GRID
 $SizeGridGap: 1.5rem;

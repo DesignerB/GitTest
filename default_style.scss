@@ -1,5 +1,5 @@
 html {
-  font-size: 12px;
+  font-size: 20px;
   font-family: "Montserrat", "Lato", arial, "Noto Sans KR", sans-serif;
   letter-spacing: -0.3;
   line-height: 1;
@@ -12,7 +12,24 @@ body {
   overflow-y: auto;
 }
 
-ul, ol, table, tr, th, td {
+nav,
+aside {
+  display: block;
+}
+
+ul,
+ol,
+table,
+tr,
+th,
+td,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   position: relative;
   //     display: inline-block;
   list-style: none;
@@ -27,4 +44,13 @@ ul, ol, table, tr, th, td {
   padding: 0;
   border: 0 none;
   vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  &:active,
+  &:hover {
+    @extend a;
+  }
 }

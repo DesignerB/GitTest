@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html {
-  font-size: 12px;
+  font-size: 20px;
   font-family: "Montserrat", "Lato", arial, "Noto Sans KR", sans-serif;
   letter-spacing: -0.3;
   line-height: 1; }
@@ -11,7 +11,23 @@ body {
   overflow-x: hidden;
   overflow-y: auto; }
 
-ul, ol, table, tr, th, td {
+nav,
+aside {
+  display: block; }
+
+ul,
+ol,
+table,
+tr,
+th,
+td,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   position: relative;
   list-style: none;
   word-break: break-word;
@@ -25,6 +41,13 @@ ul, ol, table, tr, th, td {
   padding: 0;
   border: 0 none;
   vertical-align: middle; }
+
+a, a:active, a:hover {
+  text-decoration: none;
+  outline: none; }
+
+p {
+  font-size: 0.7em; }
 
 .Mg1 {
   margin-top: 1rem; }
@@ -94,7 +117,7 @@ ul, ol, table, tr, th, td {
   max-width: 840px;
   margin: 0 auto;
   border-radius: 14px;
-  border: 10px solid #127d3b;
+  border: 10px solid #007e41;
   background-color: white; }
 
 .Split {
@@ -138,48 +161,342 @@ img {
   margin: 0;
   padding: 0; }
 
-.containerTop .upLine {
-  position: relative;
-  width: 100%;
-  height: 38px;
-  background: linear-gradient(135deg, #007e41 10%, #590c7d 90%); }
-  .containerTop .upLine table {
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 16px; }
+
+  body {
+    font-size: 1rem; }
+
+  nav ol[class="nav__menu"] li {
+    flex: 1;
+    text-align: center;
+    padding: 0.7em 0 !important; }
+    nav ol[class="nav__menu"] li:first-child {
+      margin-left: 0.5rem !important; }
+  nav ol[class="nav__operator"] {
+    display: none !important; } }
+@media screen and (min-width: 1921px) {
+  .wrap {
+    max-width: 1200px !important; } }
+@media only screen and (min-width: 401px) and (max-width: 860px) {
+  .box_Default {
+    width: 94%; }
+
+  .box_Inside {
+    width: 92%; }
+
+  .box_Stroke {
     width: 100%;
-    max-width: 1100px;
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid #007e41;
+    border-bottom: 2px solid #007e41; }
+
+  .Split {
+    justify-content: space-evenly;
+    grid-gap: 1rem; }
+
+  .CutQuarter {
+    grid-template-columns: repeat(2, 2fr); }
+
+  .sec_ad .chap_PdViewTop .scene_banner .pic, .sec_ad .chap_PdViewTop .scene_banner .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .scene_banner .bg {
+    height: 110px; }
+
+  .sec_text .chap_SystemInfo .scene_clause .scene_title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_title {
+    width: 90%; }
+  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split {
+    width: 90%; }
+    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .title {
+      margin-top: 1.2rem;
+      font-size: 1.25rem; }
+    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li:first-child, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li:first-child, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li:first-child {
+      padding-top: 0; }
+    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li {
+      list-style-type: none;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ebebeb; }
+  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split:first-child .title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split:first-child .title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split:first-child .title {
+    margin-top: 0; }
+  .sec_text .chap_SystemInfo .scene_clause .scene_info .CutOneFour, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .CutOneFour, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .CutOneFour {
+    grid-template-columns: repeat(1, 1fr); }
+
+  .sec_display .chap_PdIntro .support {
+    width: 94%; }
+  .sec_display .chap_PdSpec .box_Stroke .Split {
+    width: 92%;
+    grid-gap: 1.5em; }
+    .sec_display .chap_PdSpec .box_Stroke .Split .pic, .sec_display .chap_PdSpec .box_Stroke .Split .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_display .chap_PdSpec .box_Stroke .Split .bg {
+      height: 137.56px; }
+  .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
+    padding: 1.25rem 1.5rem 3rem; }
+    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split {
+      display: block; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .info:last-child {
+        margin-top: 2rem; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .tag {
+        width: 20%;
+        margin: 0 auto; }
+      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .pic, .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .bg {
+        margin-top: 1rem; }
+  .sec_display .chap_PdEditor .scene_EditExplain .box_explain {
+    padding: 1.25rem 1.5rem 2rem; }
+  .sec_display .chap_PdOption .scene_OptionView {
+    width: 100%; }
+
+  .scene_title .sub {
+    text-align: left;
+    padding: 0 0.2rem; }
+
+  .MobileCenter {
+    text-align: center !important; } }
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.3rem 0.5rem; }
+
+.body {
+  position: relative; }
+
+nav {
+  width: 100%;
+  font-size: 0.75em; }
+  nav article[id="nav__topBar"] {
+    background: #007e41;
+    text-decoration: none;
+    transition: all 0.1s; }
+    nav article[id="nav__topBar"] a {
+      color: white; }
+    nav article[id="nav__topBar"] .wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      nav article[id="nav__topBar"] .wrap section {
+        position: relative;
+        height: 100%;
+        color: white; }
+        nav article[id="nav__topBar"] .wrap section:first-child {
+          max-width: 100%;
+          flex: 1 1 0; }
+        nav article[id="nav__topBar"] .wrap section:last-child {
+          width: auto;
+          flex: 0 0 auto;
+          margin-left: auto; }
+          nav article[id="nav__topBar"] .wrap section:last-child a {
+            display: inline-block;
+            border: 1px solid white;
+            text-decoration: none;
+            padding: 0.5em 0.7em; }
+            nav article[id="nav__topBar"] .wrap section:last-child a:last-child {
+              margin-right: 0; }
+            nav article[id="nav__topBar"] .wrap section:last-child a span {
+              color: white; }
+  nav article[id="nav__menuBar"] {
+    border-bottom: 1px solid #e6e6e6;
+    background: white; }
+    nav article[id="nav__menuBar"] .wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      nav article[id="nav__menuBar"] .wrap #btn__hamburger {
+        display: block;
+        position: relative;
+        flex: 0 0 auto;
+        width: 24px;
+        height: auto;
+        text-decoration: none;
+        cursor: pointer; }
+        nav article[id="nav__menuBar"] .wrap #btn__hamburger span {
+          display: block;
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          height: 2px;
+          border-radius: 3px;
+          background: #b3b3b3;
+          color: transparent;
+          transition: all 0.1s; }
+          nav article[id="nav__menuBar"] .wrap #btn__hamburger span:before, nav article[id="nav__menuBar"] .wrap #btn__hamburger span:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            background: #b3b3b3;
+            border-radius: 3px;
+            transition: all 0.3s; }
+          nav article[id="nav__menuBar"] .wrap #btn__hamburger span:before {
+            top: -6px; }
+          nav article[id="nav__menuBar"] .wrap #btn__hamburger span:after {
+            top: 6px; }
+      nav article[id="nav__menuBar"] .wrap #btn__hamburger.on span {
+        background: transparent; }
+        nav article[id="nav__menuBar"] .wrap #btn__hamburger.on span:before {
+          top: 0;
+          transform: rotate(45deg);
+          background: #007e41; }
+        nav article[id="nav__menuBar"] .wrap #btn__hamburger.on span:after {
+          top: 0;
+          transform: rotate(-45deg);
+          background: #007e41; }
+      nav article[id="nav__menuBar"] .wrap ol[class="nav__menu"] {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex: 1; }
+        nav article[id="nav__menuBar"] .wrap ol[class="nav__menu"] li {
+          cursor: pointer;
+          padding: 0.7em 1.5em; }
+          nav article[id="nav__menuBar"] .wrap ol[class="nav__menu"] li:first-child {
+            margin-left: 1em; }
+          nav article[id="nav__menuBar"] .wrap ol[class="nav__menu"] li:hover, nav article[id="nav__menuBar"] .wrap ol[class="nav__menu"] li:active {
+            color: #007e41;
+            border-radius: 2rem; }
+      nav article[id="nav__menuBar"] .wrap ol[class="nav__operator"] {
+        display: flex;
+        flex: 0 0 auto;
+        margin-left: auto;
+        border-left: 1px solid #e6e6e6; }
+        nav article[id="nav__menuBar"] .wrap ol[class="nav__operator"] li {
+          cursor: pointer;
+          padding: 0.7em 1em; }
+          nav article[id="nav__menuBar"] .wrap ol[class="nav__operator"] li:first-child {
+            margin-left: 0.5rem; }
+          nav article[id="nav__menuBar"] .wrap ol[class="nav__operator"] li:last-child {
+            padding-right: 0; }
+          nav article[id="nav__menuBar"] .wrap ol[class="nav__operator"] li:hover, nav article[id="nav__menuBar"] .wrap ol[class="nav__operator"] li:active {
+            color: #007e41;
+            border-radius: 2rem; }
+  nav article[id="nav__extendMenu"] {
+    display: none;
+    padding: 1rem;
+    border-bottom: 1px solid #007e41; }
+    nav article[id="nav__extendMenu"] .wrap {
+      display: grid;
+      grid-template-columns: 6fr 1fr 1fr; }
+      nav article[id="nav__extendMenu"] .wrap section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); }
+        nav article[id="nav__extendMenu"] .wrap section h2 {
+          grid-column: 1/6;
+          color: #007e41; }
+        nav article[id="nav__extendMenu"] .wrap section:first-child {
+          margin-left: 1rem; }
+          nav article[id="nav__extendMenu"] .wrap section:first-child li {
+            background: hotpink; }
+        nav article[id="nav__extendMenu"] .wrap section:nth-child(2) {
+          grid-template-columns: 1fr; }
+          nav article[id="nav__extendMenu"] .wrap section:nth-child(2) li {
+            background: greenyellow; }
+        nav article[id="nav__extendMenu"] .wrap section:last-child {
+          grid-template-columns: 1fr; }
+          nav article[id="nav__extendMenu"] .wrap section:last-child li {
+            background: cornflowerblue; }
+  nav article[id="nav__extendMenu"].on {
+    animation: scale-display 1.2s;
+    display: block; }
+@keyframes scale-display {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+aside[id="ad__index"] {
+  background: #f2f0ed;
+  height: auto;
+  padding: 3rem 0 5rem;
+  text-align: center; }
+  aside[id="ad__index"] .wrap {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  aside[id="ad__index"] article {
+    text-align: center;
     margin: 0 auto;
-    height: 100%; }
-    .containerTop .upLine table td {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    flex: 1;
+    background-color: white; }
+    aside[id="ad__index"] article img {
+      width: 100%; }
+    aside[id="ad__index"] article h2 {
+      margin-top: 1rem; }
+    aside[id="ad__index"] article p {
+      margin-top: 0.5rem; }
+
+footer {
+  margin-top: 5rem; }
+  footer header {
+    padding: 0.35em 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 0.7em; }
+    footer header .wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start; }
+    footer header a, footer header a:active, footer header a:hover {
+      display: block;
+      flex: 0 0 auto;
+      padding: 0 1rem;
       text-align: center;
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.8); }
-.containerTop .nav .Split div {
-  width: 100%; }
-.containerTop .nav .Split div:nth-child(odd) {
-  background-color: #ffda0a; }
-.containerTop .nav .Split div:nth-child(even) {
-  background-color: #adff0a; }
-.containerTop .nav .Split div:nth-child(1) {
-  -ms-grid-column: 1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3; }
-.containerTop .nav .Split div:nth-child(2) {
-  -ms-grid-column: 2;
-  -ms-grid-row: 1 min; }
-.containerTop .nav .Split div:nth-child(3) {
-  -ms-grid-column: 3;
-  -ms-grid-row: 1; }
-.containerTop .nav .Split div:nth-child(4) {
-  -ms-grid-column: 4;
-  -ms-grid-row: 1; }
-.containerTop .nav .Split div:nth-child(5) {
-  -ms-grid-column: 2;
-  -ms-grid-row: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2/4; }
-.containerTop .nav .Split div:nth-child(6) {
-  -ms-grid-column: 4;
-  -ms-grid-row: 2; }
+      color: rgba(0, 0, 0, 0.8); }
+      footer header a:first-child {
+        padding-left: 0; }
+      footer header a:last-child {
+        padding-right: 0; }
+      footer header a:hover {
+        color: #007e41; }
+  footer article {
+    font-size: 0.6rem;
+    margin: 0.8rem 0 2rem; }
+    footer article .wrap {
+      display: flex;
+      flex-direction: row;
+      justify-items: flex-start;
+      align-items: stretch;
+      flex-wrap: wrap; }
+      footer article .wrap section {
+        flex: 1; }
+        footer article .wrap section h2 {
+          color: #007e41; }
+        footer article .wrap section address {
+          font-size: 0.6rem;
+          margin-top: 0.4em;
+          line-height: 1.3;
+          font-style: nomal !important; }
+        footer article .wrap section p {
+          display: block;
+          font-size: 0.65rem;
+          margin-top: 0.2em;
+          line-height: 1.2; }
+        footer article .wrap section:first-child {
+          width: 100px;
+          flex: 0 0 auto; }
+        footer article .wrap section:nth-child(2) {
+          width: 43%; }
+          footer article .wrap section:nth-child(2) div:last-child {
+            margin-top: 0.5rem;
+            margin-left: 3px;
+            font-size: 0.4em; }
+        footer article .wrap section:last-child {
+          width: 300px;
+          flex: 0 0 auto;
+          margin-left: auto;
+          background: #f2f0ed;
+          border: 1px solid #e6e6e6;
+          text-align: center; }
 
 .sec_ad .chap_PdViewTop {
   margin-top: 5rem;
@@ -211,7 +528,7 @@ img {
   .sec_ad .chap_PdViewTop .scene_AdBanner .title {
     text-align: center;
     font-size: 1.45rem;
-    color: #127d3b;
+    color: #007e41;
     font-weight: bold;
     padding-top: 0.6em; }
   .sec_ad .chap_PdViewTop .scene_AdBanner .text {
@@ -278,7 +595,7 @@ img {
     margin: 0 auto; }
   .sec_display .chap_PdIntro .title {
     font-size: 2rem;
-    color: #127d3b;
+    color: #007e41;
     font-weight: bold;
     margin-top: 0.4em; }
   .sec_display .chap_PdIntro .sub {
@@ -312,7 +629,7 @@ img {
     font-family: "Righteous", cursive;
     margin-top: 0.1em; }
   .sec_display .chap_MultiView .scene_feature .front .num_green {
-    color: #127d3b; }
+    color: #007e41; }
   .sec_display .chap_MultiView .scene_feature .front .num_violet {
     color: #531f7d; }
   .sec_display .chap_MultiView .scene_feature .front .num_orange {
@@ -353,7 +670,7 @@ img {
     text-align: center; }
     .sec_display .chap_PdSpec .box_Stroke .scene_title .title {
       font-size: 1.6rem;
-      color: #127d3b;
+      color: #007e41;
       font-weight: bold; }
     .sec_display .chap_PdSpec .box_Stroke .scene_title .sub {
       font-size: 1.2rem;
@@ -387,11 +704,11 @@ img {
       text-align: center;
       margin: 0 auto;
       font-size: 1.1em;
-      background-color: #127d3b;
+      background-color: #007e41;
       margin-top: -1em; }
     .sec_display .chap_PdSpec .box_Stroke .Split .title {
       font-size: 1.45rem;
-      color: #127d3b;
+      color: #007e41;
       font-weight: bold;
       text-align: center;
       margin-top: 0.2em; }
@@ -403,7 +720,7 @@ img {
     text-align: center; }
     .sec_display .chap_PdEditor .scene_title .title {
       font-size: 1.6rem;
-      color: #127d3b;
+      color: #007e41;
       font-weight: bold; }
     .sec_display .chap_PdEditor .scene_title .sub {
       font-size: 1.2rem;
@@ -458,14 +775,14 @@ img {
         font-size: 1.2rem; }
       .sec_display .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_display .chap_PdEditor .scene_EditExplain .box_explain .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
         text-align: center;
-        background-color: #127d3b;
+        background-color: #007e41;
         border-radius: 2rem;
         padding: 0.18rem 0; }
 .sec_display .chap_PdOption .scene_title {
   text-align: center; }
   .sec_display .chap_PdOption .scene_title .title {
     font-size: 1.6rem;
-    color: #127d3b;
+    color: #007e41;
     font-weight: bold; }
   .sec_display .chap_PdOption .scene_title .sub {
     font-size: 1.2rem;
@@ -482,7 +799,7 @@ img {
     background: yellowgreen; }
   .sec_display .chap_PdOption .scene_OptionView .title {
     font-size: 1.45rem;
-    color: #127d3b;
+    color: #007e41;
     font-weight: bold;
     text-align: center;
     margin-top: 0.5rem; }
@@ -504,7 +821,7 @@ img {
     border-radius: 24px;
     background-color: whitesmoke;
     margin: 0 auto;
-    background: linear-gradient(-45deg, #127d3b, #531f7d);
+    background: linear-gradient(-45deg, #007e41, #531f7d);
     background-size: 150% 120%;
     -webkit-animation: InfoDraft 4s ease infinite;
     -moz-animation: InfoDraft 4s ease infinite;
@@ -613,7 +930,7 @@ img {
     border-radius: 24px;
     background-color: whitesmoke;
     margin: 0 auto;
-    background: linear-gradient(-45deg, #531f7d, #127d3b);
+    background: linear-gradient(-45deg, #531f7d, #007e41);
     background-size: 130% 110%;
     -webkit-animation: InfoDraftReverse 4s ease infinite;
     -moz-animation: InfoDraftReverse 4s ease infinite;
@@ -697,7 +1014,7 @@ img {
         height: 2.2rem;
         border-radius: 50%;
         background-color: white;
-        color: #127d3b;
+        color: #007e41;
         line-height: 2.2rem;
         font-weight: 700;
         font-size: 1.3rem;
@@ -708,7 +1025,7 @@ img {
         border-radius: 1rem; }
       .sec_text .chap_InfoOrder .scene_MakeInfoNameCard .InfoSub .title {
         font-size: 1.45rem;
-        color: #127d3b;
+        color: #007e41;
         font-weight: bold;
         text-align: center;
         margin-top: 0.7rem; }
@@ -723,7 +1040,7 @@ img {
   background: linear-gradient(0deg, #050b24 0%, #060d2d 10%, #060d2d 90%, #050b24 100%);
   padding: 10rem 0 11rem; }
   .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default {
-    background: linear-gradient(-45deg, #127d3b, #531f7d);
+    background: linear-gradient(-45deg, #007e41, #531f7d);
     background-size: 150% 120%;
     -webkit-animation: InfoDraft 4s ease infinite;
     -moz-animation: InfoDraft 4s ease infinite;
@@ -764,7 +1081,7 @@ img {
       padding-top: 1.3rem; }
       .sec_text .chap_InfoMake .scene_NoticeMakeSample .box_Default .scene_title .title, .sec_text .chap_InfoMake .scene_NoticeMakeCustom .box_Default .scene_title .title {
         font-size: 1.6rem;
-        color: #127d3b;
+        color: #007e41;
         font-weight: bold;
         text-align: center;
         color: white; }
@@ -828,7 +1145,7 @@ img {
       text-align: center; }
       .sec_text .chap_InfoSystem .scene_clause .scene_title .title, .sec_text .chap_InfoSystem .scene_InfoMake .scene_title .title {
         font-size: 1.6rem;
-        color: #127d3b;
+        color: #007e41;
         font-weight: bold; }
       .sec_text .chap_InfoSystem .scene_clause .scene_title .sub, .sec_text .chap_InfoSystem .scene_InfoMake .scene_title .sub {
         font-size: 1.2rem;
@@ -844,7 +1161,7 @@ img {
         .sec_text .chap_InfoSystem .scene_clause .scene_info .Split .title, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info .Split .title {
           padding-top: 0.7rem;
           font-size: 1.45rem;
-          color: #127d3b;
+          color: #007e41;
           font-weight: bold;
           font-size: 1.1em; }
         .sec_text .chap_InfoSystem .scene_clause .scene_info .Split .text li, .sec_text .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li {
@@ -862,7 +1179,7 @@ img {
   .sec_text .chap_InfoSystem .scene_clause:first-child, .sec_text .chap_InfoSystem .scene_InfoMake:first-child {
     margin-top: 0; }
   .sec_text .chap_InfoSystem .scene_InfoMake {
-    background: linear-gradient(-45deg, #127d3b, #531f7d);
+    background: linear-gradient(-45deg, #007e41, #531f7d);
     background-size: 150% 120%;
     -webkit-animation: InfoDraft 4s ease infinite;
     -moz-animation: InfoDraft 4s ease infinite;
@@ -904,7 +1221,7 @@ img {
   text-align: center; }
   .sec_text .chap_PdEditor .scene_title .title {
     font-size: 1.6rem;
-    color: #127d3b;
+    color: #007e41;
     font-weight: bold; }
   .sec_text .chap_PdEditor .scene_title .sub {
     font-size: 1.2rem;
@@ -959,7 +1276,7 @@ img {
       font-size: 1.2rem; }
     .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_green, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_green, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_violet, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_violet, .sec_text .chap_PdEditor .scene_EditExplain .box_explain .sec_display .chap_MultiView .scene_feature .front .num_orange, .sec_display .chap_MultiView .scene_feature .front .sec_text .chap_PdEditor .scene_EditExplain .box_explain .num_orange {
       text-align: center;
-      background-color: #127d3b;
+      background-color: #007e41;
       border-radius: 2rem;
       padding: 0.18rem 0; }
 
@@ -975,80 +1292,5 @@ img {
     letter-spacing: 0.18em;
     margin-top: 0.7rem;
     color: #e6e6e6; }
-
-@media only screen and (min-width: 0px) and (max-width: 860px) {
-  html {
-    font-size: 11px; }
-
-  .box_Default {
-    width: 94%; }
-
-  .box_Inside {
-    width: 92%; }
-
-  .box_Stroke {
-    width: 100%;
-    border: 0;
-    border-radius: 0;
-    border-top: 2px solid #127d3b;
-    border-bottom: 2px solid #127d3b; }
-
-  .Split {
-    justify-content: space-evenly;
-    grid-gap: 1rem; }
-
-  .CutQuarter {
-    grid-template-columns: repeat(2, 2fr); }
-
-  .sec_ad .chap_PdViewTop .scene_banner .pic, .sec_ad .chap_PdViewTop .scene_banner .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .scene_banner .bg {
-    height: 110px; }
-
-  .sec_text .chap_SystemInfo .scene_clause .scene_title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_title {
-    width: 90%; }
-  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split {
-    width: 90%; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .title {
-      margin-top: 1.2rem;
-      font-size: 1.25rem; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li:first-child, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li:first-child, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li:first-child {
-      padding-top: 0; }
-    .sec_text .chap_SystemInfo .scene_clause .scene_info .Split .text li, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split .text li, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split .text li {
-      list-style-type: none;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #ebebeb; }
-  .sec_text .chap_SystemInfo .scene_clause .scene_info .Split:first-child .title, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .Split:first-child .title, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .Split:first-child .title {
-    margin-top: 0; }
-  .sec_text .chap_SystemInfo .scene_clause .scene_info .CutOneFour, .sec_text .chap_SystemInfo .chap_InfoSystem .scene_InfoMake .scene_info .CutOneFour, .sec_text .chap_InfoSystem .chap_SystemInfo .scene_InfoMake .scene_info .CutOneFour {
-    grid-template-columns: repeat(1, 1fr); }
-
-  .sec_display .chap_PdIntro .support {
-    width: 94%; }
-  .sec_display .chap_PdSpec .box_Stroke .Split {
-    width: 92%;
-    grid-gap: 1.5em; }
-    .sec_display .chap_PdSpec .box_Stroke .Split .pic, .sec_display .chap_PdSpec .box_Stroke .Split .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_display .chap_PdSpec .box_Stroke .Split .bg {
-      height: 137.56px; }
-  .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace {
-    padding: 1.25rem 1.5rem 3rem; }
-    .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split {
-      display: block; }
-      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .info:last-child {
-        margin-top: 2rem; }
-      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .tag {
-        width: 20%;
-        margin: 0 auto; }
-      .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .pic, .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .sec_ad .chap_PdViewTop .scene_AdBanner .bg, .sec_ad .chap_PdViewTop .scene_AdBanner .sec_display .chap_PdEditor .scene_EditDisplay .box_EditWorkSpace .Split .bg {
-        margin-top: 1rem; }
-  .sec_display .chap_PdEditor .scene_EditExplain .box_explain {
-    padding: 1.25rem 1.5rem 2rem; }
-  .sec_display .chap_PdOption .scene_OptionView {
-    width: 100%; }
-
-  .scene_title .sub {
-    text-align: left;
-    padding: 0 0.2rem; }
-
-  .MobileCenter {
-    text-align: center !important; } }
 
 /*# sourceMappingURL=pdtext.css.map */
